@@ -20,7 +20,13 @@ for i in range(0, 150):
 
 
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    driver.execute_script('document.getElementById("09_n5vocabulary.csv").checked = true ')
+
+    # 
+    driver.execute_script('document.getElementById("08_n5grammar.csv").checked = true ')
+    # driver.execute_script('document.getElementById("09_n5vocabulary.csv").checked = true ')
+
+
+
     driver.execute_script('document.getElementById("toggle").checked = true ')
     driver.execute_script('document.getElementsByTagName("button")[1].click()')
 
@@ -31,8 +37,8 @@ for i in range(0, 150):
 
 
     answers = []
-    for i in range(4):
-        answer = driver.execute_script(f"""return document.getElementsByClassName("grid")[0].getElementsByClassName("normal")[0].getElementsByTagName("button")[{i}].innerHTML""")
+    for j in range(4):
+        answer = driver.execute_script(f"""return document.getElementsByClassName("grid")[0].getElementsByClassName("normal")[0].getElementsByTagName("button")[{j}].innerHTML""")
         answers.append(answer)
 
     id = driver.execute_script("""return document.getElementsByTagName("span")[6].textContent""")
@@ -70,6 +76,10 @@ for i in range(0, 150):
 
     # print(str(obj))
 
+    full_text = ""
+    with open("questions.txt", "r") as f:
+        full_text = f.read()
+
     f = open("questions.txt", "a")
 
 
@@ -80,5 +90,10 @@ for i in range(0, 150):
 
     driver.close()
     driver.quit()
+    print(f"saved {i}")
+    if id in full_text:
+        print("duplicate")
+    else:
+        print('NEW!!!')
 
     # N5V0041 - rb in answers
