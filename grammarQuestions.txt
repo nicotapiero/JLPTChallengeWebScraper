@@ -1,7 +1,7 @@
 const QUESTIONS = [
   {
     question: "<!-- 2 -->\n\t\tわたしはりんご（ ）すきです。\t\t<hr>",
-    answers: { が: true, と: false, を: false, に: false },
+    answers: { に: false, が: true, を: false, と: false },
     id: "問題ID：N5G0002",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -19,9 +19,9 @@ const QUESTIONS = [
       "<!-- 2 -->\n\t\tあしたは９<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>（ ）あなたのうちへ<ruby><rb>迎</rb><rp>(</rp><rt>むか</rt><rp>)</rp></ruby>えに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>",
     answers: {
       ごろ: true,
-      "<ruby><rb>半</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby>": false,
-      まで: false,
       ぐらい: false,
+      まで: false,
+      "<ruby><rb>半</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby>": false,
     },
     id: "問題ID：N5G0004",
     confirmed: true,
@@ -30,10 +30,10 @@ const QUESTIONS = [
   {
     question: "<!-- 2 -->\n\t\tわたしはえいごが（ ）わかりません。\t\t<hr>",
     answers: {
-      たいてい: false,
       ぜんぜん: true,
-      ずいぶん: false,
       きっと: false,
+      ずいぶん: false,
+      たいてい: false,
     },
     id: "問題ID：N5G0005",
     confirmed: true,
@@ -41,12 +41,38 @@ const QUESTIONS = [
   },
   {
     question:
+      "<!-- 2 -->\n\t\tわたしは<ruby><rb>音楽</rb><rp>(</rp><rt>おんがく</rt><rp>)</rp></ruby>がすきです。（ ）、クラシックやジャズなどです。\t\t<hr>",
+    answers: {
+      といえば: false,
+      たとえば: true,
+      ところで: false,
+      こんどは: false,
+    },
+    id: "問題ID：N5G0006",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      "<!-- 2 -->\n\t\tわたしの<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>はアメリカで<ruby><rb>英語</rb><rp>(</rp><rt>えいご</rt><rp>)</rp></ruby>を<ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えて（ ）。\t\t<hr>",
+    answers: {
+      います: true,
+      します: false,
+      あります: false,
+      しまいます: false,
+    },
+    id: "問題ID：N5G0007",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       "<!-- 2 -->\n\t\tここはきんえんですから、たばこを<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>っ（ ）。\t\t<hr>",
     answers: {
-      てみます: false,
-      ています: false,
       てはいけません: true,
+      ています: false,
       てください: false,
+      てみます: false,
     },
     id: "問題ID：N5G0008",
     confirmed: true,
@@ -55,7 +81,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>の<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>みは<ruby><rb>土曜日</rb><rp>(</rp><rt>どようび</rt><rp>)</rp></ruby>（ ）<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>です。\t\t<hr>",
-    answers: { と: true, に: false, は: false, へ: false },
+    answers: { に: false, と: true, は: false, へ: false },
     id: "問題ID：N5G0009",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -78,8 +104,16 @@ const QUESTIONS = [
   },
   {
     question:
+      "<!-- 2 -->\n\t\t（ ）<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>へ<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>ましたか。\t\t<hr>",
+    answers: { いつ: true, どこ: false, なに: false, だれ: false },
+    id: "問題ID：N5G0012",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       "<!-- 2 -->\n\t\t（ ）<ruby><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>をしましたか。\t\t<hr>",
-    answers: { もう: true, なに: false, まだ: false, あと: false },
+    answers: { まだ: false, もう: true, あと: false, なに: false },
     id: "問題ID：N5G0013",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -89,9 +123,9 @@ const QUESTIONS = [
       "<!-- 2 -->\n\t\tあしたは<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>を<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>みます。びょういんへ（ ）。\t\t<hr>",
     answers: {
       "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きましょう": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きません": false,
       "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きませんか": false,
       "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>くんです": true,
+      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きません": false,
     },
     id: "問題ID：N5G0014",
     confirmed: true,
@@ -100,7 +134,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tわたしはおさらを<ruby><rb>洗</rb><rp>(</rp><rt>あら</rt><rp>)</rp></ruby>う（ ）きらいです。\t\t<hr>",
-    answers: { のが: true, のを: false, ので: false, のに: false },
+    answers: { ので: false, のが: true, のを: false, のに: false },
     id: "問題ID：N5G0015",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -133,10 +167,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tごはんを（ ）ながら、テレビを<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ないでください。\t\t<hr>",
     answers: {
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べた": false,
       "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べる": false,
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ": true,
+      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べた": false,
       "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べて": false,
+      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ": true,
     },
     id: "問題ID：N5G0019",
     confirmed: true,
@@ -145,7 +179,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tわたしは（ ）<ruby><rb>月</rb><rp>(</rp><rt>つき</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きたいです。\t\t<hr>",
-    answers: { いつか: true, いつまで: false, いつ: false, いつでも: false },
+    answers: { いつ: false, いつでも: false, いつか: true, いつまで: false },
     id: "問題ID：N5G0020",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -154,9 +188,9 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tわたしのおとうとはあまり<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>（ ）。\t\t<hr>",
     answers: {
-      しました: false,
-      しています: false,
       します: false,
+      しています: false,
+      しました: false,
       しません: true,
     },
     id: "問題ID：N5G0021",
@@ -166,7 +200,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tこの<ruby><rb>書類</rb><rp>(</rp><rt>しょるい</rt><rp>)</rp></ruby>は<ruby><rb>黒</rb><rp>(</rp><rt>くろ</rt><rp>)</rp></ruby>（ ）<ruby><rb>青</rb><rp>(</rp><rt>あお</rt><rp>)</rp></ruby>のボールペンで<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いてください。\t\t<hr>",
-    answers: { か: true, に: false, と: false, は: false },
+    answers: { と: false, か: true, に: false, は: false },
     id: "問題ID：N5G0022",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -183,10 +217,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tこのスーパーは（ ）、<ruby><rb>品物</rb><rp>(</rp><rt>しなもの</rt><rp>)</rp></ruby>も<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>いです。\t\t<hr>",
     answers: {
+      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>かった": false,
       "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>くて": true,
       "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>いので": false,
       "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>いで": false,
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>かった": false,
     },
     id: "問題ID：N5G0024",
     confirmed: true,
@@ -196,10 +230,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tわたしはこの<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が（ ）です。\t\t<hr>",
     answers: {
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>る": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たい": true,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ます": false,
       "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て": false,
+      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>る": false,
+      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ます": false,
+      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たい": true,
     },
     id: "問題ID：N5G0025",
     confirmed: true,
@@ -222,9 +256,9 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tわたしの<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>は20<ruby><rb>年</rb><rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>まえからぎんこうで（ ）。\t\t<hr>",
     answers: {
+      はたらきたいです: false,
       はたらきました: false,
       はたらいています: true,
-      はたらきたいです: false,
     },
     id: "問題ID：N5G0027",
     confirmed: true,
@@ -233,7 +267,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>まで（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きますか。\t\t<hr>",
-    answers: { どうやって: true, どこで: false, どんな: false, どう: false },
+    answers: { どこで: false, どんな: false, どう: false, どうやって: true },
     id: "問題ID：N5G0028",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -242,10 +276,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tあした<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<ruby><rb>海</rb><rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>へ（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>",
     answers: {
-      およいで: false,
-      およぐに: false,
-      およぎに: true,
       およんで: false,
+      およぎに: true,
+      およぐに: false,
+      およいで: false,
     },
     id: "問題ID：N5G0029",
     confirmed: true,
@@ -254,15 +288,23 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tこれはサパナさん（ ）つくったケーキです。\t\t<hr>",
-    answers: { から: false, まで: false, で: false, の: true },
+    answers: { まで: false, から: false, で: false, の: true },
     id: "問題ID：N5G0030",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      "<!-- 2 -->\n\t\tはじめまして。わたし（ ）キムです。よろしくおねがいします。\t\t<hr>",
+    answers: { に: false, は: true, が: false, の: false },
+    id: "問題ID：N5G0031",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       "<!-- 2 -->\n\t\tメールをおくる（ ）、ぶちょうに<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>せてください。\t\t<hr>",
-    answers: { さきに: false, ときに: false, ので: false, まえに: true },
+    answers: { さきに: false, まえに: true, ので: false, ときに: false },
     id: "問題ID：N5G0032",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -286,7 +328,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tテーブルの<ruby><rb>上</rb><rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>にりんご（ ）バナナなどがあります。\t\t<hr>",
-    answers: { と: false, か: false, や: true, が: false },
+    answers: { か: false, が: false, と: false, や: true },
     id: "問題ID：N5G0035",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -294,7 +336,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>今朝</rb><rp>(</rp><rt>けさ</rt><rp>)</rp></ruby>なんじに<ruby><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>きた（ ）<ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えてください。\t\t<hr>",
-    answers: { か: true, に: false, の: false, と: false },
+    answers: { の: false, に: false, か: true, と: false },
     id: "問題ID：N5G0036",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -302,7 +344,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>昼</rb><rp>(</rp><rt>ひる</rt><rp>)</rp></ruby>ご<ruby><rb>飯</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby>を<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べた（ ）、<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>にいきます。\t\t<hr>",
-    answers: { まえに: false, つぎに: false, さきに: false, あとで: true },
+    answers: { さきに: false, つぎに: false, あとで: true, まえに: false },
     id: "問題ID：N5G0037",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -310,7 +352,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t（ ）めがねをかけている<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>は、<ruby><rb>山田</rb><rp>(</rp><rt>やまだ</rt><rp>)</rp></ruby><ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>です。\t\t<hr>",
-    answers: { あの: true, それ: false, あれ: false, そこ: false },
+    answers: { あの: true, そこ: false, それ: false, あれ: false },
     id: "問題ID：N5G0038",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -326,7 +368,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tわたしはりんごよりみかんの（ ）がすきです。\t\t<hr>",
-    answers: { まで: false, から: false, より: false, ほう: true },
+    answers: { より: false, から: false, まで: false, ほう: true },
     id: "問題ID：N5G0040",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -342,7 +384,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tこの<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>の（ ）<ruby><rb>方</rb><rp>(</rp><rt>かた</rt><rp>)</rp></ruby>を<ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えていただけませんか。\t\t<hr>",
-    answers: { つくって: false, つくり: true, つくる: false, つくった: false },
+    answers: { つくって: false, つくった: false, つくる: false, つくり: true },
     id: "問題ID：N5G0042",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -358,7 +400,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>のかいぎは9<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>から11<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>（ ）です。\t\t<hr>",
-    answers: { しか: false, まで: true, など: false, だけ: false },
+    answers: { など: false, まで: true, だけ: false, しか: false },
     id: "問題ID：N5G0044",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -368,9 +410,9 @@ const QUESTIONS = [
       "<!-- 2 -->\n\t\tとなりの<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>からピアノの<ruby><rb>音</rb><rp>(</rp><rt>おと</rt><rp>)</rp></ruby>が（ ）。\t\t<hr>",
     answers: {
       きけます: false,
-      きこえられます: false,
       きこえます: true,
       ききます: false,
+      きこえられます: false,
     },
     id: "問題ID：N5G0045",
     confirmed: true,
@@ -393,10 +435,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tきのうは（ ）<ruby><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>られませんでした。\t\t<hr>",
     answers: {
-      あつくて: true,
-      あつかって: false,
-      あついですから: false,
       あついので: false,
+      あつくて: true,
+      あついですから: false,
+      あつかって: false,
     },
     id: "問題ID：N5G0047",
     confirmed: true,
@@ -405,7 +447,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：すみません。（ ）りんごはいくらですか。<br>B：1つ100<ruby><rb>円</rb><rp>(</rp><rt>えん</rt><rp>)</rp></ruby>です。\t\t<hr>",
-    answers: { それ: false, どの: false, そこ: false, その: true },
+    answers: { どの: false, それ: false, そこ: false, その: true },
     id: "問題ID：N5G0048",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -413,7 +455,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tカップラーメンはお<ruby><rb>湯</rb><rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby>を<ruby><rb>入</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>れる（ ）で<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べられます。\t\t<hr>",
-    answers: { だけ: true, しか: false, のみ: false, さえ: false },
+    answers: { さえ: false, だけ: true, しか: false, のみ: false },
     id: "問題ID：N5G0049",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -421,7 +463,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tまだおすしを（ ）ことがないので、<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べてみたいです。\t\t<hr>",
-    answers: { たべない: false, たべた: true, たべる: false, たべて: false },
+    answers: { たべる: false, たべない: false, たべた: true, たべて: false },
     id: "問題ID：N5G0050",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -429,7 +471,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>はテレビを<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たり、ゲームを（ ）います。\t\t<hr>",
-    answers: { したり: false, したりして: true, して: false, みて: false },
+    answers: { して: false, みて: false, したりして: true, したり: false },
     id: "問題ID：N5G0051",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -437,7 +479,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tわたしはいつもひとり（ ）ごはんを<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べています。\t\t<hr>",
-    answers: { で: true, と: false, は: false, に: false },
+    answers: { に: false, で: true, と: false, は: false },
     id: "問題ID：N5G0052",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -445,7 +487,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>はハンサム（ ）、とても<ruby><rb>優</rb><rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しいです。\t\t<hr>",
-    answers: { で: true, し: false, くて: false, と: false },
+    answers: { し: false, で: true, と: false, くて: false },
     id: "問題ID：N5G0053",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -454,10 +496,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>銀行</rb><rp>(</rp><rt>ぎんこう</rt><rp>)</rp></ruby>でお<ruby><rb>金</rb><rp>(</rp><rt>かね</rt><rp>)</rp></ruby>を（ ）、<ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>い<ruby><rb>物</rb><rp>(</rp><rt>もの</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>",
     answers: {
-      だしたとき: false,
       だしたので: false,
       だしてから: true,
       だしたから: false,
+      だしたとき: false,
     },
     id: "問題ID：N5G0054",
     confirmed: true,
@@ -467,9 +509,9 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>にかぎを<ruby><rb>忘</rb><rp>(</rp><rt>わす</rt><rp>)</rp></ruby>れたので、ちょっと（ ）。\t\t<hr>",
     answers: {
-      とってみます: false,
-      とってきます: true,
       とります: false,
+      とってきます: true,
+      とってみます: false,
       とっていきます: false,
     },
     id: "問題ID：N5G0055",
@@ -492,8 +534,21 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tはじめまして。わたしは<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>（ ）。どうぞよろしくお<ruby><rb>願</rb><rp>(</rp><rt>ねが</rt><rp>)</rp></ruby>いします。\t\t<hr>",
-    answers: { なんです: false, です: true, ですから: false, さんです: false },
+    answers: { です: true, なんです: false, ですから: false, さんです: false },
     id: "問題ID：N5G0057",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      "<!-- 2 -->\n\t\tA：この<ruby><rb>地図</rb><rp>(</rp><rt>ちず</rt><rp>)</rp></ruby>を（ ）。<br>B：ええ、どうぞ。\t\t<hr>",
+    answers: {
+      もらってもいいですか: true,
+      もらったほうがいいですか: false,
+      もらっていただけませんか: false,
+      もらわなければなりませんか: false,
+    },
+    id: "問題ID：N5G0058",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -501,10 +556,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：ふくおかはどうですか。<br>B：<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ<ruby><rb>物</rb><rp>(</rp><rt>もの</rt><rp>)</rp></ruby>が（ ）<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>います。\t\t<hr>",
     answers: {
-      おいしくて: false,
       おいしいと: true,
-      おいしいし: false,
       おいしく: false,
+      おいしいし: false,
+      おいしくて: false,
     },
     id: "問題ID：N5G0059",
     confirmed: true,
@@ -513,7 +568,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎</rb><rp>(</rp><rt>まい</rt><rp>)</rp></ruby><ruby><rb>朝</rb><rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>ごはんを（ ）ながら、<ruby><rb>新聞</rb><rp>(</rp><rt>しんぶん</rt><rp>)</rp></ruby>を<ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>んでいます。\t\t<hr>",
-    answers: { たべ: true, たべる: false, たべて: false, たべます: false },
+    answers: { たべます: false, たべる: false, たべて: false, たべ: true },
     id: "問題ID：N5G0060",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -521,7 +576,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：このケーキおいしいです（ ）。<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べてみませんか。<br>B：ありがとうございます。いただきます。\t\t<hr>",
-    answers: { わ: false, よ: true, ね: false, か: false },
+    answers: { よ: true, わ: false, ね: false, か: false },
     id: "問題ID：N5G0061",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -529,7 +584,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：このケーキおいしい（ ）。<br>B：<ruby><rb>本当</rb><rp>(</rp><rt>ほんとう</rt><rp>)</rp></ruby>（ ）。※（ ）には<ruby><rb>同</rb><rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じ<ruby><rb>言葉</rb><rp>(</rp><rt>ことば</rt><rp>)</rp></ruby>が<ruby><rb>入</rb><rp>(</rp><rt>はい</rt><rp>)</rp></ruby>ります。\t\t<hr>",
-    answers: { か: false, よ: false, わ: false, ね: true },
+    answers: { か: false, ね: true, よ: false, わ: false },
     id: "問題ID：N5G0062",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -537,7 +592,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：それは（ ）ですか。<br>B：<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんのです。\t\t<hr>",
-    answers: { だれに: false, だれと: false, だれの: true, だれが: false },
+    answers: { だれの: true, だれに: false, だれが: false, だれと: false },
     id: "問題ID：N5G0063",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -546,10 +601,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：かぜですか。<ruby><rb>病院</rb><rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby>へ（ ）よ。<br>B：そうですね。<ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby>から<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>ってきます。\t\t<hr>",
     answers: {
-      いったほうがいいです: true,
       いってもいいです: false,
-      いってみます: false,
       いかなくてもいいです: false,
+      いったほうがいいです: true,
+      いってみます: false,
     },
     id: "問題ID：N5G0064",
     confirmed: true,
@@ -559,8 +614,8 @@ const QUESTIONS = [
     question: "<!-- 2 -->\n\t\tこのケーキはあまり（ ）。\t\t<hr>",
     answers: {
       あまいじゃありません: false,
-      あまかったです: false,
       あまくないです: true,
+      あまかったです: false,
       あまいです: false,
     },
     id: "問題ID：N5G0065",
@@ -570,7 +625,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t62<ruby><rb>円</rb><rp>(</rp><rt>えん</rt><rp>)</rp></ruby>のきって（ ）1<ruby><rb>枚</rb><rp>(</rp><rt>まい</rt><rp>)</rp></ruby>ください。\t\t<hr>",
-    answers: { を: true, が: false, と: false, に: false },
+    answers: { が: false, と: false, に: false, を: true },
     id: "問題ID：N5G0066",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -578,7 +633,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tこの<ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>にピアノが（ ）。\t\t<hr>",
-    answers: { います: false, ひきます: false, あります: true, します: false },
+    answers: { あります: true, します: false, ひきます: false, います: false },
     id: "問題ID：N5G0067",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -587,10 +642,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>池</rb><rp>(</rp><rt>いけ</rt><rp>)</rp></ruby>にきれいな<ruby><rb>魚</rb><rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>が（ ）。\t\t<hr>",
     answers: {
+      たべます: false,
+      およぎます: false,
       あります: false,
       います: true,
-      およぎます: false,
-      たべます: false,
     },
     id: "問題ID：N5G0068",
     confirmed: true,
@@ -598,8 +653,16 @@ const QUESTIONS = [
   },
   {
     question:
+      "<!-- 2 -->\n\t\tわたしは<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>をつくる（ ）きらいです。\t\t<hr>",
+    answers: { のが: true, のを: false, ので: false, のに: false },
+    id: "問題ID：N5G0069",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みませんか。<br>B：そうですね。\t\t<hr>",
-    answers: { が: false, に: false, か: true, を: false },
+    answers: { に: false, を: false, が: false, か: true },
     id: "問題ID：N5G0070",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -607,7 +670,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>今年</rb><rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>の<ruby><rb>誕生日</rb><rp>(</rp><rt>たんじょうび</rt><rp>)</rp></ruby>は<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）ほしい？<ruby><rb>決</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>めた？<br>B：<ruby><rb>新</rb><rp>(</rp><rt>あたら</rt><rp>)</rp></ruby>しい<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>！\t\t<hr>",
-    answers: { か: false, が: true, で: false, を: false },
+    answers: { を: false, が: true, か: false, で: false },
     id: "問題ID：N5G0071",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -629,10 +692,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tこの<ruby><rb>写真</rb><rp>(</rp><rt>しゃしん</rt><rp>)</rp></ruby>は<ruby><rb>小</rb><rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さいので、（ ）ください。\t\t<hr>",
     answers: {
+      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きいにして": false,
+      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくなって": false,
       "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくして": true,
       "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくて": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくなって": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きいにして": false,
     },
     id: "問題ID：N5G0073",
     confirmed: true,
@@ -640,8 +703,21 @@ const QUESTIONS = [
   },
   {
     question:
+      "<!-- 2 -->\n\t\tA：<ruby><rb>最近</rb><rp>(</rp><rt>さいきん</rt><rp>)</rp></ruby>、（ ）なりましたね。<br>B：そうですね。\t\t<hr>",
+    answers: {
+      "<ruby><rb>寒</rb><rp>(</rp><rt>さむ</rt><rp>)</rp></ruby>いに": false,
+      "<ruby><rb>寒</rb><rp>(</rp><rt>さむ</rt><rp>)</rp></ruby>くて": false,
+      "<ruby><rb>寒</rb><rp>(</rp><rt>さむ</rt><rp>)</rp></ruby>い": false,
+      "<ruby><rb>寒</rb><rp>(</rp><rt>さむ</rt><rp>)</rp></ruby>く": true,
+    },
+    id: "問題ID：N5G0074",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       "<!-- 2 -->\n\t\t<ruby><rb>今年</rb><rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>の<ruby><rb>夏休</rb><rp>(</rp><rt>なつやす</rt><rp>)</rp></ruby>みは1<ruby><rb>週間</rb><rp>(</rp><rt>しゅうかん</rt><rp>)</rp></ruby>（ ）<ruby><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>こうと<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>っています。\t\t<hr>",
-    answers: { くない: false, ぐらい: true, ぐない: false, うらい: false },
+    answers: { ぐない: false, くない: false, うらい: false, ぐらい: true },
     id: "問題ID：N5G0075",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -657,7 +733,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tわたしは<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby>の<ruby><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>（ ）<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>を<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しました。\t\t<hr>",
-    answers: { で: true, と: false, を: false, に: false },
+    answers: { に: false, を: false, と: false, で: true },
     id: "問題ID：N5G0077",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -665,7 +741,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tわたしは（ ）ひとりで<ruby><rb>温泉</rb><rp>(</rp><rt>おんせん</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>",
-    answers: { とても: false, ぜんぜん: false, あまり: false, ときどき: true },
+    answers: { とても: false, あまり: false, ぜんぜん: false, ときどき: true },
     id: "問題ID：N5G0078",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -674,10 +750,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby>（ ）<ruby><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>ますか。<br>B：7<ruby><rb>時間</rb><rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>ぐらい<ruby><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>ています。\t\t<hr>",
     answers: {
+      どのくらい: true,
       どうやって: false,
       なんじに: false,
       なんじかんに: false,
-      どのくらい: true,
     },
     id: "問題ID：N5G0079",
     confirmed: true,
@@ -687,10 +763,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：（ ）<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きですか。<br>B：アメリカの<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。\t\t<hr>",
     answers: {
-      どうやって: false,
-      どのくらい: false,
-      どんな: true,
       どう: false,
+      どんな: true,
+      どのくらい: false,
+      どうやって: false,
     },
     id: "問題ID：N5G0080",
     confirmed: true,
@@ -700,10 +776,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：ここは<ruby><rb>禁煙</rb><rp>(</rp><rt>きんえん</rt><rp>)</rp></ruby>ですから、たばこを（ ）。<br>B：すみません。\t\t<hr>",
     answers: {
+      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わなければなりません": false,
       "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わないでください": true,
       "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってもいいです": false,
       "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってください": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わなければなりません": false,
     },
     id: "問題ID：N5G0081",
     confirmed: true,
@@ -713,10 +789,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>の<ruby><rb>寮</rb><rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>は（ ）、とても<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>いです。\t\t<hr>",
     answers: {
-      きれくて: false,
       きれいで: true,
       きれいくて: false,
       きれで: false,
+      きれくて: false,
     },
     id: "問題ID：N5G0082",
     confirmed: true,
@@ -725,7 +801,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby>、どうやって<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きますか。<br>B：<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>",
-    answers: { を: false, で: true, と: false, に: false },
+    answers: { で: true, に: false, を: false, と: false },
     id: "問題ID：N5G0083",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -733,7 +809,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tここに<ruby><rb>住所</rb><rp>(</rp><rt>じゅうしょ</rt><rp>)</rp></ruby>と<ruby><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby><ruby><rb>番号</rb><rp>(</rp><rt>ばんごう</rt><rp>)</rp></ruby>を（ ）ください。\t\t<hr>",
-    answers: { かきて: false, かりて: false, かいて: true, かって: false },
+    answers: { かきて: false, かりて: false, かって: false, かいて: true },
     id: "問題ID：N5G0084",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -749,7 +825,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：みかんとりんごと（ ）が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きですか。<br>B：みかんのほうが<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。\t\t<hr>",
-    answers: { どうして: false, どれ: false, どちら: true, どなた: false },
+    answers: { どなた: false, どれ: false, どうして: false, どちら: true },
     id: "問題ID：N5G0086",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -765,7 +841,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>は<ruby><rb>疲</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>れましたから、<ruby><rb>早</rb><rp>(</rp><rt>はや</rt><rp>)</rp></ruby>くうち（ ）<ruby><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>りたいです。\t\t<hr>",
-    answers: { に: true, で: false, を: false, と: false },
+    answers: { で: false, を: false, と: false, に: true },
     id: "問題ID：N5G0088",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -776,8 +852,8 @@ const QUESTIONS = [
     answers: {
       じょうずくて: false,
       じょうずで: false,
-      じょうずに: true,
       じょうずく: false,
+      じょうずに: true,
     },
     id: "問題ID：N5G0089",
     confirmed: true,
@@ -786,7 +862,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tわたしは<ruby><rb>来年</rb><rp>(</rp><rt>らいねん</rt><rp>)</rp></ruby>の3<ruby><rb>月</rb><rp>(</rp><rt>がつ</rt><rp>)</rp></ruby>（ ）<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby>へ<ruby><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>ります。\t\t<hr>",
-    answers: { で: false, から: false, に: true, まで: false },
+    answers: { で: false, に: true, から: false, まで: false },
     id: "問題ID：N5G0090",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -794,7 +870,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tお<ruby><rb>店</rb><rp>(</rp><rt>みせ</rt><rp>)</rp></ruby>の<ruby><rb>前</rb><rp>(</rp><rt>まえ</rt><rp>)</rp></ruby>（ ）<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>を<ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>めないでください。\t\t<hr>",
-    answers: { で: false, まで: false, から: false, に: true },
+    answers: { に: true, まで: false, から: false, で: false },
     id: "問題ID：N5G0091",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -802,7 +878,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>魚</rb><rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>は<ruby><rb>冷蔵庫</rb><rp>(</rp><rt>れいぞうこ</rt><rp>)</rp></ruby>に（ ）から、<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べてください。\t\t<hr>",
-    answers: { います: false, おきます: false, あります: true, します: false },
+    answers: { おきます: false, います: false, あります: true, します: false },
     id: "問題ID：N5G0092",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -810,8 +886,16 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tミラーさんの<ruby><rb>隣</rb><rp>(</rp><rt>となり</rt><rp>)</rp></ruby>に（ ）<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>はだれですか。\t\t<hr>",
-    answers: { ある: false, たつ: false, いる: true, おる: false },
+    answers: { たつ: false, おる: false, いる: true, ある: false },
     id: "問題ID：N5G0093",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      "<!-- 2 -->\n\t\tA：お<ruby><rb>疲</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>れ<ruby><rb>様</rb><rp>(</rp><rt>さま</rt><rp>)</rp></ruby>でした。あしたも<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby>ですか。<br>B：いいえ、あした（ ）<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>みです。\t\t<hr>",
+    answers: { に: false, も: false, は: true, で: false },
+    id: "問題ID：N5G0094",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -840,9 +924,9 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>暑</rb><rp>(</rp><rt>あつ</rt><rp>)</rp></ruby>いですね。エアコンを（ ）か。<br>B：お<ruby><rb>願</rb><rp>(</rp><rt>ねが</rt><rp>)</rp></ruby>いします。\t\t<hr>",
     answers: {
-      つけましょう: true,
       つけました: false,
       つけています: false,
+      つけましょう: true,
       つけたいです: false,
     },
     id: "問題ID：N5G0097",
@@ -852,7 +936,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby>がんばっていますね。<br>B：はい。うち（ ）3<ruby><rb>時間</rb><rp>(</rp><rt>じかん</rt><rp>)</rp></ruby><ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しています。\t\t<hr>",
-    answers: { にも: false, とも: false, も: false, でも: true },
+    answers: { とも: false, も: false, でも: true, にも: false },
     id: "問題ID：N5G0098",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -869,8 +953,8 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>誕生日</rb><rp>(</rp><rt>たんじょうび</rt><rp>)</rp></ruby>に<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>がネクタイを（ ）。\t\t<hr>",
     answers: {
-      もらいました: false,
       あげました: false,
+      もらいました: false,
       やりました: false,
       くれました: true,
     },
@@ -881,7 +965,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>子</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>ども（ ）は、<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<ruby><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>びに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きました。\t\t<hr>",
-    answers: { さん: false, たち: true, くん: false, ちゃん: false },
+    answers: { さん: false, ちゃん: false, くん: false, たち: true },
     id: "問題ID：N5G0101",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -891,8 +975,8 @@ const QUESTIONS = [
       "<!-- 2 -->\n\t\tA：<ruby><rb>色</rb><rp>(</rp><rt>いろ</rt><rp>)</rp></ruby>はこの<ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby>から（ ）なくてはなりませんか。<br>B：ええ、お<ruby><rb>願</rb><rp>(</rp><rt>ねが</rt><rp>)</rp></ruby>いします。\t\t<hr>",
     answers: {
       "<ruby><rb>決</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>め": true,
-      "<ruby><rb>決</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>める": false,
       "<ruby><rb>決</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>めた": false,
+      "<ruby><rb>決</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>める": false,
       "<ruby><rb>決</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>めて": false,
     },
     id: "問題ID：N5G0102",
@@ -916,10 +1000,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：（ ）なったら、<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>になりたい？<br>B：お<ruby><rb>医者</rb><rp>(</rp><rt>いしゃ</rt><rp>)</rp></ruby>さんになりたい。\t\t<hr>",
     answers: {
+      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きく": true,
+      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きいに": false,
       "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくて": false,
       "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きい": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きいに": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きく": true,
     },
     id: "問題ID：N5G0104",
     confirmed: true,
@@ -937,10 +1021,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>最近</rb><rp>(</rp><rt>さいきん</rt><rp>)</rp></ruby>、<ruby><rb>体</rb><rp>(</rp><rt>からだ</rt><rp>)</rp></ruby>の<ruby><rb>調子</rb><rp>(</rp><rt>ちょうし</rt><rp>)</rp></ruby>が<ruby><rb>悪</rb><rp>(</rp><rt>わる</rt><rp>)</rp></ruby>いんです。<br>B：<ruby><rb>早</rb><rp>(</rp><rt>はや</rt><rp>)</rp></ruby>く<ruby><rb>病院</rb><rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby>へ（ ）ほうがいいですよ。\t\t<hr>",
     answers: {
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>って": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>った": true,
       "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>く": false,
+      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>った": true,
       "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>こう": false,
+      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>って": false,
     },
     id: "問題ID：N5G0106",
     confirmed: true,
@@ -950,10 +1034,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>いっしょに<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>に（ ）。<br>B：いいですね。<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きましょう。\t\t<hr>",
     answers: {
+      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きませんか": true,
+      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>くんですか": false,
       "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きましたか": false,
       "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>かないんですか": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>くんですか": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きませんか": true,
     },
     id: "問題ID：N5G0107",
     confirmed: true,
@@ -983,7 +1067,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>の<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>（ ）<ruby><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby>のお<ruby><rb>土産</rb><rp>(</rp><rt>みやげ</rt><rp>)</rp></ruby>をもらいました。\t\t<hr>",
-    answers: { に: true, の: false, と: false, で: false },
+    answers: { の: false, で: false, に: true, と: false },
     id: "問題ID：N5G0110",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -991,7 +1075,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>は<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>をしていますか。<br>B：（ ）<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ています。\t\t<hr>",
-    answers: { しばらく: false, よく: true, ずいぶん: false, とても: false },
+    answers: { とても: false, しばらく: false, ずいぶん: false, よく: true },
     id: "問題ID：N5G0111",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -1007,7 +1091,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>困</rb><rp>(</rp><rt>こま</rt><rp>)</rp></ruby>ったことがあったら、（ ）<ruby><rb>連絡</rb><rp>(</rp><rt>れんらく</rt><rp>)</rp></ruby>してくださいね。<br>B：ありがとうございます。\t\t<hr>",
-    answers: { いつでも: true, いつ: false, いつから: false, いつか: false },
+    answers: { いつから: false, いつ: false, いつか: false, いつでも: true },
     id: "問題ID：N5G0113",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -1016,10 +1100,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tA：<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>、デパートで<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>か<ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>った？<br>B：ううん。（ ）<ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>わなかった。\t\t<hr>",
     answers: {
-      "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>か": false,
       "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>": false,
-      "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>を": false,
+      "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>か": false,
       "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>も": true,
+      "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>を": false,
     },
     id: "問題ID：N5G0114",
     confirmed: true,
@@ -1028,7 +1112,7 @@ const QUESTIONS = [
   {
     question:
       "<!-- 2 -->\n\t\tエアコンが（ ）いますから、<ruby><rb>窓</rb><rp>(</rp><rt>まど</rt><rp>)</rp></ruby>を<ruby><rb>閉</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>めてください。\t\t<hr>",
-    answers: { あけて: false, あいて: false, つけて: false, ついて: true },
+    answers: { ついて: true, あけて: false, つけて: false, あいて: false },
     id: "問題ID：N5G0115",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -1037,10 +1121,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tすみません。お<ruby><rb>皿</rb><rp>(</rp><rt>さら</rt><rp>)</rp></ruby>を（ ）しまいました。\t\t<hr>",
     answers: {
-      "<ruby><rb>壊</rb><rp>(</rp><rt>こわ</rt><rp>)</rp></ruby>して": false,
-      "<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>って": true,
-      "<ruby><rb>壊</rb><rp>(</rp><rt>こわ</rt><rp>)</rp></ruby>れて": false,
       "<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>れて": false,
+      "<ruby><rb>壊</rb><rp>(</rp><rt>こわ</rt><rp>)</rp></ruby>れて": false,
+      "<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>って": true,
+      "<ruby><rb>壊</rb><rp>(</rp><rt>こわ</rt><rp>)</rp></ruby>して": false,
     },
     id: "問題ID：N5G0116",
     confirmed: true,
@@ -1050,10 +1134,10 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\tこれは<ruby><rb>去年</rb><rp>(</rp><rt>きょねん</rt><rp>)</rp></ruby>の<ruby><rb>誕生日</rb><rp>(</rp><rt>たんじょうび</rt><rp>)</rp></ruby>に<ruby><rb>母</rb><rp>(</rp><rt>はは</rt><rp>)</rp></ruby>に（ ）セーターです。\t\t<hr>",
     answers: {
-      もらったの: false,
       もらうの: false,
-      もらった: true,
       もらって: false,
+      もらった: true,
+      もらったの: false,
     },
     id: "問題ID：N5G0117",
     confirmed: true,
@@ -1063,1570 +1147,13 @@ const QUESTIONS = [
     question:
       "<!-- 2 -->\n\t\t<ruby><rb>母</rb><rp>(</rp><rt>はは</rt><rp>)</rp></ruby>のたんじょうびに<ruby><rb>花</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>を（ ）。\t\t<hr>",
     answers: {
-      いただきました: false,
       やりました: false,
-      あげました: true,
+      いただきました: false,
       くれました: false,
+      あげました: true,
     },
     id: "問題ID：﻿N5G0001",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>はテレビを<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たり、ゲームを（ ）います。		<hr>`,
-    answers: { して: false, みて: false, したり: false, したりして: true },
-    id: "問題ID：N5G0051",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みませんか。<br>B：そうですね。		<hr>`,
-    answers: { に: false, か: true, が: false, を: false },
-    id: "問題ID：N5G0070",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		テーブルの<ruby><rb>上</rb><rp>(</rp><rt>うえ</rt><rp>)</rp></ruby>にりんご（ ）バナナなどがあります。		<hr>`,
-    answers: { か: false, が: false, と: false, や: true },
-    id: "問題ID：N5G0035",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		あした<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<ruby><rb>海</rb><rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>へ（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: {
-      およぐに: false,
-      およぎに: true,
-      およいで: false,
-      およんで: false,
-    },
-    id: "問題ID：N5G0029",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>書類</rb><rp>(</rp><rt>しょるい</rt><rp>)</rp></ruby>は<ruby><rb>黒</rb><rp>(</rp><rt>くろ</rt><rp>)</rp></ruby>（ ）<ruby><rb>青</rb><rp>(</rp><rt>あお</rt><rp>)</rp></ruby>のボールペンで<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いてください。		<hr>`,
-    answers: { か: true, は: false, と: false, に: false },
-    id: "問題ID：N5G0022",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：このケーキおいしい（ ）。<br>B：<ruby><rb>本当</rb><rp>(</rp><rt>ほんとう</rt><rp>)</rp></ruby>（ ）。※（ ）には<ruby><rb>同</rb><rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じ<ruby><rb>言葉</rb><rp>(</rp><rt>ことば</rt><rp>)</rp></ruby>が<ruby><rb>入</rb><rp>(</rp><rt>はい</rt><rp>)</rp></ruby>ります。		<hr>`,
-    answers: { わ: false, か: false, ね: true, よ: false },
-    id: "問題ID：N5G0062",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>魚</rb><rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>は<ruby><rb>冷蔵庫</rb><rp>(</rp><rt>れいぞうこ</rt><rp>)</rp></ruby>に（ ）から、<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べてください。		<hr>`,
-    answers: { あります: true, います: false, します: false, おきます: false },
-    id: "問題ID：N5G0092",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）<ruby><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>をしましたか。		<hr>`,
-    answers: { もう: true, あと: false, なに: false, まだ: false },
-    id: "問題ID：N5G0013",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>へ<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>ましたか。		<hr>`,
-    answers: { なに: false, いつ: true, どこ: false, だれ: false },
-    id: "問題ID：N5G0012",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはりんご（ ）すきです。		<hr>`,
-    answers: { を: false, と: false, に: false, が: true },
-    id: "問題ID：N5G0002",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>は<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>をしていますか。<br>B：（ ）<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ています。		<hr>`,
-    answers: { よく: true, ずいぶん: false, とても: false, しばらく: false },
-    id: "問題ID：N5G0111",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ごはんを（ ）ながら、テレビを<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ないでください。		<hr>`,
-    answers: {
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べた": false,
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べて": false,
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ": true,
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べる": false,
-    },
-    id: "問題ID：N5G0019",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはりんご（ ）すきです。		<hr>`,
-    answers: { と: false, を: false, が: true, に: false },
-    id: "問題ID：N5G0002",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ここはきんえんですから、たばこを<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>っ（ ）。		<hr>`,
-    answers: {
-      てはいけません: true,
-      ています: false,
-      てください: false,
-      てみます: false,
-    },
-    id: "問題ID：N5G0008",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：このケーキおいしい（ ）。<br>B：<ruby><rb>本当</rb><rp>(</rp><rt>ほんとう</rt><rp>)</rp></ruby>（ ）。※（ ）には<ruby><rb>同</rb><rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じ<ruby><rb>言葉</rb><rp>(</rp><rt>ことば</rt><rp>)</rp></ruby>が<ruby><rb>入</rb><rp>(</rp><rt>はい</rt><rp>)</rp></ruby>ります。		<hr>`,
-    answers: { か: false, ね: true, よ: false, わ: false },
-    id: "問題ID：N5G0062",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは（ ）<ruby><rb>月</rb><rp>(</rp><rt>つき</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きたいです。		<hr>`,
-    answers: { いつか: true, いつでも: false, いつまで: false, いつ: false },
-    id: "問題ID：N5G0020",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>いっしょに<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>に（ ）。<br>B：いいですね。<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きましょう。		<hr>`,
-    answers: {
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きませんか": true,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>かないんですか": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きましたか": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>くんですか": false,
-    },
-    id: "問題ID：N5G0107",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>誕生日</rb><rp>(</rp><rt>たんじょうび</rt><rp>)</rp></ruby>に<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>がネクタイを（ ）。		<hr>`,
-    answers: {
-      あげました: false,
-      もらいました: false,
-      やりました: false,
-      くれました: true,
-    },
-    id: "問題ID：N5G0100",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはチョコレート（ ）<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。		<hr>`,
-    answers: { に: false, を: false, が: true, と: false },
-    id: "問題ID：N5G0041",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：ここは<ruby><rb>禁煙</rb><rp>(</rp><rt>きんえん</rt><rp>)</rp></ruby>ですから、たばこを（ ）。<br>B：すみません。		<hr>`,
-    answers: {
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わなければなりません": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってもいいです": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わないでください": true,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってください": false,
-    },
-    id: "問題ID：N5G0081",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしのおとうとはあまり<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>（ ）。		<hr>`,
-    answers: {
-      しました: false,
-      します: false,
-      しています: false,
-      しません: true,
-    },
-    id: "問題ID：N5G0021",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>荷物</rb><rp>(</rp><rt>にもつ</rt><rp>)</rp></ruby>が<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>いですね。1つ（ ）。<br>B：すみません。お<ruby><rb>願</rb><rp>(</rp><rt>ねが</rt><rp>)</rp></ruby>いします。		<hr>`,
-    answers: {
-      "<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ちませんか": false,
-      "<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってもいいですか": false,
-      "<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ちましょうか": true,
-      "<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってください": false,
-    },
-    id: "問題ID：N5G0108",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）めがねをかけている<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>は、<ruby><rb>山田</rb><rp>(</rp><rt>やまだ</rt><rp>)</rp></ruby><ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: { そこ: false, それ: false, あの: true, あれ: false },
-    id: "問題ID：N5G0038",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ごはんを（ ）ながら、テレビを<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ないでください。		<hr>`,
-    answers: {
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べて": false,
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べる": false,
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べた": false,
-      "<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ": true,
-    },
-    id: "問題ID：N5G0019",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはこの<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が（ ）です。		<hr>`,
-    answers: {
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たい": true,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>る": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ます": false,
-    },
-    id: "問題ID：N5G0025",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みませんか。<br>B：そうですね。		<hr>`,
-    answers: { か: true, が: false, を: false, に: false },
-    id: "問題ID：N5G0070",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>はハンサム（ ）、とても<ruby><rb>優</rb><rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しいです。		<hr>`,
-    answers: { と: false, で: true, くて: false, し: false },
-    id: "問題ID：N5G0053",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしの<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>は20<ruby><rb>年</rb><rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>まえからぎんこうで（ ）。		<hr>`,
-    answers: {
-      はたらきました: false,
-      はたらきたいです: false,
-      はたらいています: true,
-      はたらきました: false,
-    },
-    id: "問題ID：N5G0027",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		あしたは９<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>（ ）あなたのうちへ<ruby><rb>迎</rb><rp>(</rp><rt>むか</rt><rp>)</rp></ruby>えに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: {
-      まで: false,
-      "<ruby><rb>半</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby>": false,
-      ぐらい: false,
-      ごろ: true,
-    },
-    id: "問題ID：N5G0004",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>図</rb><rp>(</rp><rt>ず</rt><rp>)</rp></ruby>はちょっと<ruby><rb>小</rb><rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さいので、もうすこし（ ）してください。		<hr>`,
-    answers: {
-      おおきい: false,
-      おおきいに: false,
-      おおきく: true,
-      おおきいで: false,
-    },
-    id: "問題ID：N5G0046",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>魚</rb><rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>は<ruby><rb>冷蔵庫</rb><rp>(</rp><rt>れいぞうこ</rt><rp>)</rp></ruby>に（ ）から、<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べてください。		<hr>`,
-    answers: { おきます: false, います: false, します: false, あります: true },
-    id: "問題ID：N5G0092",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		このスーパーは（ ）、<ruby><rb>品物</rb><rp>(</rp><rt>しなもの</rt><rp>)</rp></ruby>も<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>いです。		<hr>`,
-    answers: {
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>いで": false,
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>いので": false,
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>くて": true,
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>かった": false,
-    },
-    id: "問題ID：N5G0024",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		これはサパナさん（ ）つくったケーキです。		<hr>`,
-    answers: { まで: false, から: false, で: false, の: true },
-    id: "問題ID：N5G0030",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはおさらを<ruby><rb>洗</rb><rp>(</rp><rt>あら</rt><rp>)</rp></ruby>う（ ）きらいです。		<hr>`,
-    answers: { のを: false, のが: true, のに: false, ので: false },
-    id: "問題ID：N5G0015",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>にピアノが（ ）。		<hr>`,
-    answers: { あります: true, います: false, します: false, ひきます: false },
-    id: "問題ID：N5G0067",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>はテレビを<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たり、ゲームを（ ）います。		<hr>`,
-    answers: { したり: false, して: false, みて: false, したりして: true },
-    id: "問題ID：N5G0051",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>へ<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>ましたか。		<hr>`,
-    answers: { だれ: false, なに: false, いつ: true, どこ: false },
-    id: "問題ID：N5G0012",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>の<ruby><rb>寮</rb><rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>は（ ）、とても<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>いです。		<hr>`,
-    answers: {
-      きれいで: true,
-      きれいくて: false,
-      きれで: false,
-      きれくて: false,
-    },
-    id: "問題ID：N5G0082",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎</rb><rp>(</rp><rt>まい</rt><rp>)</rp></ruby><ruby><rb>朝</rb><rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>ごはんを（ ）ながら、<ruby><rb>新聞</rb><rp>(</rp><rt>しんぶん</rt><rp>)</rp></ruby>を<ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>んでいます。		<hr>`,
-    answers: { たべます: false, たべる: false, たべて: false, たべ: true },
-    id: "問題ID：N5G0060",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		エアコンが（ ）いますから、<ruby><rb>窓</rb><rp>(</rp><rt>まど</rt><rp>)</rp></ruby>を<ruby><rb>閉</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>めてください。		<hr>`,
-    answers: { ついて: true, あけて: false, つけて: false, あいて: false },
-    id: "問題ID：N5G0115",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）<ruby><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>をしましたか。		<hr>`,
-    answers: { あと: false, なに: false, もう: true, まだ: false },
-    id: "問題ID：N5G0013",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みませんか。<br>B：そうですね。		<hr>`,
-    answers: { か: true, を: false, が: false, に: false },
-    id: "問題ID：N5G0070",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今年</rb><rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>の<ruby><rb>夏休</rb><rp>(</rp><rt>なつやす</rt><rp>)</rp></ruby>みは1<ruby><rb>週間</rb><rp>(</rp><rt>しゅうかん</rt><rp>)</rp></ruby>（ ）<ruby><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>こうと<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>っています。		<hr>`,
-    answers: { ぐない: false, くない: false, うらい: false, ぐらい: true },
-    id: "問題ID：N5G0075",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：この<ruby><rb>地図</rb><rp>(</rp><rt>ちず</rt><rp>)</rp></ruby>を（ ）。<br>B：ええ、どうぞ。		<hr>`,
-    answers: {
-      もらっていただけませんか: false,
-      もらったほうがいいですか: false,
-      もらわなければなりませんか: false,
-      もらってもいいですか: true,
-    },
-    id: "問題ID：N5G0058",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：すみません。（ ）りんごはいくらですか。<br>B：1つ100<ruby><rb>円</rb><rp>(</rp><rt>えん</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: { そこ: false, どの: false, その: true, それ: false },
-    id: "問題ID：N5G0048",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：ここは<ruby><rb>禁煙</rb><rp>(</rp><rt>きんえん</rt><rp>)</rp></ruby>ですから、たばこを（ ）。<br>B：すみません。		<hr>`,
-    answers: {
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わなければなりません": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わないでください": true,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってもいいです": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってください": false,
-    },
-    id: "問題ID：N5G0081",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>の（ ）<ruby><rb>方</rb><rp>(</rp><rt>かた</rt><rp>)</rp></ruby>を<ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えていただけませんか。		<hr>`,
-    answers: { つくって: false, つくった: false, つくる: false, つくり: true },
-    id: "問題ID：N5G0042",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：この<ruby><rb>地図</rb><rp>(</rp><rt>ちず</rt><rp>)</rp></ruby>を（ ）。<br>B：ええ、どうぞ。		<hr>`,
-    answers: {
-      もらわなければなりませんか: false,
-      もらっていただけませんか: false,
-      もらってもいいですか: true,
-      もらったほうがいいですか: false,
-    },
-    id: "問題ID：N5G0058",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		すみません。お<ruby><rb>皿</rb><rp>(</rp><rt>さら</rt><rp>)</rp></ruby>を（ ）しまいました。		<hr>`,
-    answers: {
-      "<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>れて": false,
-      "<ruby><rb>壊</rb><rp>(</rp><rt>こわ</rt><rp>)</rp></ruby>れて": false,
-      "<ruby><rb>壊</rb><rp>(</rp><rt>こわ</rt><rp>)</rp></ruby>して": false,
-      "<ruby><rb>割</rb><rp>(</rp><rt>わ</rt><rp>)</rp></ruby>って": true,
-    },
-    id: "問題ID：N5G0116",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはサントスです。ネパール（ ）きました。		<hr>`,
-    answers: { まで: false, と: false, から: true, に: false },
-    id: "問題ID：N5G0023",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby>、どうやって<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きますか。<br>B：<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { で: true, を: false, に: false, と: false },
-    id: "問題ID：N5G0083",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		パーティーのまえに<ruby><rb>花</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>をかざって（ ）。		<hr>`,
-    answers: { おきます: true, います: false, あります: false, します: false },
-    id: "問題ID：N5G0003",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：この<ruby><rb>地図</rb><rp>(</rp><rt>ちず</rt><rp>)</rp></ruby>を（ ）。<br>B：ええ、どうぞ。		<hr>`,
-    answers: {
-      もらってもいいですか: true,
-      もらったほうがいいですか: false,
-      もらっていただけませんか: false,
-      もらわなければなりませんか: false,
-    },
-    id: "問題ID：N5G0058",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		となりの<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>からピアノの<ruby><rb>音</rb><rp>(</rp><rt>おと</rt><rp>)</rp></ruby>が（ ）。		<hr>`,
-    answers: {
-      きけます: false,
-      ききます: false,
-      きこえます: true,
-      きこえられます: false,
-    },
-    id: "問題ID：N5G0045",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは（ ）ひとりで<ruby><rb>温泉</rb><rp>(</rp><rt>おんせん</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { あまり: false, とても: false, ときどき: true, ぜんぜん: false },
-    id: "問題ID：N5G0078",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：（ ）なったら、<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>になりたい？<br>B：お<ruby><rb>医者</rb><rp>(</rp><rt>いしゃ</rt><rp>)</rp></ruby>さんになりたい。		<hr>`,
-    answers: {
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きく": true,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きいに": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくて": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きい": false,
-    },
-    id: "問題ID：N5G0104",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：すみません。お<ruby><rb>手洗</rb><rp>(</rp><rt>てあら</rt><rp>)</rp></ruby>いは（ ）ですか。<br>B：そちらです。		<hr>`,
-    answers: { どの: false, どこ: true, どれ: false, どう: false },
-    id: "問題ID：N5G0087",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby>の<ruby><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>（ ）<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>を<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しました。		<hr>`,
-    answers: { を: false, に: false, と: false, で: true },
-    id: "問題ID：N5G0077",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは（ ）<ruby><rb>月</rb><rp>(</rp><rt>つき</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きたいです。		<hr>`,
-    answers: { いつ: false, いつでも: false, いつか: true, いつまで: false },
-    id: "問題ID：N5G0020",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>写真</rb><rp>(</rp><rt>しゃしん</rt><rp>)</rp></ruby>は<ruby><rb>小</rb><rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さいので、（ ）ください。		<hr>`,
-    answers: {
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくして": true,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくて": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きいにして": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくなって": false,
-    },
-    id: "問題ID：N5G0073",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		パーティーのまえに<ruby><rb>花</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>をかざって（ ）。		<hr>`,
-    answers: { います: false, あります: false, します: false, おきます: true },
-    id: "問題ID：N5G0003",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		これは<ruby><rb>去年</rb><rp>(</rp><rt>きょねん</rt><rp>)</rp></ruby>の<ruby><rb>誕生日</rb><rp>(</rp><rt>たんじょうび</rt><rp>)</rp></ruby>に<ruby><rb>母</rb><rp>(</rp><rt>はは</rt><rp>)</rp></ruby>に（ ）セーターです。		<hr>`,
-    answers: {
-      もらった: true,
-      もらうの: false,
-      もらったの: false,
-      もらって: false,
-    },
-    id: "問題ID：N5G0117",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>荷物</rb><rp>(</rp><rt>にもつ</rt><rp>)</rp></ruby>が<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>いですね。1つ（ ）。<br>B：すみません。お<ruby><rb>願</rb><rp>(</rp><rt>ねが</rt><rp>)</rp></ruby>いします。		<hr>`,
-    answers: {
-      "<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってください": false,
-      "<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ちましょうか": true,
-      "<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってもいいですか": false,
-      "<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ちませんか": false,
-    },
-    id: "問題ID：N5G0108",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby>がんばっていますね。<br>B：はい。うち（ ）3<ruby><rb>時間</rb><rp>(</rp><rt>じかん</rt><rp>)</rp></ruby><ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しています。		<hr>`,
-    answers: { でも: true, も: false, とも: false, にも: false },
-    id: "問題ID：N5G0098",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		あしたは<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>を<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>みます。びょういんへ（ ）。		<hr>`,
-    answers: {
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>くんです": true,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きませんか": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きません": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きましょう": false,
-    },
-    id: "問題ID：N5G0014",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしのおとうとはあまり<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>（ ）。		<hr>`,
-    answers: {
-      します: false,
-      しています: false,
-      しました: false,
-      しません: true,
-    },
-    id: "問題ID：N5G0021",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは<ruby><rb>音楽</rb><rp>(</rp><rt>おんがく</rt><rp>)</rp></ruby>がすきです。（ ）、クラシックやジャズなどです。		<hr>`,
-    answers: {
-      こんどは: false,
-      といえば: false,
-      ところで: false,
-      たとえば: true,
-    },
-    id: "問題ID：N5G0006",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>写真</rb><rp>(</rp><rt>しゃしん</rt><rp>)</rp></ruby>は<ruby><rb>小</rb><rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さいので、（ ）ください。		<hr>`,
-    answers: {
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくして": true,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくなって": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくて": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きいにして": false,
-    },
-    id: "問題ID：N5G0073",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはサントスです。ネパール（ ）きました。		<hr>`,
-    answers: { から: true, まで: false, と: false, に: false },
-    id: "問題ID：N5G0023",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしの<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>の<ruby><rb>窓</rb><rp>(</rp><rt>まど</rt><rp>)</rp></ruby>から<ruby><rb>海</rb><rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>が（ ）。		<hr>`,
-    answers: {
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>せます": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>られます": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>えます": true,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ます": false,
-    },
-    id: "問題ID：N5G0072",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）<ruby><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>をしましたか。		<hr>`,
-    answers: { なに: false, あと: false, まだ: false, もう: true },
-    id: "問題ID：N5G0013",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしの<ruby><rb>息子</rb><rp>(</rp><rt>むすこ</rt><rp>)</rp></ruby>はとても（ ）<ruby><rb>絵</rb><rp>(</rp><rt>え</rt><rp>)</rp></ruby>をかきます。		<hr>`,
-    answers: {
-      じょうずに: true,
-      じょうずく: false,
-      じょうずくて: false,
-      じょうずで: false,
-    },
-    id: "問題ID：N5G0089",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		メールをおくる（ ）、ぶちょうに<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>せてください。		<hr>`,
-    answers: { さきに: false, まえに: true, ときに: false, ので: false },
-    id: "問題ID：N5G0032",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはえいごが（ ）わかりません。		<hr>`,
-    answers: {
-      きっと: false,
-      ずいぶん: false,
-      たいてい: false,
-      ぜんぜん: true,
-    },
-    id: "問題ID：N5G0005",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>は<ruby><rb>疲</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>れましたから、<ruby><rb>早</rb><rp>(</rp><rt>はや</rt><rp>)</rp></ruby>くうち（ ）<ruby><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>りたいです。		<hr>`,
-    answers: { に: true, で: false, と: false, を: false },
-    id: "問題ID：N5G0088",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		はじめまして。わたしは<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>（ ）。どうぞよろしくお<ruby><rb>願</rb><rp>(</rp><rt>ねが</rt><rp>)</rp></ruby>いします。		<hr>`,
-    answers: { です: true, なんです: false, ですから: false, さんです: false },
-    id: "問題ID：N5G0057",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）<ruby><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>をしましたか。		<hr>`,
-    answers: { なに: false, まだ: false, もう: true, あと: false },
-    id: "問題ID：N5G0013",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby>、どうやって<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きますか。<br>B：<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { で: true, に: false, を: false, と: false },
-    id: "問題ID：N5G0083",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはチョコレート（ ）<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。		<hr>`,
-    answers: { に: false, が: true, を: false, と: false },
-    id: "問題ID：N5G0041",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みませんか。<br>B：そうですね。		<hr>`,
-    answers: { に: false, が: false, か: true, を: false },
-    id: "問題ID：N5G0070",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしの<ruby><rb>息子</rb><rp>(</rp><rt>むすこ</rt><rp>)</rp></ruby>はとても（ ）<ruby><rb>絵</rb><rp>(</rp><rt>え</rt><rp>)</rp></ruby>をかきます。		<hr>`,
-    answers: {
-      じょうずくて: false,
-      じょうずで: false,
-      じょうずく: false,
-      じょうずに: true,
-    },
-    id: "問題ID：N5G0089",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>図</rb><rp>(</rp><rt>ず</rt><rp>)</rp></ruby>はちょっと<ruby><rb>小</rb><rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さいので、もうすこし（ ）してください。		<hr>`,
-    answers: {
-      おおきく: true,
-      おおきい: false,
-      おおきいに: false,
-      おおきいで: false,
-    },
-    id: "問題ID：N5G0046",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは<ruby><rb>来年</rb><rp>(</rp><rt>らいねん</rt><rp>)</rp></ruby>の3<ruby><rb>月</rb><rp>(</rp><rt>がつ</rt><rp>)</rp></ruby>（ ）<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby>へ<ruby><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>ります。		<hr>`,
-    answers: { まで: false, から: false, に: true, で: false },
-    id: "問題ID：N5G0090",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今朝</rb><rp>(</rp><rt>けさ</rt><rp>)</rp></ruby>なんじに<ruby><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>きた（ ）<ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えてください。		<hr>`,
-    answers: { の: false, に: false, か: true, と: false },
-    id: "問題ID：N5G0036",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby>がんばっていますね。<br>B：はい。うち（ ）3<ruby><rb>時間</rb><rp>(</rp><rt>じかん</rt><rp>)</rp></ruby><ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しています。		<hr>`,
-    answers: { とも: false, も: false, でも: true, にも: false },
-    id: "問題ID：N5G0098",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>最近</rb><rp>(</rp><rt>さいきん</rt><rp>)</rp></ruby>、<ruby><rb>体</rb><rp>(</rp><rt>からだ</rt><rp>)</rp></ruby>の<ruby><rb>調子</rb><rp>(</rp><rt>ちょうし</rt><rp>)</rp></ruby>が<ruby><rb>悪</rb><rp>(</rp><rt>わる</rt><rp>)</rp></ruby>いんです。<br>B：<ruby><rb>早</rb><rp>(</rp><rt>はや</rt><rp>)</rp></ruby>く<ruby><rb>病院</rb><rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby>へ（ ）ほうがいいですよ。		<hr>`,
-    answers: {
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>く": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>った": true,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>こう": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>って": false,
-    },
-    id: "問題ID：N5G0106",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはりんごよりみかんの（ ）がすきです。		<hr>`,
-    answers: { より: false, から: false, まで: false, ほう: true },
-    id: "問題ID：N5G0040",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>にピアノが（ ）。		<hr>`,
-    answers: { います: false, あります: true, ひきます: false, します: false },
-    id: "問題ID：N5G0067",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		このケーキはあまり（ ）。		<hr>`,
-    answers: {
-      あまくないです: true,
-      あまいじゃありません: false,
-      あまいです: false,
-      あまかったです: false,
-    },
-    id: "問題ID：N5G0065",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：このケーキおいしいです（ ）。<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べてみませんか。<br>B：ありがとうございます。いただきます。		<hr>`,
-    answers: { よ: true, わ: false, ね: false, か: false },
-    id: "問題ID：N5G0061",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		くだものでなに（ ）いちばん<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きですか。		<hr>`,
-    answers: { を: false, で: false, が: true, と: false },
-    id: "問題ID：N5G0039",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>困</rb><rp>(</rp><rt>こま</rt><rp>)</rp></ruby>ったことがあったら、（ ）<ruby><rb>連絡</rb><rp>(</rp><rt>れんらく</rt><rp>)</rp></ruby>してくださいね。<br>B：ありがとうございます。		<hr>`,
-    answers: { いつから: false, いつ: false, いつか: false, いつでも: true },
-    id: "問題ID：N5G0113",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		カップラーメンはお<ruby><rb>湯</rb><rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby>を<ruby><rb>入</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>れる（ ）で<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べられます。		<hr>`,
-    answers: { さえ: false, だけ: true, しか: false, のみ: false },
-    id: "問題ID：N5G0049",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		あしたは<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>を<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>みます。びょういんへ（ ）。		<hr>`,
-    answers: {
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きましょう": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きませんか": false,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>くんです": true,
-      "<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きません": false,
-    },
-    id: "問題ID：N5G0014",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>にピアノが（ ）。		<hr>`,
-    answers: { ひきます: false, います: false, します: false, あります: true },
-    id: "問題ID：N5G0067",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		これは<ruby><rb>去年</rb><rp>(</rp><rt>きょねん</rt><rp>)</rp></ruby>の<ruby><rb>誕生日</rb><rp>(</rp><rt>たんじょうび</rt><rp>)</rp></ruby>に<ruby><rb>母</rb><rp>(</rp><rt>はは</rt><rp>)</rp></ruby>に（ ）セーターです。		<hr>`,
-    answers: {
-      もらうの: false,
-      もらって: false,
-      もらった: true,
-      もらったの: false,
-    },
-    id: "問題ID：N5G0117",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>子</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>ども（ ）は、<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<ruby><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>びに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きました。		<hr>`,
-    answers: { たち: true, さん: false, ちゃん: false, くん: false },
-    id: "問題ID：N5G0101",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>魚</rb><rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>は<ruby><rb>冷蔵庫</rb><rp>(</rp><rt>れいぞうこ</rt><rp>)</rp></ruby>に（ ）から、<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べてください。		<hr>`,
-    answers: { おきます: false, います: false, あります: true, します: false },
-    id: "問題ID：N5G0092",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは<ruby><rb>音楽</rb><rp>(</rp><rt>おんがく</rt><rp>)</rp></ruby>がすきです。（ ）、クラシックやジャズなどです。		<hr>`,
-    answers: {
-      といえば: false,
-      たとえば: true,
-      ところで: false,
-      こんどは: false,
-    },
-    id: "問題ID：N5G0006",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>写真</rb><rp>(</rp><rt>しゃしん</rt><rp>)</rp></ruby>は<ruby><rb>小</rb><rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さいので、（ ）ください。		<hr>`,
-    answers: {
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくて": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくして": true,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きくなって": false,
-      "<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きいにして": false,
-    },
-    id: "問題ID：N5G0073",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはこの<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が（ ）です。		<hr>`,
-    answers: {
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たい": true,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ます": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>る": false,
-    },
-    id: "問題ID：N5G0025",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>暑</rb><rp>(</rp><rt>あつ</rt><rp>)</rp></ruby>いですね。エアコンを（ ）か。<br>B：お<ruby><rb>願</rb><rp>(</rp><rt>ねが</rt><rp>)</rp></ruby>いします。		<hr>`,
-    answers: {
-      つけています: false,
-      つけましょう: true,
-      つけました: false,
-      つけたいです: false,
-    },
-    id: "問題ID：N5G0097",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>、デパートで<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>か<ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>った？<br>B：ううん。（ ）<ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>わなかった。		<hr>`,
-    answers: {
-      "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>": false,
-      "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>か": false,
-      "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>も": true,
-      "<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>を": false,
-    },
-    id: "問題ID：N5G0114",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：ふくおかはどうですか。<br>B：<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ<ruby><rb>物</rb><rp>(</rp><rt>もの</rt><rp>)</rp></ruby>が（ ）<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>います。		<hr>`,
-    answers: {
-      おいしいと: true,
-      おいしく: false,
-      おいしいし: false,
-      おいしくて: false,
-    },
-    id: "問題ID：N5G0059",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>まで（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きますか。		<hr>`,
-    answers: { どう: false, どんな: false, どこで: false, どうやって: true },
-    id: "問題ID：N5G0028",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		パーティーのまえに<ruby><rb>花</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>をかざって（ ）。		<hr>`,
-    answers: { います: false, します: false, あります: false, おきます: true },
-    id: "問題ID：N5G0003",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>今年</rb><rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>の<ruby><rb>誕生日</rb><rp>(</rp><rt>たんじょうび</rt><rp>)</rp></ruby>は<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）ほしい？<ruby><rb>決</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>めた？<br>B：<ruby><rb>新</rb><rp>(</rp><rt>あたら</rt><rp>)</rp></ruby>しい<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>！		<hr>`,
-    answers: { か: false, が: true, を: false, で: false },
-    id: "問題ID：N5G0071",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		お<ruby><rb>店</rb><rp>(</rp><rt>みせ</rt><rp>)</rp></ruby>の<ruby><rb>前</rb><rp>(</rp><rt>まえ</rt><rp>)</rp></ruby>（ ）<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>を<ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>めないでください。		<hr>`,
-    answers: { に: true, で: false, まで: false, から: false },
-    id: "問題ID：N5G0091",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>は<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>をしていますか。<br>B：（ ）<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ています。		<hr>`,
-    answers: { しばらく: false, ずいぶん: false, よく: true, とても: false },
-    id: "問題ID：N5G0111",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		このスーパーは（ ）、<ruby><rb>品物</rb><rp>(</rp><rt>しなもの</rt><rp>)</rp></ruby>も<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>いです。		<hr>`,
-    answers: {
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>かった": false,
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>いので": false,
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>いで": false,
-      "<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>くて": true,
-    },
-    id: "問題ID：N5G0024",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>へ<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>ましたか。		<hr>`,
-    answers: { いつ: true, どこ: false, なに: false, だれ: false },
-    id: "問題ID：N5G0012",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>をつくる（ ）きらいです。		<hr>`,
-    answers: { のが: true, のを: false, ので: false, のに: false },
-    id: "問題ID：N5G0069",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		くだものでなに（ ）いちばん<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きですか。		<hr>`,
-    answers: { と: false, を: false, が: true, で: false },
-    id: "問題ID：N5G0039",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>母</rb><rp>(</rp><rt>はは</rt><rp>)</rp></ruby>のたんじょうびに<ruby><rb>花</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>を（ ）。		<hr>`,
-    answers: {
-      やりました: false,
-      いただきました: false,
-      くれました: false,
-      あげました: true,
-    },
-    id: "問題ID：﻿N5G0001",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：ここは<ruby><rb>禁煙</rb><rp>(</rp><rt>きんえん</rt><rp>)</rp></ruby>ですから、たばこを（ ）。<br>B：すみません。		<hr>`,
-    answers: {
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってもいいです": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わないでください": true,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってください": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わなければなりません": false,
-    },
-    id: "問題ID：N5G0081",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：それは（ ）ですか。<br>B：<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんのです。		<hr>`,
-    answers: { だれの: true, だれに: false, だれが: false, だれと: false },
-    id: "問題ID：N5G0063",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはりんご（ ）すきです。		<hr>`,
-    answers: { を: false, と: false, が: true, に: false },
-    id: "問題ID：N5G0002",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）めがねをかけている<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>は、<ruby><rb>山田</rb><rp>(</rp><rt>やまだ</rt><rp>)</rp></ruby><ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: { あの: true, そこ: false, それ: false, あれ: false },
-    id: "問題ID：N5G0038",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはおさらを<ruby><rb>洗</rb><rp>(</rp><rt>あら</rt><rp>)</rp></ruby>う（ ）きらいです。		<hr>`,
-    answers: { ので: false, のが: true, のを: false, のに: false },
-    id: "問題ID：N5G0015",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはりんご（ ）すきです。		<hr>`,
-    answers: { と: false, に: false, が: true, を: false },
-    id: "問題ID：N5G0002",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ミラーさんの<ruby><rb>隣</rb><rp>(</rp><rt>となり</rt><rp>)</rp></ruby>に（ ）<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>はだれですか。		<hr>`,
-    answers: { たつ: false, おる: false, いる: true, ある: false },
-    id: "問題ID：N5G0093",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		きのうは（ ）<ruby><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>られませんでした。		<hr>`,
-    answers: {
-      あついので: false,
-      あつくて: true,
-      あついですから: false,
-      あつかって: false,
-    },
-    id: "問題ID：N5G0047",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは（ ）ひとりで<ruby><rb>温泉</rb><rp>(</rp><rt>おんせん</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { とても: false, あまり: false, ぜんぜん: false, ときどき: true },
-    id: "問題ID：N5G0078",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		（ ）<ruby><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>をしましたか。		<hr>`,
-    answers: { まだ: false, もう: true, あと: false, なに: false },
-    id: "問題ID：N5G0013",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>今年</rb><rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>の<ruby><rb>誕生日</rb><rp>(</rp><rt>たんじょうび</rt><rp>)</rp></ruby>は<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）ほしい？<ruby><rb>決</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>めた？<br>B：<ruby><rb>新</rb><rp>(</rp><rt>あたら</rt><rp>)</rp></ruby>しい<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>！		<hr>`,
-    answers: { で: false, を: false, か: false, が: true },
-    id: "問題ID：N5G0071",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>銀行</rb><rp>(</rp><rt>ぎんこう</rt><rp>)</rp></ruby>でお<ruby><rb>金</rb><rp>(</rp><rt>かね</rt><rp>)</rp></ruby>を（ ）、<ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>い<ruby><rb>物</rb><rp>(</rp><rt>もの</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: {
-      だしてから: true,
-      だしたので: false,
-      だしたから: false,
-      だしたとき: false,
-    },
-    id: "問題ID：N5G0054",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>（ ）<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みませんか。<br>B：そうですね。		<hr>`,
-    answers: { に: false, を: false, が: false, か: true },
-    id: "問題ID：N5G0070",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは<ruby><rb>来年</rb><rp>(</rp><rt>らいねん</rt><rp>)</rp></ruby>の3<ruby><rb>月</rb><rp>(</rp><rt>がつ</rt><rp>)</rp></ruby>（ ）<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby>へ<ruby><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>ります。		<hr>`,
-    answers: { で: false, に: true, から: false, まで: false },
-    id: "問題ID：N5G0090",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		となりの<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>からピアノの<ruby><rb>音</rb><rp>(</rp><rt>おと</rt><rp>)</rp></ruby>が（ ）。		<hr>`,
-    answers: {
-      きけます: false,
-      きこえます: true,
-      ききます: false,
-      きこえられます: false,
-    },
-    id: "問題ID：N5G0045",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはこの<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が（ ）です。		<hr>`,
-    answers: {
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たい": true,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>る": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ます": false,
-    },
-    id: "問題ID：N5G0025",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしは<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby>の<ruby><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>（ ）<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>を<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しました。		<hr>`,
-    answers: { に: false, で: true, を: false, と: false },
-    id: "問題ID：N5G0077",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>は<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>をしていますか。<br>B：（ ）<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ています。		<hr>`,
-    answers: { とても: false, ずいぶん: false, しばらく: false, よく: true },
-    id: "問題ID：N5G0111",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：みかんとりんごと（ ）が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きですか。<br>B：みかんのほうが<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。		<hr>`,
-    answers: { どなた: false, どれ: false, どうして: false, どちら: true },
-    id: "問題ID：N5G0086",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：かぜですか。<ruby><rb>病院</rb><rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby>へ（ ）よ。<br>B：そうですね。<ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby>から<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>ってきます。		<hr>`,
-    answers: {
-      いってみます: false,
-      いったほうがいいです: true,
-      いってもいいです: false,
-      いかなくてもいいです: false,
-    },
-    id: "問題ID：N5G0064",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>にピアノが（ ）。		<hr>`,
-    answers: { あります: true, します: false, ひきます: false, います: false },
-    id: "問題ID：N5G0067",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：ここは<ruby><rb>禁煙</rb><rp>(</rp><rt>きんえん</rt><rp>)</rp></ruby>ですから、たばこを（ ）。<br>B：すみません。		<hr>`,
-    answers: {
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わなければなりません": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>わないでください": true,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってもいいです": false,
-      "<ruby><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ってください": false,
-    },
-    id: "問題ID：N5G0081",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>昼</rb><rp>(</rp><rt>ひる</rt><rp>)</rp></ruby>ご<ruby><rb>飯</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby>を<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べた（ ）、<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>にいきます。		<hr>`,
-    answers: { まえに: false, つぎに: false, あとで: true, さきに: false },
-    id: "問題ID：N5G0037",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはこの<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が（ ）です。		<hr>`,
-    answers: {
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ます": false,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>たい": true,
-      "<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>る": false,
-    },
-    id: "問題ID：N5G0025",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		メールをおくる（ ）、ぶちょうに<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>せてください。		<hr>`,
-    answers: { ときに: false, まえに: true, ので: false, さきに: false },
-    id: "問題ID：N5G0032",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>のかいぎは9<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>から11<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>（ ）です。		<hr>`,
-    answers: { など: false, まで: true, だけ: false, しか: false },
-    id: "問題ID：N5G0044",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		お<ruby><rb>店</rb><rp>(</rp><rt>みせ</rt><rp>)</rp></ruby>の<ruby><rb>前</rb><rp>(</rp><rt>まえ</rt><rp>)</rp></ruby>（ ）<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>を<ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>めないでください。		<hr>`,
-    answers: { に: true, まで: false, から: false, で: false },
-    id: "問題ID：N5G0091",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		メールをおくる（ ）、ぶちょうに<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>せてください。		<hr>`,
-    answers: { ときに: false, まえに: true, さきに: false, ので: false },
-    id: "問題ID：N5G0032",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしの<ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>は<ruby><rb>駅</rb><rp>(</rp><rt>えき</rt><rp>)</rp></ruby>のまえ（ ）あります。		<hr>`,
-    answers: { に: true, から: false, まで: false, で: false },
-    id: "問題ID：N5G0010",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		62<ruby><rb>円</rb><rp>(</rp><rt>えん</rt><rp>)</rp></ruby>のきって（ ）1<ruby><rb>枚</rb><rp>(</rp><rt>まい</rt><rp>)</rp></ruby>ください。		<hr>`,
-    answers: { が: false, と: false, に: false, を: true },
-    id: "問題ID：N5G0066",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>子</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>ども（ ）は、<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<ruby><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>びに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きました。		<hr>`,
-    answers: { さん: false, たち: true, くん: false, ちゃん: false },
-    id: "問題ID：N5G0101",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>まで（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きますか。		<hr>`,
-    answers: { どうやって: true, どう: false, どこで: false, どんな: false },
-    id: "問題ID：N5G0028",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ここに<ruby><rb>住所</rb><rp>(</rp><rt>じゅうしょ</rt><rp>)</rp></ruby>と<ruby><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby><ruby><rb>番号</rb><rp>(</rp><rt>ばんごう</rt><rp>)</rp></ruby>を（ ）ください。		<hr>`,
-    answers: { かって: false, かいて: true, かりて: false, かきて: false },
-    id: "問題ID：N5G0084",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		はじめまして。わたし（ ）キムです。よろしくおねがいします。		<hr>`,
-    answers: { に: false, は: true, が: false, の: false },
-    id: "問題ID：N5G0031",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>昼</rb><rp>(</rp><rt>ひる</rt><rp>)</rp></ruby>ご<ruby><rb>飯</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby>を<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べた（ ）、<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>にいきます。		<hr>`,
-    answers: { さきに: false, つぎに: false, あとで: true, まえに: false },
-    id: "問題ID：N5G0037",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>まで（ ）<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きますか。		<hr>`,
-    answers: { どこで: false, どんな: false, どう: false, どうやって: true },
-    id: "問題ID：N5G0028",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>は<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>をしていますか。<br>B：（ ）<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ています。		<hr>`,
-    answers: { とても: false, しばらく: false, ずいぶん: false, よく: true },
-    id: "問題ID：N5G0111",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>の<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>（ ）<ruby><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby>のお<ruby><rb>土産</rb><rp>(</rp><rt>みやげ</rt><rp>)</rp></ruby>をもらいました。		<hr>`,
-    answers: { の: false, で: false, に: true, と: false },
-    id: "問題ID：N5G0110",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>はハンサム（ ）、とても<ruby><rb>優</rb><rp>(</rp><rt>やさ</rt><rp>)</rp></ruby>しいです。		<hr>`,
-    answers: { し: false, で: true, と: false, くて: false },
-    id: "問題ID：N5G0053",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしはサントスです。ネパール（ ）きました。		<hr>`,
-    answers: { と: false, まで: false, に: false, から: true },
-    id: "問題ID：N5G0023",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>池</rb><rp>(</rp><rt>いけ</rt><rp>)</rp></ruby>にきれいな<ruby><rb>魚</rb><rp>(</rp><rt>さかな</rt><rp>)</rp></ruby>が（ ）。		<hr>`,
-    answers: {
-      たべます: false,
-      およぎます: false,
-      あります: false,
-      います: true,
-    },
-    id: "問題ID：N5G0068",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：お<ruby><rb>疲</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>れ<ruby><rb>様</rb><rp>(</rp><rt>さま</rt><rp>)</rp></ruby>でした。あしたも<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby>ですか。<br>B：いいえ、あした（ ）<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>みです。		<hr>`,
-    answers: { に: false, も: false, は: true, で: false },
-    id: "問題ID：N5G0094",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：すみません。お<ruby><rb>手洗</rb><rp>(</rp><rt>てあら</rt><rp>)</rp></ruby>いは（ ）ですか。<br>B：そちらです。		<hr>`,
-    answers: { どの: false, どう: false, どれ: false, どこ: true },
-    id: "問題ID：N5G0087",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		わたしの<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>はアメリカで<ruby><rb>英語</rb><rp>(</rp><rt>えいご</rt><rp>)</rp></ruby>を<ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えて（ ）。		<hr>`,
-    answers: {
-      います: true,
-      します: false,
-      あります: false,
-      しまいます: false,
-    },
-    id: "問題ID：N5G0007",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：（ ）<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きですか。<br>B：アメリカの<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。		<hr>`,
-    answers: {
-      どう: false,
-      どうやって: false,
-      どのくらい: false,
-      どんな: true,
-    },
-    id: "問題ID：N5G0080",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
   },
 ];
