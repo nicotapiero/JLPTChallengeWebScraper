@@ -8,15 +8,16 @@ import time
 import json
 
 
-for i in range(0, 150):
+driver = webdriver.Firefox()
+driver.get("https://challenge-jlpt.com/")
+
+for i in range(0, 300):
 
     # firefox_profile = webdriver.FirefoxProfile()
     # firefox_profile.set_preference("browser.privatebrowsing.autostart", True)
 
     # driver = webdriver.Firefox(firefox_profile=firefox_profile)
 
-    driver = webdriver.Firefox()
-    driver.get("https://challenge-jlpt.com/")
 
 
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -102,8 +103,10 @@ for i in range(0, 150):
 
     f.close()
 
-    driver.close()
-    driver.quit()
+   
+
+
+
     print(f"saved {i}")
     if id in full_text:
         print("duplicate")
@@ -111,3 +114,12 @@ for i in range(0, 150):
         print('NEW!!!')
 
     # N5V0041 - rb in answers
+
+    # change site insteas of closing
+    driver.execute_script("""window.location.replace("https://challenge-jlpt.com/")""")
+    time.sleep(4)
+
+
+    
+    # driver.close()
+    # driver.quit()
