@@ -43,14 +43,27 @@ for i in range(0, 150):
 
     id = driver.execute_script("""return document.getElementsByTagName("span")[6].textContent""")
 
+    correct_index = -1
+    for j in range(4):
+        driver.execute_script(f"""document.getElementsByClassName("grid")[0].getElementsByClassName("normal")[0].getElementsByTagName("button")[{j}].click()""")
+        time.sleep(3)
+        spans = driver.execute_script(f"""return document.getElementsByTagName("span")""")
+        for span in spans:
+            if "Correct!" in span.get_attribute("innerHTML"):
+                print("CORRECT")
+                correct_index = j
+                break
+            elif "Wrong!" in span.get_attribute("innerHTML"):
+                print("INCORRECT")
+            print('looping again')
+        else:
+            continue
+        break
 
     result = result.strip()
     id = id.strip()
 
     print(result, answers,id )
-
-
-
 
     string = ""
 
@@ -62,10 +75,11 @@ for i in range(0, 150):
 
     [q1, q2, q3, q4] = answers
 
-    string +='"'+ q1 + '": false,"' + q2 + '": false,"' + q3 + '": false,"' + q4 + '": false,'
+    string +='"'+ q1 + f'": {str(correct_index==0).lower()},"' + q2 + f'": {str(correct_index==1).lower()},"' + q3 + f'": {str(correct_index==2).lower()},"' + q4 + f'": {str(correct_index==3).lower()},'
 
     string +="},"
     string += "id:'"+id+"',"
+    string += "confirmed:true, "
         # ", {q2}: false, {q3}: false, {q4}: false]",)
     string +=f"explanation : `TODO: ADD EXPLANATION AND SET`"
 
