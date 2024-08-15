@@ -1,11 +1,10 @@
-const QUESTIONS = [
-  {
+{
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>教師</rb><rp>(</rp><rt>きょうし</rt><rp>)</rp></ruby></span>です。<ruby><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>で<ruby><rb>英語</rb><rp>(</rp><rt>えいご</rt><rp>)</rp></ruby>を<ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えています。\t\t<hr>',
     answers: {
-      きょうしい: false,
       きょうし: true,
       きょし: false,
+      きょうしい: false,
       きょしい: false,
     },
     id: "問題ID：BKY0002",
@@ -16,10 +15,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>風邪</rb><rp>(</rp><rt>かぜ</rt><rp>)</rp></ruby>を<ruby><rb>引</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>いたら、<span class="kanji"><ruby><rb>病院</rb><rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby></span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
     answers: {
-      びょっいん: false,
+      びょおいん: false,
       びょういん: true,
       びょいん: false,
-      びょおいん: false,
+      びょっいん: false,
     },
     id: "問題ID：BKY0003",
     confirmed: true,
@@ -27,8 +26,16 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\tA：きれいな<span class="kanji"><ruby><rb>傘</rb><rp>(</rp><rt>かさ</rt><rp>)</rp></ruby></span>ですね。<br>B：ありがとうございます。\t\t<hr>',
+    answers: { かさ: true, ほん: false, いろ: false, ふく: false },
+    id: "問題ID：BKY0004",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>本屋</rb><rp>(</rp><rt>ほんや</rt><rp>)</rp></ruby>へカメラの<span class="kanji"><ruby><rb>雑誌</rb><rp>(</rp><rt>ざっし</rt><rp>)</rp></ruby></span>を<ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
-    answers: { じっしょ: false, じしょ: false, ざしい: false, ざっし: true },
+    answers: { じっしょ: false, ざっし: true, ざしい: false, じしょ: false },
     id: "問題ID：BKY0005",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -36,7 +43,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>壁</rb><rp>(</rp><rt>かべ</rt><rp>)</rp></ruby>に<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きな<span class="kanji"><ruby><rb>時計</rb><rp>(</rp><rt>とけい</rt><rp>)</rp></ruby></span>がかけてあります。\t\t<hr>',
-    answers: { かかみ: false, かがみ: false, とけい: true, とけ: false },
+    answers: { とけい: true, かかみ: false, とけ: false, かがみ: false },
     id: "問題ID：BKY0006",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -44,16 +51,79 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tA：その<span class="kanji"><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby></span>はだれのですか。<br>B：<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんのです。\t\t<hr>',
-    answers: { き: false, べん: false, ほん: true, しょ: false },
+    answers: { き: false, しょ: false, ほん: true, べん: false },
     id: "問題ID：BKY0007",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>たちが<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>している<span class="kanji"><ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby></span>は3<ruby><rb>階</rb><rp>(</rp><rt>がい</rt><rp>)</rp></ruby>です。\t\t<hr>',
+    answers: {
+      きょうしつ: true,
+      きょしつ: false,
+      きよしつ: false,
+      きょっしつ: false,
+    },
+    id: "問題ID：BKY0008",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎晩</rb><rp>(</rp><rt>まいばん</rt><rp>)</rp></ruby>、<ruby><rb>家族</rb><rp>(</rp><rt>かぞく</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby></span>をかけています。\t\t<hr>',
+    answers: { てんは: false, てんわ: false, でんわ: true, でんふぁ: false },
+    id: "問題ID：BKY0009",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>来週</rb><rp>(</rp><rt>らいしゅう</rt><rp>)</rp></ruby>の<ruby><rb>土曜日</rb><rp>(</rp><rt>どようび</rt><rp>)</rp></ruby>、<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちを<span class="kanji"><ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby></span>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
+    answers: { えいか: false, えいが: true, えっか: false, えが: false },
+    id: "問題ID：BKY0010",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby></span>1<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>40<ruby><rb>分</rb><rp>(</rp><rt>ふん</rt><rp>)</rp></ruby>に<ruby><rb>始</rb><rp>(</rp><rt>はじ</rt><rp>)</rp></ruby>まります。\t\t<hr>',
-    answers: { ごぜん: false, ごご: true, ごせん: false, ごこ: false },
+    answers: { ごせん: false, ごぜん: false, ごこ: false, ごご: true },
     id: "問題ID：BKY0012",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>試験</rb><rp>(</rp><rt>しけん</rt><rp>)</rp></ruby></span>は<ruby><rb>来週</rb><rp>(</rp><rt>らいしゅう</rt><rp>)</rp></ruby>の<ruby><rb>水曜日</rb><rp>(</rp><rt>すいようび</rt><rp>)</rp></ruby>です。\t\t<hr>',
+    answers: {
+      りょこう: false,
+      しゅくだい: false,
+      しごと: false,
+      しけん: true,
+    },
+    id: "問題ID：BKY0013",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>午前</rb><rp>(</rp><rt>ごぜん</rt><rp>)</rp></ruby>9<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>から<ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby>5<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>まで<span class="kanji"><ruby><rb>働</rb><rp>(</rp><rt>はたら</rt><rp>)</rp></ruby>きます</span>。\t\t<hr>',
+    answers: {
+      うごきます: false,
+      いきます: false,
+      はたらきます: true,
+      おきます: false,
+    },
+    id: "問題ID：BKY0014",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎晩</rb><rp>(</rp><rt>まいばん</rt><rp>)</rp></ruby>11<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>ます</span>。\t\t<hr>',
+    answers: { みます: false, でます: false, きます: false, ねます: true },
+    id: "問題ID：BKY0015",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -67,8 +137,21 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>郵便局</rb><rp>(</rp><rt>ゆうびんきょく</rt><rp>)</rp></ruby></span>へ<ruby><rb>手紙</rb><rp>(</rp><rt>てがみ</rt><rp>)</rp></ruby>を<ruby><rb>出</rb><rp>(</rp><rt>だ</rt><rp>)</rp></ruby>しに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
+    answers: {
+      ゆうびんきょうく: false,
+      ゆびんきょく: false,
+      ゆうびんきょくう: false,
+      ゆうびんきょく: true,
+    },
+    id: "問題ID：BKY0017",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>の<ruby><rb>晩</rb><rp>(</rp><rt>ばん</rt><rp>)</rp></ruby>、<span class="kanji"><ruby><rb>駅</rb><rp>(</rp><rt>えき</rt><rp>)</rp></ruby></span>で<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちに<ruby><rb>会</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>いました。\t\t<hr>',
-    answers: { にわ: false, えき: true, みち: false, まち: false },
+    answers: { まち: false, えき: true, みち: false, にわ: false },
     id: "問題ID：BKY0018",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -85,9 +168,9 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>今週</rb><rp>(</rp><rt>こんしゅう</rt><rp>)</rp></ruby></span>は<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby>が<ruby><rb>忙</rb><rp>(</rp><rt>いそが</rt><rp>)</rp></ruby>しいですから、<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>むことができません。\t\t<hr>',
     answers: {
-      こんしゅう: true,
       きょう: false,
       こんげつ: false,
+      こんしゅう: true,
       ことし: false,
     },
     id: "問題ID：BKY0020",
@@ -96,12 +179,25 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>急行</rb><rp>(</rp><rt>きゅうこう</rt><rp>)</rp></ruby></span><ruby><rb>電車</rb><rp>(</rp><rt>でんしゃ</rt><rp>)</rp></ruby>はこの<ruby><rb>駅</rb><rp>(</rp><rt>えき</rt><rp>)</rp></ruby>には<ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>まりません。\t\t<hr>',
+    answers: {
+      きゅうこ: false,
+      きゅっこう: false,
+      きゅこう: false,
+      きゅうこう: true,
+    },
+    id: "問題ID：BKY0021",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby>から<ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>まで<span class="kanji"><ruby><rb>地下鉄</rb><rp>(</rp><rt>ちかてつ</rt><rp>)</rp></ruby></span>で20<ruby><rb>分</rb><rp>(</rp><rt>ふん</rt><rp>)</rp></ruby>ぐらいです。\t\t<hr>',
     answers: {
-      じてんしゃ: false,
       ちかてつ: true,
-      ひこうき: false,
+      じてんしゃ: false,
       しんかんせん: false,
+      ひこうき: false,
     },
     id: "問題ID：BKY0022",
     confirmed: true,
@@ -110,15 +206,23 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>から<span class="kanji"><ruby><rb>十日</rb><rp>(</rp><rt>とおか</rt><rp>)</rp></ruby></span>ほど<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>ませていただけませんか。\t\t<hr>',
-    answers: { とか: false, どうか: false, とうか: false, とおか: true },
+    answers: { とうか: false, とおか: true, どうか: false, とか: false },
     id: "問題ID：BKY0023",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\tA：<span class="kanji"><ruby><rb>何年</rb><rp>(</rp><rt>なんねん</rt><rp>)</rp></ruby></span>ぐらい<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>を<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しましたか。<br>B：3<ruby><rb>年</rb><rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>ぐらい<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しました。\t\t<hr>',
+    answers: { なねん: false, なんね: false, なにねん: false, なんねん: true },
+    id: "問題ID：BKY0024",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tこの<ruby><rb>電車</rb><rp>(</rp><rt>でんしゃ</rt><rp>)</rp></ruby>は<ruby><rb>博多</rb><rp>(</rp><rt>はかた</rt><rp>)</rp></ruby>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きません。<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>普通</rb><rp>(</rp><rt>ふつう</rt><rp>)</rp></ruby></span><ruby><rb>電車</rb><rp>(</rp><rt>でんしゃ</rt><rp>)</rp></ruby>に<ruby><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>ってください。\t\t<hr>',
-    answers: { ふとん: false, ふつう: true, ふとう: false, ふつ: false },
+    answers: { ふとう: false, ふとん: false, ふつ: false, ふつう: true },
     id: "問題ID：BKY0025",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -129,8 +233,8 @@ const QUESTIONS = [
     answers: {
       ぎゅうにゅう: true,
       おちゃ: false,
-      こうちゃ: false,
       みるく: false,
+      こうちゃ: false,
     },
     id: "問題ID：BKY0026",
     confirmed: true,
@@ -141,9 +245,9 @@ const QUESTIONS = [
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は1<ruby><rb>週間</rb><rp>(</rp><rt>しゅうかん</rt><rp>)</rp></ruby>に1<ruby><rb>回</rb><rp>(</rp><rt>かい</rt><rp>)</rp></ruby>、<span class="kanji"><ruby><rb>手紙</rb><rp>(</rp><rt>てがみ</rt><rp>)</rp></ruby></span>を<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いています。\t\t<hr>',
     answers: {
       さくぶん: false,
-      にっき: false,
       しゅくだい: false,
       てがみ: true,
+      にっき: false,
     },
     id: "問題ID：BKY0027",
     confirmed: true,
@@ -152,7 +256,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎朝</rb><rp>(</rp><rt>まいあさ</rt><rp>)</rp></ruby>、<span class="kanji"><ruby><rb>卵</rb><rp>(</rp><rt>たまご</rt><rp>)</rp></ruby></span>を<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べます。\t\t<hr>',
-    answers: { たまこ: false, たまご: true, たばこ: false, たばご: false },
+    answers: { たばこ: false, たまこ: false, たまご: true, たばご: false },
     id: "問題ID：BKY0028",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -162,8 +266,8 @@ const QUESTIONS = [
       '<!-- 2 -->\n\t\t<ruby><rb>忙</rb><rp>(</rp><rt>いそが</rt><rp>)</rp></ruby>しいですから、<span class="kanji"><ruby><rb>晩</rb><rp>(</rp><rt>ばん</rt><rp>)</rp></ruby>ごはん</span>はいつもレストランで<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べています。\t\t<hr>',
     answers: {
       よるごはん: false,
-      ばんごはん: true,
       ひるごはん: false,
+      ばんごはん: true,
       あさごはん: false,
     },
     id: "問題ID：BKY0029",
@@ -174,10 +278,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんの<span class="kanji">お<ruby><rb>母</rb><rp>(</rp><rt>かあ</rt><rp>)</rp></ruby>さん</span>は<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>が<ruby><rb>上手</rb><rp>(</rp><rt>じょうず</rt><rp>)</rp></ruby>です。\t\t<hr>',
     answers: {
+      おっかさん: false,
+      おかあさん: true,
       おかさん: false,
       おかっさん: false,
-      おかあさん: true,
-      おっかさん: false,
     },
     id: "問題ID：BKY0030",
     confirmed: true,
@@ -186,7 +290,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tここにお<ruby><rb>金</rb><rp>(</rp><rt>かね</rt><rp>)</rp></ruby>を<ruby><rb>入</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>れて、ボタンを<ruby><rb>押</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>すと<span class="kanji"><ruby><rb>切符</rb><rp>(</rp><rt>きっぷ</rt><rp>)</rp></ruby></span>が<ruby><rb>出</rb><rp>(</rp><rt>で</rt><rp>)</rp></ruby>ます。\t\t<hr>',
-    answers: { きって: false, けっか: false, きっぷ: true, もんだい: false },
+    answers: { きって: false, もんだい: false, けっか: false, きっぷ: true },
     id: "問題ID：BKY0031",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -195,10 +299,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>荷物</rb><rp>(</rp><rt>にもつ</rt><rp>)</rp></ruby></span>はここに<ruby><rb>置</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>いてください。\t\t<hr>',
     answers: {
-      じてんしゃ: false,
-      しょくぶつ: false,
-      にもつ: true,
       かばん: false,
+      しょくぶつ: false,
+      じてんしゃ: false,
+      にもつ: true,
     },
     id: "問題ID：BKY0032",
     confirmed: true,
@@ -207,16 +311,48 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby></span>の<ruby><rb>趣味</rb><rp>(</rp><rt>しゅみ</rt><rp>)</rp></ruby>は<ruby><rb>写真</rb><rp>(</rp><rt>しゃしん</rt><rp>)</rp></ruby>を<ruby><rb>撮</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>ることです。\t\t<hr>',
-    answers: { あに: false, ちち: true, はは: false, おとうと: false },
+    answers: { はは: false, あに: false, ちち: true, おとうと: false },
     id: "問題ID：BKY0033",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\tあの<span class="kanji"><ruby><rb>青</rb><rp>(</rp><rt>あお</rt><rp>)</rp></ruby>い</span>ネクタイをしている<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>は<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんです。\t\t<hr>',
+    answers: { あおい: true, くろい: false, しろい: false, あかい: false },
+    id: "問題ID：BKY0034",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\tあの<span class="kanji"><ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きい</span><ruby><rb>机</rb><rp>(</rp><rt>つくえ</rt><rp>)</rp></ruby>は<ruby><rb>山田</rb><rp>(</rp><rt>やまだ</rt><rp>)</rp></ruby>さんのです。\t\t<hr>',
+    answers: { おおき: false, おきい: false, おおきい: true, おうきい: false },
+    id: "問題ID：BKY0035",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby></span>は<ruby><rb>大変</rb><rp>(</rp><rt>たいへん</rt><rp>)</rp></ruby>ですが、<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>楽</rb><rp>(</rp><rt>たの</rt><rp>)</rp></ruby>しいです。\t\t<hr>',
-    answers: { べんきょう: false, しごと: true, かじ: false, せいかつ: false },
+    answers: { せいかつ: false, かじ: false, しごと: true, べんきょう: false },
     id: "問題ID：BKY0036",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんはとても<span class="kanji"><ruby><rb>親切</rb><rp>(</rp><rt>しんせつ</rt><rp>)</rp></ruby></span>な<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>です。\t\t<hr>',
+    answers: { べんり: false, げんき: false, しんせつ: true, ゆうめい: false },
+    id: "問題ID：BKY0037",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>はその<span class="kanji"><ruby><rb>小</rb><rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さい</span><ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>です。\t\t<hr>',
+    answers: { ちさい: false, ちいさい: true, ちいさ: false, ちさいい: false },
+    id: "問題ID：BKY0038",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -236,7 +372,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>姉</rb><rp>(</rp><rt>あね</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>絵</rb><rp>(</rp><rt>え</rt><rp>)</rp></ruby></span>がとても<ruby><rb>上手</rb><rp>(</rp><rt>じょうず</rt><rp>)</rp></ruby>です。\t\t<hr>',
-    answers: { じ: false, はなし: false, うた: false, え: true },
+    answers: { うた: false, はなし: false, え: true, じ: false },
     id: "問題ID：BKY0040",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -244,7 +380,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>漢字</rb><rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby></span>の<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>が<ruby><rb>大好</rb><rp>(</rp><rt>だいす</rt><rp>)</rp></ruby>きです。\t\t<hr>',
-    answers: { ぶんぽう: false, かんじ: true, ことば: false, さくぶん: false },
+    answers: { かんじ: true, ことば: false, さくぶん: false, ぶんぽう: false },
     id: "問題ID：BKY0041",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -253,10 +389,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>主人</rb><rp>(</rp><rt>しゅじん</rt><rp>)</rp></ruby></span>は<ruby><rb>字</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>がとてもきれいです。\t\t<hr>',
     answers: {
-      しゅうじ: false,
-      しゅうじん: false,
-      しゅじん: true,
       しゅっじ: false,
+      しゅじん: true,
+      しゅうじん: false,
+      しゅうじ: false,
     },
     id: "問題ID：BKY0042",
     confirmed: true,
@@ -264,24 +400,74 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\tもっと<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>が<span class="kanji"><ruby><rb>上手</rb><rp>(</rp><rt>じょうず</rt><rp>)</rp></ruby></span>になりたいです。\t\t<hr>',
+    answers: {
+      じょうず: true,
+      じょず: false,
+      じょずう: false,
+      じょうずう: false,
+    },
+    id: "問題ID：BKY0043",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>妻</rb><rp>(</rp><rt>つま</rt><rp>)</rp></ruby></span>はとてもきれいです。\t\t<hr>',
+    answers: { いもうと: false, あね: false, はは: false, つま: true },
+    id: "問題ID：BKY0044",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>今晩</rb><rp>(</rp><rt>こんばん</rt><rp>)</rp></ruby>は<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>く<span class="kanji"><ruby><rb>約束</rb><rp>(</rp><rt>やくそく</rt><rp>)</rp></ruby></span>があります。\t\t<hr>',
-    answers: { よてい: false, よやく: false, やくそく: true, ようじ: false },
+    answers: { ようじ: false, よやく: false, よてい: false, やくそく: true },
     id: "問題ID：BKY0045",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\tこの<span class="kanji"><ruby><rb>間</rb><rp>(</rp><rt>あいだ</rt><rp>)</rp></ruby></span>、<ruby><rb>駅</rb><rp>(</rp><rt>えき</rt><rp>)</rp></ruby>で<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>に<ruby><rb>会</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>ってびっくりしました。\t\t<hr>',
+    answers: { ひ: false, あいだ: true, かん: false, まえ: false },
+    id: "問題ID：BKY0046",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>動物</rb><rp>(</rp><rt>どうぶつ</rt><rp>)</rp></ruby>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。<ruby><rb>特</rb><rp>(</rp><rt>とく</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>犬</rb><rp>(</rp><rt>いぬ</rt><rp>)</rp></ruby></span>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。\t\t<hr>',
-    answers: { うま: false, うし: false, ねこ: false, いぬ: true },
+    answers: { いぬ: true, うし: false, うま: false, ねこ: false },
     id: "問題ID：BKY0047",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>公園</rb><rp>(</rp><rt>こうえん</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>木</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby></span>がたくさんあります。\t\t<hr>',
+    answers: { きい: false, き: true, ぎ: false, もく: false },
+    id: "問題ID：BKY0048",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>、<span class="kanji"><ruby><rb>喫茶店</rb><rp>(</rp><rt>きっさてん</rt><rp>)</rp></ruby></span>で<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちとおしゃべりをしました。\t\t<hr>',
+    answers: {
+      びじゅつかん: false,
+      きっさてん: true,
+      としょかん: false,
+      りょうりてん: false,
+    },
+    id: "問題ID：BKY0049",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>郵便局</rb><rp>(</rp><rt>ゆうびんきょく</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>隣</rb><rp>(</rp><rt>となり</rt><rp>)</rp></ruby></span>に<ruby><rb>銀行</rb><rp>(</rp><rt>ぎんこう</rt><rp>)</rp></ruby>があります。\t\t<hr>',
-    answers: { となり: true, まえ: false, うしろ: false, よこ: false },
+    answers: { よこ: false, まえ: false, となり: true, うしろ: false },
     id: "問題ID：BKY0050",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -289,7 +475,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>箱</rb><rp>(</rp><rt>はこ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby></span>に<ruby><rb>猫</rb><rp>(</rp><rt>ねこ</rt><rp>)</rp></ruby>がいます。\t\t<hr>',
-    answers: { うえ: false, した: false, なか: true, まえ: false },
+    answers: { まえ: false, なか: true, した: false, うえ: false },
     id: "問題ID：BKY0051",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -297,23 +483,57 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>近</rb><rp>(</rp><rt>ちか</rt><rp>)</rp></ruby>く</span>に<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>たら、<ruby><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby>をください。\t\t<hr>',
-    answers: { はやく: false, おそく: false, とおく: false, ちかく: true },
+    answers: { おそく: false, とおく: false, ちかく: true, はやく: false },
     id: "問題ID：BKY0052",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\tA：<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>はいい<span class="kanji"><ruby><rb>天気</rb><rp>(</rp><rt>てんき</rt><rp>)</rp></ruby></span>ですね。<br>B：ええ、そうですね。\t\t<hr>',
+    answers: { てんき: true, ようき: false, くうき: false, げんき: false },
+    id: "問題ID：BKY0053",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>はいつも<ruby><rb>肉</rb><rp>(</rp><rt>にく</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>屋</rb><rp>(</rp><rt>や</rt><rp>)</rp></ruby></span>で<ruby><rb>肉</rb><rp>(</rp><rt>にく</rt><rp>)</rp></ruby>を<ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>っています。\t\t<hr>',
-    answers: { か: false, みせ: false, てん: false, や: true },
+    answers: { みせ: false, や: true, か: false, てん: false },
     id: "問題ID：BKY0054",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>弟</rb><rp>(</rp><rt>おとうと</rt><rp>)</rp></ruby></span>はまだ<ruby><rb>小学生</rb><rp>(</rp><rt>しょうがくせい</rt><rp>)</rp></ruby>です。\t\t<hr>',
+    answers: {
+      おとっと: false,
+      おとと: false,
+      おとうと: true,
+      おととう: false,
+    },
+    id: "問題ID：BKY0055",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby>までに3<ruby><rb>回</rb><rp>(</rp><rt>かい</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>外国</rb><rp>(</rp><rt>がいこく</rt><rp>)</rp></ruby></span>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>ったことがあります。\t\t<hr>',
+    answers: {
+      がいこく: true,
+      かいがい: false,
+      そとくに: false,
+      そとこく: false,
+    },
+    id: "問題ID：BKY0056",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tこの<ruby><rb>荷物</rb><rp>(</rp><rt>にもつ</rt><rp>)</rp></ruby>、<ruby><rb>航空</rb><rp>(</rp><rt>こうくう</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>便</rb><rp>(</rp><rt>びん</rt><rp>)</rp></ruby></span>でアメリカまでいくらですか。\t\t<hr>',
-    answers: { びん: true, べん: false, ひん: false, き: false },
+    answers: { ひん: false, びん: true, き: false, べん: false },
     id: "問題ID：BKY0057",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -321,15 +541,23 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>郵便局</rb><rp>(</rp><rt>ゆうびんきょく</rt><rp>)</rp></ruby>で<ruby><rb>切手</rb><rp>(</rp><rt>きって</rt><rp>)</rp></ruby>を1<span class="kanji"><ruby><rb>枚</rb><rp>(</rp><rt>まい</rt><rp>)</rp></ruby></span><ruby><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いました。\t\t<hr>',
-    answers: { まい: true, だい: false, こ: false, さつ: false },
+    answers: { さつ: false, まい: true, だい: false, こ: false },
     id: "問題ID：BKY0058",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>一年</rb><rp>(</rp><rt>いちねん</rt><rp>)</rp></ruby>で<span class="kanji"><ruby><rb>秋</rb><rp>(</rp><rt>あき</rt><rp>)</rp></ruby></span>がいちばん<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。\t\t<hr>',
+    answers: { はる: false, ふゆ: false, なつ: false, あき: true },
+    id: "問題ID：BKY0059",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby><ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>は<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>国</rb><rp>(</rp><rt>くに</rt><rp>)</rp></ruby>の<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>より<span class="kanji"><ruby><rb>甘</rb><rp>(</rp><rt>あま</rt><rp>)</rp></ruby>い</span>です。\t\t<hr>',
-    answers: { あまい: true, からい: false, おおい: false, あつい: false },
+    answers: { あまい: true, あつい: false, からい: false, おおい: false },
     id: "問題ID：BKY0060",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -337,7 +565,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>来年</rb><rp>(</rp><rt>らいねん</rt><rp>)</rp></ruby>の<ruby><rb>夏</rb><rp>(</rp><rt>なつ</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>海</rb><rp>(</rp><rt>うみ</rt><rp>)</rp></ruby></span>へ<ruby><rb>泳</rb><rp>(</rp><rt>およ</rt><rp>)</rp></ruby>ぎに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きたいです。\t\t<hr>',
-    answers: { みずうみ: false, いけ: false, かわ: false, うみ: true },
+    answers: { うみ: true, みずうみ: false, いけ: false, かわ: false },
     id: "問題ID：BKY0061",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -345,16 +573,45 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>季節</rb><rp>(</rp><rt>きせつ</rt><rp>)</rp></ruby></span>が4つあります。\t\t<hr>',
-    answers: { かいしゃ: false, しごと: false, きせつ: true, せいかつ: false },
+    answers: { しごと: false, かいしゃ: false, せいかつ: false, きせつ: true },
     id: "問題ID：BKY0062",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>は<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちを<span class="kanji"><ruby><rb>空港</rb><rp>(</rp><rt>くうこう</rt><rp>)</rp></ruby></span>まで<ruby><rb>迎</rb><rp>(</rp><rt>むか</rt><rp>)</rp></ruby>えに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
+    answers: { くこう: false, くうごう: false, くうこ: false, くうこう: true },
+    id: "問題ID：BKY0063",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>世界</rb><rp>(</rp><rt>せかい</rt><rp>)</rp></ruby></span>には<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>たちの<ruby><rb>知</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>らないことがたくさんあります。\t\t<hr>',
+    answers: { せいかい: false, せかい: true, せがい: false, ぜかい: false },
+    id: "問題ID：BKY0064",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>雪</rb><rp>(</rp><rt>ゆき</rt><rp>)</rp></ruby></span>が<ruby><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>ったら、バスで<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
-    answers: { みず: false, ふゆ: false, ゆき: true, あめ: false },
+    answers: { ゆき: true, みず: false, ふゆ: false, あめ: false },
     id: "問題ID：BKY0065",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>今晩</rb><rp>(</rp><rt>こんばん</rt><rp>)</rp></ruby>は<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<span class="kanji"><ruby><rb>食事</rb><rp>(</rp><rt>しょくじ</rt><rp>)</rp></ruby></span>する<ruby><rb>約束</rb><rp>(</rp><rt>やくそく</rt><rp>)</rp></ruby>があります。\t\t<hr>',
+    answers: {
+      けっこん: false,
+      ちゅうもん: false,
+      しょくじ: true,
+      さんぽ: false,
+    },
+    id: "問題ID：BKY0066",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -363,9 +620,9 @@ const QUESTIONS = [
       '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>週末</rb><rp>(</rp><rt>しゅうまつ</rt><rp>)</rp></ruby></span>は<ruby><rb>家族</rb><rp>(</rp><rt>かぞく</rt><rp>)</rp></ruby>と<ruby><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>びに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>こうと<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>っています。\t\t<hr>',
     answers: {
       げつまつ: false,
+      ねんまつ: false,
       にちまつ: false,
       しゅうまつ: true,
-      ねんまつ: false,
     },
     id: "問題ID：BKY0067",
     confirmed: true,
@@ -373,16 +630,50 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>今度</rb><rp>(</rp><rt>こんど</rt><rp>)</rp></ruby>の<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>は<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>と<span class="kanji"><ruby><rb>釣</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>り</span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
+    answers: { つり: true, くり: false, ふり: false, うり: false },
+    id: "問題ID：BKY0068",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>へ<span class="kanji"><ruby><rb>美術</rb><rp>(</rp><rt>びじゅつ</rt><rp>)</rp></ruby></span>の<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>に<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>ました。\t\t<hr>',
+    answers: {
+      びじゅうつ: false,
+      びじゅつう: false,
+      びいじゅつ: false,
+      びじゅつ: true,
+    },
+    id: "問題ID：BKY0069",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tこの<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>はもう<ruby><rb>少</rb><rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>し<span class="kanji"><ruby><rb>砂糖</rb><rp>(</rp><rt>さとう</rt><rp>)</rp></ruby></span>を<ruby><rb>入</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>れるとおいしいですよ。\t\t<hr>',
-    answers: { みそ: false, しお: false, さとう: true, しょうゆ: false },
+    answers: { しお: false, しょうゆ: false, さとう: true, みそ: false },
     id: "問題ID：BKY0070",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\tここに<span class="kanji"><ruby><rb>住所</rb><rp>(</rp><rt>じゅうしょ</rt><rp>)</rp></ruby></span>と<ruby><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby><ruby><rb>番号</rb><rp>(</rp><rt>ばんごう</rt><rp>)</rp></ruby>を<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いてください。\t\t<hr>',
+    answers: {
+      じゅうしょう: false,
+      じゅしょ: false,
+      じゅしょう: false,
+      じゅうしょ: true,
+    },
+    id: "問題ID：BKY0071",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>壁</rb><rp>(</rp><rt>かべ</rt><rp>)</rp></ruby>に<ruby><rb>世界</rb><rp>(</rp><rt>せかい</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>地図</rb><rp>(</rp><rt>ちず</rt><rp>)</rp></ruby></span>が<ruby><rb>貼</rb><rp>(</rp><rt>は</rt><rp>)</rp></ruby>ってあります。\t\t<hr>',
-    answers: { ちす: false, ちず: true, ぢず: false, ちつ: false },
+    answers: { ちつ: false, ちず: true, ちす: false, ぢず: false },
     id: "問題ID：BKY0072",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -392,9 +683,9 @@ const QUESTIONS = [
       '<!-- 2 -->\n\t\t<ruby><rb>山田</rb><rp>(</rp><rt>やまだ</rt><rp>)</rp></ruby>さんはよくパソコンを<span class="kanji"><ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>います</span>。\t\t<hr>',
     answers: {
       あらいます: false,
-      すいます: false,
-      つかいます: true,
       かいます: false,
+      つかいます: true,
+      すいます: false,
     },
     id: "問題ID：BKY0073",
     confirmed: true,
@@ -402,12 +693,25 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>か<span class="kanji"><ruby><rb>問題</rb><rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby></span>があったら、いつでも<ruby><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>きに<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>てください。\t\t<hr>',
+    answers: {
+      もんだい: true,
+      かだい: false,
+      しつもん: false,
+      しゅくだい: false,
+    },
+    id: "問題ID：BKY0074",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tA：あっ、<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>が<span class="kanji"><ruby><rb>取</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>ります</span>よ。<br>B：ありがとうございます。\t\t<hr>',
     answers: {
-      かります: false,
-      とります: true,
       あけます: false,
+      かります: false,
       うります: false,
+      とります: true,
     },
     id: "問題ID：BKY0075",
     confirmed: true,
@@ -418,11 +722,24 @@ const QUESTIONS = [
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>で<span class="kanji"><ruby><rb>経済</rb><rp>(</rp><rt>けいざい</rt><rp>)</rp></ruby></span>の<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>をしようと<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>っています。\t\t<hr>',
     answers: {
       けいらい: false,
-      けえざい: false,
-      けざい: false,
       けいざい: true,
+      けざい: false,
+      けえざい: false,
     },
     id: "問題ID：BKY0076",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>保険証</rb><rp>(</rp><rt>ほけんしょう</rt><rp>)</rp></ruby>をなくしたら、<span class="kanji"><ruby><rb>市役所</rb><rp>(</rp><rt>しやくしょ</rt><rp>)</rp></ruby></span>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>かなければなりません。\t\t<hr>',
+    answers: {
+      しやくしょ: true,
+      しゃくそ: false,
+      しやくそ: false,
+      しゃくしょ: false,
+    },
+    id: "問題ID：BKY0077",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -431,8 +748,8 @@ const QUESTIONS = [
       '<!-- 2 -->\n\t\t<ruby><rb>論文</rb><rp>(</rp><rt>ろんぶん</rt><rp>)</rp></ruby>を<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>くために<span class="kanji"><ruby><rb>資料</rb><rp>(</rp><rt>しりょう</rt><rp>)</rp></ruby></span>を<ruby><rb>集</rb><rp>(</rp><rt>あつ</rt><rp>)</rp></ruby>めています。\t\t<hr>',
     answers: {
       しじょう: false,
-      そるい: false,
       しょるい: false,
+      そるい: false,
       しりょう: true,
     },
     id: "問題ID：BKY0078",
@@ -441,8 +758,29 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\tミラーさんは35<ruby><rb>歳</rb><rp>(</rp><rt>さい</rt><rp>)</rp></ruby>で、<span class="kanji"><ruby><rb>独身</rb><rp>(</rp><rt>どくしん</rt><rp>)</rp></ruby></span>です。\t\t<hr>',
+    answers: { みこん: false, ひとみ: false, どくみ: false, どくしん: true },
+    id: "問題ID：BKY0079",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>から<ruby><rb>歯</rb><rp>(</rp><rt>は</rt><rp>)</rp></ruby>が<ruby><rb>痛</rb><rp>(</rp><rt>いた</rt><rp>)</rp></ruby>いので、<span class="kanji"><ruby><rb>歯医者</rb><rp>(</rp><rt>はいしゃ</rt><rp>)</rp></ruby></span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
+    answers: {
+      はいしゃ: true,
+      はいさ: false,
+      はいじゃ: false,
+      はいしや: false,
+    },
+    id: "問題ID：BKY0080",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tA：<span class="kanji"><ruby><rb>皆</rb><rp>(</rp><rt>みな</rt><rp>)</rp></ruby></span>さん、こんにちは。<br>B：こんにちは。\t\t<hr>',
-    answers: { みんなん: false, みな: true, みんな: false, みなん: false },
+    answers: { みんなん: false, みんな: false, みな: true, みなん: false },
     id: "問題ID：BKY0081",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -450,15 +788,31 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>、<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>で<ruby><rb>転</rb><rp>(</rp><rt>ころ</rt><rp>)</rp></ruby>んで<span class="kanji"><ruby><rb>足</rb><rp>(</rp><rt>あし</rt><rp>)</rp></ruby></span>にけがをしました。\t\t<hr>',
-    answers: { て: false, かお: false, あたま: false, あし: true },
+    answers: { あし: true, て: false, かお: false, あたま: false },
     id: "問題ID：BKY0082",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>朝</rb><rp>(</rp><rt>あさ</rt><rp>)</rp></ruby>6<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>に<ruby><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>きて、<span class="kanji"><ruby><rb>顔</rb><rp>(</rp><rt>かお</rt><rp>)</rp></ruby></span>を<ruby><rb>洗</rb><rp>(</rp><rt>あら</rt><rp>)</rp></ruby>ってからご<ruby><rb>飯</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby>を<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べます。\t\t<hr>',
+    answers: { からだ: false, あたま: false, かお: true, あし: false },
+    id: "問題ID：BKY0083",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>暗</rb><rp>(</rp><rt>くら</rt><rp>)</rp></ruby>く</span>なりましたね。そろそろ<ruby><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>りましょう。\t\t<hr>',
+    answers: { あかるく: false, あつく: false, くらく: true, さむく: false },
+    id: "問題ID：BKY0084",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tへびは<span class="kanji"><ruby><rb>体</rb><rp>(</rp><rt>からだ</rt><rp>)</rp></ruby></span>が<ruby><rb>長</rb><rp>(</rp><rt>なが</rt><rp>)</rp></ruby>いです。\t\t<hr>',
-    answers: { はな: false, みみ: false, あし: false, からだ: true },
+    answers: { はな: false, あし: false, みみ: false, からだ: true },
     id: "問題ID：BKY0085",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -466,23 +820,83 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>先日</rb><rp>(</rp><rt>せんじつ</rt><rp>)</rp></ruby>、<ruby><rb>家族</rb><rp>(</rp><rt>かぞく</rt><rp>)</rp></ruby>と<span class="kanji"><ruby><rb>神社</rb><rp>(</rp><rt>じんじゃ</rt><rp>)</rp></ruby></span>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きました。\t\t<hr>',
-    answers: { じんじゃ: true, かいしゃ: false, かいさ: false, じんざ: false },
+    answers: { かいさ: false, じんざ: false, かいしゃ: false, じんじゃ: true },
     id: "問題ID：BKY0086",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>博多駅</rb><rp>(</rp><rt>はかたえき</rt><rp>)</rp></ruby>からバスに<span class="kanji"><ruby><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>ります</span>。\t\t<hr>',
+    answers: {
+      おります: false,
+      のります: true,
+      かります: false,
+      とります: false,
+    },
+    id: "問題ID：BKY0087",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tA：カリナさんはどの<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ですか。<br>B：あの<ruby><rb>髪</rb><rp>(</rp><rt>かみ</rt><rp>)</rp></ruby>が<span class="kanji"><ruby><rb>短</rb><rp>(</rp><rt>みじか</rt><rp>)</rp></ruby>い</span><ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ですよ。\t\t<hr>',
-    answers: { くろい: false, ほそい: false, みじかい: true, ながい: false },
+    answers: { くろい: false, みじかい: true, ほそい: false, ながい: false },
     id: "問題ID：BKY0088",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>夜</rb><rp>(</rp><rt>よる</rt><rp>)</rp></ruby>は<ruby><rb>冷</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>えますから、<span class="kanji"><ruby><rb>上着</rb><rp>(</rp><rt>うわぎ</rt><rp>)</rp></ruby></span>を<ruby><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>って<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>ったほうがいいですよ。\t\t<hr>',
+    answers: { うわき: false, うえき: false, うわぎ: true, うえぎ: false },
+    id: "問題ID：BKY0089",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は1<ruby><rb>日</rb><rp>(</rp><rt>にち</rt><rp>)</rp></ruby>に6つずつ<ruby><rb>漢字</rb><rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby>を<span class="kanji"><ruby><rb>覚</rb><rp>(</rp><rt>おぼ</rt><rp>)</rp></ruby>えて</span>います。\t\t<hr>',
+    answers: {
+      かぞえて: false,
+      かんがえて: false,
+      おしえて: false,
+      おぼえて: true,
+    },
+    id: "問題ID：BKY0090",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>から3<ruby><rb>日間</rb><rp>(</rp><rt>かかん</rt><rp>)</rp></ruby><ruby><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>出張</rb><rp>(</rp><rt>しゅっちょう</rt><rp>)</rp></ruby></span>します。\t\t<hr>',
+    answers: {
+      しゅっちょう: true,
+      すっちょう: false,
+      しゅちょう: false,
+      すちょう: false,
+    },
+    id: "問題ID：BKY0091",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\tA：<ruby><rb>風邪</rb><rp>(</rp><rt>かぜ</rt><rp>)</rp></ruby>はどうですか。<br>B：もう<span class="kanji"><ruby><rb>大丈夫</rb><rp>(</rp><rt>だいじょうぶ</rt><rp>)</rp></ruby></span>です。\t\t<hr>',
+    answers: {
+      だいじょうぶ: true,
+      だいじょおぶ: false,
+      だいじょぶ: false,
+      だいぞうぶ: false,
+    },
+    id: "問題ID：BKY0092",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>熱</rb><rp>(</rp><rt>ねつ</rt><rp>)</rp></ruby></span>があるときはお<ruby><rb>風呂</rb><rp>(</rp><rt>ふろ</rt><rp>)</rp></ruby>に<ruby><rb>入</rb><rp>(</rp><rt>はい</rt><rp>)</rp></ruby>らないほうがいいです。\t\t<hr>',
-    answers: { れづ: false, れつ: false, あつ: false, ねつ: true },
+    answers: { あつ: false, れづ: false, ねつ: true, れつ: false },
     id: "問題ID：BKY0093",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -491,8 +905,8 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>服</rb><rp>(</rp><rt>ふく</rt><rp>)</rp></ruby>を<span class="kanji"><ruby><rb>洗</rb><rp>(</rp><rt>あら</rt><rp>)</rp></ruby>います</span>。\t\t<hr>',
     answers: {
-      わらいます: false,
       もらいます: false,
+      わらいます: false,
       あらいます: true,
       はらいます: false,
     },
@@ -503,7 +917,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>馬</rb><rp>(</rp><rt>うま</rt><rp>)</rp></ruby></span>に<ruby><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>ったことがありません。\t\t<hr>',
-    answers: { ま: false, ば: false, うま: true, うまん: false },
+    answers: { うまん: false, うま: true, ば: false, ま: false },
     id: "問題ID：BKY0095",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -511,7 +925,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>趣味</rb><rp>(</rp><rt>しゅみ</rt><rp>)</rp></ruby></span>は<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ることです。\t\t<hr>',
-    answers: { すうみ: false, しゅうみ: false, しゅみ: true, すみ: false },
+    answers: { しゅうみ: false, すうみ: false, すみ: false, しゅみ: true },
     id: "問題ID：BKY0096",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -520,9 +934,9 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>は<ruby><rb>貿易</rb><rp>(</rp><rt>ぼうえき</rt><rp>)</rp></ruby><ruby><rb>会社</rb><rp>(</rp><rt>がいしゃ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>社長</rb><rp>(</rp><rt>しゃちょう</rt><rp>)</rp></ruby></span>です。\t\t<hr>',
     answers: {
-      じゃじょう: false,
-      しゃちょう: true,
       さちょう: false,
+      しゃちょう: true,
+      じゃじょう: false,
       さじょう: false,
     },
     id: "問題ID：BKY0097",
@@ -531,12 +945,96 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>る<ruby><rb>前</rb><rp>(</rp><rt>まえ</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>日記</rb><rp>(</rp><rt>にっき</rt><rp>)</rp></ruby></span>を<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いています。\t\t<hr>',
+    answers: { りいき: false, にいき: false, にっき: true, りっき: false },
+    id: "問題ID：BKY0098",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby>はインターネットで<span class="kanji"><ruby><rb>予約</rb><rp>(</rp><rt>よやく</rt><rp>)</rp></ruby></span>ができるので<ruby><rb>便利</rb><rp>(</rp><rt>べんり</rt><rp>)</rp></ruby>です。\t\t<hr>',
+    answers: { ようじ: false, やくそく: false, よてい: false, よやく: true },
+    id: "問題ID：BKY0099",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>妹</rb><rp>(</rp><rt>いもうと</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>動物</rb><rp>(</rp><rt>どうぶつ</rt><rp>)</rp></ruby></span>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。\t\t<hr>',
+    answers: {
+      しょくぶつ: false,
+      くだもの: false,
+      どうぶつ: true,
+      にもつ: false,
+    },
+    id: "問題ID：BKY0100",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>を<span class="kanji"><ruby><rb>掃除</rb><rp>(</rp><rt>そうじ</rt><rp>)</rp></ruby></span>するのが<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。\t\t<hr>',
+    answers: { しょじ: false, そじ: false, そうじ: true, しょうじ: false },
+    id: "問題ID：BKY0101",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>今度</rb><rp>(</rp><rt>こんど</rt><rp>)</rp></ruby>の<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>、<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<ruby><rb>富士山</rb><rp>(</rp><rt>ふじさん</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>登</rb><rp>(</rp><rt>のぼ</rt><rp>)</rp></ruby>ります</span>。\t\t<hr>',
+    answers: {
+      もどります: false,
+      はいります: false,
+      のぼります: true,
+      あがります: false,
+    },
+    id: "問題ID：BKY0102",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\tその<span class="kanji"><ruby><rb>着物</rb><rp>(</rp><rt>きもの</rt><rp>)</rp></ruby></span>はとてもきれいですね。\t\t<hr>',
+    answers: {
+      くだもの: false,
+      しょくぶつ: false,
+      きもの: true,
+      どうぶつ: false,
+    },
+    id: "問題ID：BKY0103",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\tA：<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>を<span class="kanji"><ruby><rb>修理</rb><rp>(</rp><rt>しゅうり</rt><rp>)</rp></ruby></span>することができますか。<br>B：はい、できます。\t\t<hr>',
+    answers: {
+      しゅうじ: false,
+      しゅんり: false,
+      しゅうり: true,
+      すうり: false,
+    },
+    id: "問題ID：BKY0104",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>交通</rb><rp>(</rp><rt>こうつう</rt><rp>)</rp></ruby></span>が<ruby><rb>便利</rb><rp>(</rp><rt>べんり</rt><rp>)</rp></ruby>だと<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>います。\t\t<hr>',
+    answers: { こうつん: false, こんつう: false, こうつう: true, こつ: false },
+    id: "問題ID：BKY0105",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>のサッカーの<span class="kanji"><ruby><rb>試合</rb><rp>(</rp><rt>しあい</rt><rp>)</rp></ruby></span>は<ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby>7<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>からです。\t\t<hr>',
     answers: {
+      けいけん: false,
       たいかい: false,
       れんしゅう: false,
       しあい: true,
-      けいけん: false,
     },
     id: "問題ID：BKY0106",
     confirmed: true,
@@ -545,7 +1043,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>月</rb><rp>(</rp><rt>つき</rt><rp>)</rp></ruby></span>がとてもきれいですね。\t\t<hr>',
-    answers: { げっ: false, つき: true, げつ: false, つぎ: false },
+    answers: { げっ: false, つぎ: false, つき: true, げつ: false },
     id: "問題ID：BKY0107",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -553,7 +1051,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tここは<span class="kanji"><ruby><rb>物価</rb><rp>(</rp><rt>ぶっか</rt><rp>)</rp></ruby></span>が<ruby><rb>高</rb><rp>(</rp><rt>たか</rt><rp>)</rp></ruby>いので、<ruby><rb>生活</rb><rp>(</rp><rt>せいかつ</rt><rp>)</rp></ruby>が<ruby><rb>大変</rb><rp>(</rp><rt>たいへん</rt><rp>)</rp></ruby>です。\t\t<hr>',
-    answers: { ぶっか: true, かかく: false, かち: false, ねだん: false },
+    answers: { ねだん: false, かち: false, かかく: false, ぶっか: true },
     id: "問題ID：BKY0108",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -561,7 +1059,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>将来</rb><rp>(</rp><rt>しょうらい</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>夢</rb><rp>(</rp><rt>ゆめ</rt><rp>)</rp></ruby></span>は<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>になることです。\t\t<hr>',
-    answers: { ゆうめい: false, ゆめ: true, ゆうめ: false, ゆんめ: false },
+    answers: { ゆうめい: false, ゆうめ: false, ゆんめ: false, ゆめ: true },
     id: "問題ID：BKY0109",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -569,8 +1067,16 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>は<ruby><rb>暑</rb><rp>(</rp><rt>あつ</rt><rp>)</rp></ruby>いので、<span class="kanji"><ruby><rb>帽子</rb><rp>(</rp><rt>ぼうし</rt><rp>)</rp></ruby></span>をかぶって<ruby><rb>出</rb><rp>(</rp><rt>で</rt><rp>)</rp></ruby>かけます。\t\t<hr>',
-    answers: { ぼんし: false, ぼうし: true, ぼし: false, ぼうしい: false },
+    answers: { ぼうしい: false, ぼし: false, ぼうし: true, ぼんし: false },
     id: "問題ID：BKY0110",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>角</rb><rp>(</rp><rt>かど</rt><rp>)</rp></ruby></span>を<ruby><rb>右</rb><rp>(</rp><rt>みぎ</rt><rp>)</rp></ruby>へ<ruby><rb>曲</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby>がると、<ruby><rb>左</rb><rp>(</rp><rt>ひだり</rt><rp>)</rp></ruby>に<ruby><rb>銀行</rb><rp>(</rp><rt>ぎんこう</rt><rp>)</rp></ruby>があります。\t\t<hr>',
+    answers: { かど: true, かく: false, すみ: false, つの: false },
+    id: "問題ID：BKY0111",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -578,10 +1084,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちがいなくて<span class="kanji"><ruby><rb>寂</rb><rp>(</rp><rt>さび</rt><rp>)</rp></ruby>しい</span>ので、<ruby><rb>毎晩</rb><rp>(</rp><rt>まいばん</rt><rp>)</rp></ruby>お<ruby><rb>酒</rb><rp>(</rp><rt>さけ</rt><rp>)</rp></ruby>を<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>んでいます。\t\t<hr>',
     answers: {
-      くるしい: false,
-      かなしい: false,
-      まずしい: false,
       さびしい: true,
+      かなしい: false,
+      くるしい: false,
+      まずしい: false,
     },
     id: "問題ID：BKY0112",
     confirmed: true,
@@ -590,7 +1096,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tこの<span class="kanji"><ruby><rb>道</rb><rp>(</rp><rt>みち</rt><rp>)</rp></ruby></span>を50メートルぐらいまっすぐ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>くと、<ruby><rb>左</rb><rp>(</rp><rt>ひだり</rt><rp>)</rp></ruby>に<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>があります。\t\t<hr>',
-    answers: { たお: false, みち: true, どう: false, ろ: false },
+    answers: { ろ: false, みち: true, どう: false, たお: false },
     id: "問題ID：BKY0113",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -599,12 +1105,25 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>駐車場</rb><rp>(</rp><rt>ちゅうしゃじょう</rt><rp>)</rp></ruby></span>に<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>を<ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>めるのが<ruby><rb>苦手</rb><rp>(</rp><rt>にがて</rt><rp>)</rp></ruby>です。\t\t<hr>',
     answers: {
-      ちゅうしゃりょう: false,
-      ちゅうさじょう: false,
       ちゅうしゃじょう: true,
       ちゅんしゃじょう: false,
+      ちゅうしゃりょう: false,
+      ちゅうさじょう: false,
     },
     id: "問題ID：BKY0114",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\tA：<ruby><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>準備</rb><rp>(</rp><rt>じゅんび</rt><rp>)</rp></ruby></span>はもうできました。<br>はい、もうできました。\t\t<hr>',
+    answers: {
+      ずんび: false,
+      じゅうんび: false,
+      じゅび: false,
+      じゅんび: true,
+    },
+    id: "問題ID：BKY0115",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -623,12 +1142,20 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\tA：すみません、<span class="kanji"><ruby><rb>意味</rb><rp>(</rp><rt>いみ</rt><rp>)</rp></ruby></span>がわからないので、もう<ruby><rb>一度</rb><rp>(</rp><rt>いちど</rt><rp>)</rp></ruby><ruby><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>えていただけませんか。<br>B：わかりました。\t\t<hr>',
+    answers: { いと: false, いし: false, いけん: false, いみ: true },
+    id: "問題ID：BKY0117",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tこの<ruby><rb>飛行機</rb><rp>(</rp><rt>ひこうき</rt><rp>)</rp></ruby>は<ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby>7<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>に<ruby><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>着</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>きます</span>。\t\t<hr>',
     answers: {
       おきます: false,
-      あきます: false,
-      うきます: false,
       つきます: true,
+      うきます: false,
+      あきます: false,
     },
     id: "問題ID：BKY0118",
     confirmed: true,
@@ -638,10 +1165,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>来月</rb><rp>(</rp><rt>らいげつ</rt><rp>)</rp></ruby>から<ruby><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby><ruby><rb>本社</rb><rp>(</rp><rt>ほんしゃ</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>転勤</rb><rp>(</rp><rt>てんきん</rt><rp>)</rp></ruby></span>することになりました。\t\t<hr>',
     answers: {
-      しゅっちょう: false,
       てんきん: true,
       つうきん: false,
       てんしょく: false,
+      しゅっちょう: false,
     },
     id: "問題ID：BKY0119",
     confirmed: true,
@@ -653,8 +1180,8 @@ const QUESTIONS = [
     answers: {
       おくれました: true,
       ちれました: false,
-      くれました: false,
       おそれました: false,
+      くれました: false,
     },
     id: "問題ID：BKY0120",
     confirmed: true,
@@ -664,10 +1191,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>今週</rb><rp>(</rp><rt>こんしゅう</rt><rp>)</rp></ruby>の<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>、<ruby><rb>娘</rb><rp>(</rp><rt>むすめ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>運動会</rb><rp>(</rp><rt>うんどうかい</rt><rp>)</rp></ruby></span>があります。\t\t<hr>',
     answers: {
-      うんどうかい: true,
-      うんどんかい: false,
       うんとうかい: false,
+      うんどんかい: false,
       うんどうがい: false,
+      うんどうかい: true,
     },
     id: "問題ID：BKY0121",
     confirmed: true,
@@ -676,8 +1203,21 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>の<ruby><rb>夜</rb><rp>(</rp><rt>よる</rt><rp>)</rp></ruby>、お<ruby><rb>酒</rb><rp>(</rp><rt>さけ</rt><rp>)</rp></ruby>を<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みすぎて<span class="kanji"><ruby><rb>気分</rb><rp>(</rp><rt>きぶん</rt><rp>)</rp></ruby></span>が<ruby><rb>悪</rb><rp>(</rp><rt>わる</rt><rp>)</rp></ruby>いです。\t\t<hr>',
-    answers: { きもち: false, きぶ: false, きんもち: false, きぶん: true },
+    answers: { きぶん: true, きぶ: false, きんもち: false, きもち: false },
     id: "問題ID：BKY0122",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby>、<ruby><rb>新</rb><rp>(</rp><rt>あたら</rt><rp>)</rp></ruby>しい<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby>を<span class="kanji"><ruby><rb>探</rb><rp>(</rp><rt>さが</rt><rp>)</rp></ruby>して</span>います。\t\t<hr>',
+    answers: {
+      さがして: true,
+      だして: false,
+      まわして: false,
+      おとして: false,
+    },
+    id: "問題ID：BKY0123",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -692,8 +1232,24 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tそのビルの<span class="kanji"><ruby><rb>横</rb><rp>(</rp><rt>よこ</rt><rp>)</rp></ruby></span>に<ruby><rb>自動販売機</rb><rp>(</rp><rt>じどうはんばいき</rt><rp>)</rp></ruby>があります。\t\t<hr>',
-    answers: { となり: false, よこ: true, なか: false, まえ: false },
+    answers: { よこ: true, なか: false, となり: false, まえ: false },
     id: "問題ID：BKY0125",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>瓶</rb><rp>(</rp><rt>びん</rt><rp>)</rp></ruby></span>とペットボトルは<ruby><rb>火曜日</rb><rp>(</rp><rt>かようび</rt><rp>)</rp></ruby>に<ruby><rb>出</rb><rp>(</rp><rt>だ</rt><rp>)</rp></ruby>してください。\t\t<hr>',
+    answers: { かん: false, ひん: false, がん: false, びん: true },
+    id: "問題ID：BKY0126",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>隣</rb><rp>(</rp><rt>となり</rt><rp>)</rp></ruby>の<ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>から<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>の<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きな<span class="kanji"><ruby><rb>声</rb><rp>(</rp><rt>こえ</rt><rp>)</rp></ruby></span>が<ruby><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>こえます。\t\t<hr>',
+    answers: { おと: false, おん: false, せい: false, こえ: true },
+    id: "問題ID：BKY0127",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -708,7 +1264,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tこの<ruby><rb>店</rb><rp>(</rp><rt>みせ</rt><rp>)</rp></ruby>はとても<span class="kanji"><ruby><rb>味</rb><rp>(</rp><rt>あじ</rt><rp>)</rp></ruby></span>がいいので、<ruby><rb>人気</rb><rp>(</rp><rt>にんき</rt><rp>)</rp></ruby>がある。\t\t<hr>',
-    answers: { におい: false, いろ: false, あじ: true, くち: false },
+    answers: { におい: false, いろ: false, くち: false, あじ: true },
     id: "問題ID：BKY0129",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -716,7 +1272,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>では<span class="kanji"><ruby><rb>偉</rb><rp>(</rp><rt>えら</rt><rp>)</rp></ruby>い</span><ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ほど<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby>は<ruby><rb>大変</rb><rp>(</rp><rt>たいへん</rt><rp>)</rp></ruby>だ。\t\t<hr>',
-    answers: { えらい: true, ふるい: false, たかい: false, おおい: false },
+    answers: { ふるい: false, えらい: true, たかい: false, おおい: false },
     id: "問題ID：BKY0130",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -732,7 +1288,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tこの<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>経験</rb><rp>(</rp><rt>けいけん</rt><rp>)</rp></ruby></span>がないと<ruby><rb>難</rb><rp>(</rp><rt>むずか</rt><rp>)</rp></ruby>しいです。\t\t<hr>',
-    answers: { けけん: false, たけん: false, けいけん: true, たいけん: false },
+    answers: { たけん: false, けけん: false, たいけん: false, けいけん: true },
     id: "問題ID：BKY0132",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -752,9 +1308,41 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>彼</rb><rp>(</rp><rt>かれ</rt><rp>)</rp></ruby>はとても<span class="kanji"><ruby><rb>力</rb><rp>(</rp><rt>ちから</rt><rp>)</rp></ruby></span>が<ruby><rb>強</rb><rp>(</rp><rt>つよ</rt><rp>)</rp></ruby>いです。\t\t<hr>',
+    answers: { ちから: true, こころ: false, あし: false, あたま: false },
+    id: "問題ID：BKY0134",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\tこの<ruby><rb>歌</rb><rp>(</rp><rt>うた</rt><rp>)</rp></ruby>は<ruby><rb>若</rb><rp>(</rp><rt>わか</rt><rp>)</rp></ruby>い<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>人気</rb><rp>(</rp><rt>にんき</rt><rp>)</rp></ruby></span>があります。\t\t<hr>',
+    answers: { ひとけ: false, にんき: true, れんき: false, じんき: false },
+    id: "問題ID：BKY0135",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tこの<ruby><rb>パン</rb><rp>(</rp><rt>ぱん</rt><rp>)</rp></ruby><ruby><rb>屋</rb><rp>(</rp><rt>や</rt><rp>)</rp></ruby>は19<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>を<ruby><rb>過</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ぎると<span class="kanji"><ruby><rb>値段</rb><rp>(</rp><rt>ねだん</rt><rp>)</rp></ruby></span>が<ruby><rb>安</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>くなります。\t\t<hr>',
-    answers: { ぶっか: false, かち: false, かかく: false, ねだん: true },
+    answers: { かかく: false, ねだん: true, ぶっか: false, かち: false },
     id: "問題ID：BKY0136",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>彼</rb><rp>(</rp><rt>かれ</rt><rp>)</rp></ruby>はとても<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>熱心</rb><rp>(</rp><rt>ねっしん</rt><rp>)</rp></ruby></span>な<ruby><rb>学生</rb><rp>(</rp><rt>がくせい</rt><rp>)</rp></ruby>です。\t\t<hr>',
+    answers: { ねっしん: true, れっし: false, ねっし: false, れっしん: false },
+    id: "問題ID：BKY0137",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>娘</rb><rp>(</rp><rt>むすめ</rt><rp>)</rp></ruby></span>は<ruby><rb>今年</rb><rp>(</rp><rt>ことし</rt><rp>)</rp></ruby>3<ruby><rb>歳</rb><rp>(</rp><rt>さい</rt><rp>)</rp></ruby>です。とてもかわいいです。\t\t<hr>',
+    answers: { むすこ: false, まご: false, むすめ: true, いもうと: false },
+    id: "問題ID：BKY0138",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -763,8 +1351,8 @@ const QUESTIONS = [
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は2か<ruby><rb>月</rb><rp>(</rp><rt>げつ</rt><rp>)</rp></ruby>に1<ruby><rb>回</rb><rp>(</rp><rt>かい</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>美容院</rb><rp>(</rp><rt>びよういん</rt><rp>)</rp></ruby></span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
     answers: {
       びょんいん: false,
-      びよういん: true,
       びよんいん: false,
+      びよういん: true,
       びょういん: false,
     },
     id: "問題ID：BKY0139",
@@ -775,10 +1363,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>財布</rb><rp>(</rp><rt>さいふ</rt><rp>)</rp></ruby>を<ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>としたら、すぐに<span class="kanji"><ruby><rb>交番</rb><rp>(</rp><rt>こうばん</rt><rp>)</rp></ruby></span>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>ってください。\t\t<hr>',
     answers: {
-      ごんばん: false,
       こうばん: true,
-      ごうばん: false,
+      ごんばん: false,
       こんばん: false,
+      ごうばん: false,
     },
     id: "問題ID：BKY0140",
     confirmed: true,
@@ -786,8 +1374,16 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>のお<ruby><rb>祝</rb><rp>(</rp><rt>いわ</rt><rp>)</rp></ruby>いに<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんに<span class="kanji">お<ruby><rb>皿</rb><rp>(</rp><rt>さら</rt><rp>)</rp></ruby></span>をいただきました。\t\t<hr>',
+    answers: { おさけ: false, おわん: false, おさら: true, おはし: false },
+    id: "問題ID：BKY0141",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tこの<span class="kanji"><ruby><rb>書類</rb><rp>(</rp><rt>しょるい</rt><rp>)</rp></ruby></span>は<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>までに<ruby><rb>部長</rb><rp>(</rp><rt>ぶちょう</rt><rp>)</rp></ruby>に<ruby><rb>出</rb><rp>(</rp><rt>だ</rt><rp>)</rp></ruby>してください。\t\t<hr>',
-    answers: { しょるい: true, しょぬい: false, そるい: false, そぬい: false },
+    answers: { そるい: false, そぬい: false, しょるい: true, しょぬい: false },
     id: "問題ID：BKY0142",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -795,7 +1391,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tごみはこの<span class="kanji"><ruby><rb>袋</rb><rp>(</rp><rt>ふくろ</rt><rp>)</rp></ruby></span>に<ruby><rb>入</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>れて<ruby><rb>捨</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ててください。\t\t<hr>',
-    answers: { ぶくろ: false, ふくろん: false, ふくろ: true, ふうくろ: false },
+    answers: { ふくろん: false, ぶくろ: false, ふうくろ: false, ふくろ: true },
     id: "問題ID：BKY0143",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -803,24 +1399,100 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>危</rb><rp>(</rp><rt>あぶ</rt><rp>)</rp></ruby>ないですから、この<span class="kanji"><ruby><rb>池</rb><rp>(</rp><rt>いけ</rt><rp>)</rp></ruby></span>で<ruby><rb>泳</rb><rp>(</rp><rt>およ</rt><rp>)</rp></ruby>いではいけません。\t\t<hr>',
-    answers: { みずうみ: false, いけ: true, かわ: false, うみ: false },
+    answers: { みずうみ: false, いけ: true, うみ: false, かわ: false },
     id: "問題ID：BKY0144",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>今晩</rb><rp>(</rp><rt>こんばん</rt><rp>)</rp></ruby>パーティーをしますから、<ruby><rb>花</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>を<span class="kanji"><ruby><rb>飾</rb><rp>(</rp><rt>かざ</rt><rp>)</rp></ruby>って</span>おきます。\t\t<hr>',
+    answers: {
+      かざって: true,
+      おくって: false,
+      つくって: false,
+      とって: false,
+    },
+    id: "問題ID：BKY0145",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tこの<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>には<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きな<span class="kanji"><ruby><rb>鏡</rb><rp>(</rp><rt>かがみ</rt><rp>)</rp></ruby></span>が<ruby><rb>掛</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>けてあります。\t\t<hr>',
-    answers: { かぎ: false, かがみ: true, がく: false, え: false },
+    answers: { かぎ: false, がく: false, かがみ: true, え: false },
     id: "問題ID：BKY0146",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>玄関</rb><rp>(</rp><rt>げんかん</rt><rp>)</rp></ruby></span>が<ruby><rb>広</rb><rp>(</rp><rt>ひろ</rt><rp>)</rp></ruby>い<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。\t\t<hr>',
+    answers: {
+      いま: false,
+      しんしつ: false,
+      げんかん: true,
+      だいどころ: false,
+    },
+    id: "問題ID：BKY0147",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>来週</rb><rp>(</rp><rt>らいしゅう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>予定</rb><rp>(</rp><rt>よてい</rt><rp>)</rp></ruby></span>を<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いておきますから、<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ておいてください。\t\t<hr>',
+    answers: { ようじ: false, やくそく: false, よやく: false, よてい: true },
+    id: "問題ID：BKY0148",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>授業</rb><rp>(</rp><rt>じゅぎょう</rt><rp>)</rp></ruby></span>は9<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>から12<ruby><rb>時半</rb><rp>(</rp><rt>じはん</rt><rp>)</rp></ruby>までです。\t\t<hr>',
+    answers: {
+      ずぎょう: false,
+      じゅぎょう: true,
+      じゅぎょん: false,
+      ずぎょん: false,
+    },
+    id: "問題ID：BKY0149",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tごみ<ruby><rb>箱</rb><rp>(</rp><rt>ばこ</rt><rp>)</rp></ruby>は<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>隅</rb><rp>(</rp><rt>すみ</rt><rp>)</rp></ruby></span>に<ruby><rb>置</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>いてあります。\t\t<hr>',
-    answers: { おく: false, すみ: true, そば: false, かど: false },
+    answers: { おく: false, そば: false, すみ: true, かど: false },
     id: "問題ID：BKY0150",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>は<ruby><rb>自分</rb><rp>(</rp><rt>じぶん</rt><rp>)</rp></ruby>で<span class="kanji"><ruby><rb>予習</rb><rp>(</rp><rt>よしゅう</rt><rp>)</rp></ruby></span>しておくことが<ruby><rb>大切</rb><rp>(</rp><rt>たいせつ</rt><rp>)</rp></ruby>です。\t\t<hr>',
+    answers: {
+      がくしゅう: false,
+      ふくしゅう: false,
+      じしゅう: false,
+      よしゅう: true,
+    },
+    id: "問題ID：BKY0151",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\tはさみを<ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>ったら<span class="kanji"><ruby><rb>元</rb><rp>(</rp><rt>もと</rt><rp>)</rp></ruby></span>の<ruby><rb>所</rb><rp>(</rp><rt>ところ</rt><rp>)</rp></ruby>に<ruby><rb>戻</rb><rp>(</rp><rt>もど</rt><rp>)</rp></ruby>しておいてください。\t\t<hr>',
+    answers: { かど: false, すみ: false, よこ: false, もと: true },
+    id: "問題ID：BKY0152",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>り</span>に<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちとご<ruby><rb>飯</rb><rp>(</rp><rt>はん</rt><rp>)</rp></ruby>を<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べます。\t\t<hr>',
+    answers: { かえり: true, あたり: false, もどり: false, まわり: false },
+    id: "問題ID：BKY0153",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -828,10 +1500,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>来週</rb><rp>(</rp><rt>らいしゅう</rt><rp>)</rp></ruby>の<ruby><rb>水曜日</rb><rp>(</rp><rt>すいようび</rt><rp>)</rp></ruby>までに<span class="kanji"><ruby><rb>作文</rb><rp>(</rp><rt>さくぶん</rt><rp>)</rp></ruby></span>を<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>かなければなりません。\t\t<hr>',
     answers: {
-      さくぶん: true,
       なまえ: false,
-      しょうせつ: false,
       てがみ: false,
+      しょうせつ: false,
+      さくぶん: true,
     },
     id: "問題ID：BKY0154",
     confirmed: true,
@@ -841,10 +1513,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>今度</rb><rp>(</rp><rt>こんど</rt><rp>)</rp></ruby>の<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>に<ruby><rb>家族</rb><rp>(</rp><rt>かぞく</rt><rp>)</rp></ruby>と<span class="kanji"><ruby><rb>動物園</rb><rp>(</rp><rt>どうぶつえん</rt><rp>)</rp></ruby></span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。\t\t<hr>',
     answers: {
-      どおぶつえん: false,
-      どんうえん: false,
       どうぶつえん: true,
       どんぶつえん: false,
+      どおぶつえん: false,
+      どんうえん: false,
     },
     id: "問題ID：BKY0155",
     confirmed: true,
@@ -853,7 +1525,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tよく<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>えませんから、<ruby><rb>前</rb><rp>(</rp><rt>まえ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>方</rb><rp>(</rp><rt>ほう</rt><rp>)</rp></ruby></span>に<ruby><rb>座</rb><rp>(</rp><rt>すわ</rt><rp>)</rp></ruby>りましょう。\t\t<hr>',
-    answers: { かた: false, こお: false, ほう: true, ほ: false },
+    answers: { こお: false, ほ: false, かた: false, ほう: true },
     id: "問題ID：BKY0156",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -861,15 +1533,23 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>は<ruby><rb>忙</rb><rp>(</rp><rt>いそが</rt><rp>)</rp></ruby>しいですから、ちょっと<span class="kanji"><ruby><rb>遅</rb><rp>(</rp><rt>おそ</rt><rp>)</rp></ruby>く</span>なりそうです。\t\t<hr>',
-    answers: { おそく: true, はやく: false, おおく: false, とおく: false },
+    answers: { おおく: false, とおく: false, おそく: true, はやく: false },
     id: "問題ID：BKY0157",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>は<ruby><rb>台風</rb><rp>(</rp><rt>たいふう</rt><rp>)</rp></ruby>で<span class="kanji"><ruby><rb>風</rb><rp>(</rp><rt>かぜ</rt><rp>)</rp></ruby></span>が<ruby><rb>強</rb><rp>(</rp><rt>つよ</rt><rp>)</rp></ruby>くなりそうです。\t\t<hr>',
+    answers: { かぜ: true, あめ: false, くも: false, ゆき: false },
+    id: "問題ID：BKY0158",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>福岡</rb><rp>(</rp><rt>ふくおか</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>北</rb><rp>(</rp><rt>きた</rt><rp>)</rp></ruby></span>のほうに<ruby><rb>住</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>んでいます。\t\t<hr>',
-    answers: { みなみ: false, ひがし: false, きた: true, にし: false },
+    answers: { ひがし: false, きた: true, にし: false, みなみ: false },
     id: "問題ID：BKY0159",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -877,7 +1557,7 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>寒</rb><rp>(</rp><rt>さむ</rt><rp>)</rp></ruby>くなってきましたね。<span class="kanji"><ruby><rb>今夜</rb><rp>(</rp><rt>こんや</rt><rp>)</rp></ruby></span>は<ruby><rb>雨</rb><rp>(</rp><rt>あめ</rt><rp>)</rp></ruby>が<ruby><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>りそうです。\t\t<hr>',
-    answers: { いまよ: false, こんよる: false, こんや: true, いまや: false },
+    answers: { こんよる: false, いまや: false, こんや: true, いまよ: false },
     id: "問題ID：BKY0160",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -886,10 +1566,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>時間</rb><rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>十分</rb><rp>(</rp><rt>じゅうぶん</rt><rp>)</rp></ruby></span>にありますから、ゆっくり<ruby><rb>考</rb><rp>(</rp><rt>かんが</rt><rp>)</rp></ruby>えてください。\t\t<hr>',
     answers: {
-      じゅっぷん: false,
       じっぷん: false,
-      じゅうふん: false,
       じゅうぶん: true,
+      じゅうふん: false,
+      じゅっぷん: false,
     },
     id: "問題ID：BKY0161",
     confirmed: true,
@@ -898,8 +1578,24 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tここは<span class="kanji"><ruby><rb>空</rb><rp>(</rp><rt>そら</rt><rp>)</rp></ruby></span>がとても<ruby><rb>広</rb><rp>(</rp><rt>ひろ</rt><rp>)</rp></ruby>くて<ruby><rb>気持</rb><rp>(</rp><rt>きも</rt><rp>)</rp></ruby>ちがいいですね。\t\t<hr>',
-    answers: { うみ: false, まち: false, そら: true, かわ: false },
+    answers: { うみ: false, そら: true, まち: false, かわ: false },
     id: "問題ID：BKY0162",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>が<ruby><rb>生</rb><rp>(</rp><rt>う</rt><rp>)</rp></ruby>まれた<ruby><rb>町</rb><rp>(</rp><rt>まち</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>星</rb><rp>(</rp><rt>ほし</rt><rp>)</rp></ruby></span>がとてもきれいです。\t\t<hr>',
+    answers: { ほし: true, みず: false, つき: false, そら: false },
+    id: "問題ID：BKY0163",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>は<ruby><rb>中国</rb><rp>(</rp><rt>ちゅうごく</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>東</rb><rp>(</rp><rt>ひがし</rt><rp>)</rp></ruby></span>にあります。\t\t<hr>',
+    answers: { とう: false, ひがし: true, みなみ: false, なん: false },
+    id: "問題ID：BKY0164",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
@@ -913,12 +1609,20 @@ const QUESTIONS = [
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<span class="kanji"><ruby><rb>夕方</rb><rp>(</rp><rt>ゆうがた</rt><rp>)</rp></ruby></span>は<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>が<ruby><rb>多</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>いので、<ruby><rb>早</rb><rp>(</rp><rt>はや</rt><rp>)</rp></ruby>めに<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby>を<ruby><rb>出</rb><rp>(</rp><rt>で</rt><rp>)</rp></ruby>ます。\t\t<hr>',
+    answers: { ゆうがた: true, ゆがた: false, ゆかた: false, ゆうかた: false },
+    id: "問題ID：BKY0166",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>の<ruby><rb>会議</rb><rp>(</rp><rt>かいぎ</rt><rp>)</rp></ruby>は<ruby><rb>部長</rb><rp>(</rp><rt>ぶちょう</rt><rp>)</rp></ruby>の<ruby><rb>代</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>わりに<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>が<span class="kanji"><ruby><rb>出席</rb><rp>(</rp><rt>しゅっせき</rt><rp>)</rp></ruby></span>することになりました。\t\t<hr>',
     answers: {
-      しゅうせき: false,
       すせき: false,
-      しゅっせき: true,
       すっせき: false,
+      しゅっせき: true,
+      しゅうせき: false,
     },
     id: "問題ID：BKY0167",
     confirmed: true,
@@ -928,10 +1632,10 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>の<ruby><rb>会議</rb><rp>(</rp><rt>かいぎ</rt><rp>)</rp></ruby>では、<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>規則</rb><rp>(</rp><rt>きそく</rt><rp>)</rp></ruby></span>について<ruby><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>し<ruby><rb>合</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>います。\t\t<hr>',
     answers: {
-      こうぎ: false,
       じゅぎょう: false,
-      きそく: true,
+      こうぎ: false,
       ぎょうじ: false,
+      きそく: true,
     },
     id: "問題ID：BKY0168",
     confirmed: true,
@@ -940,15 +1644,28 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>警察</rb><rp>(</rp><rt>けいさつ</rt><rp>)</rp></ruby></span><ruby><rb>官</rb><rp>(</rp><rt>かん</rt><rp>)</rp></ruby>です。\t\t<hr>',
-    answers: { かんとく: false, けいさつ: true, じむ: false, せんもん: false },
+    answers: { せんもん: false, けいさつ: true, かんとく: false, じむ: false },
     id: "問題ID：BKY0169",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>駐車場</rb><rp>(</rp><rt>ちゅうしゃじょう</rt><rp>)</rp></ruby>の<ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>徐行</rb><rp>(</rp><rt>じょこう</rt><rp>)</rp></ruby></span><ruby><rb>運転</rb><rp>(</rp><rt>うんてん</rt><rp>)</rp></ruby>をしてください。\t\t<hr>',
+    answers: {
+      ぞこう: false,
+      ぞっこう: false,
+      じょこう: true,
+      じょうこう: false,
+    },
+    id: "問題ID：BKY0170",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>席</rb><rp>(</rp><rt>せき</rt><rp>)</rp></ruby></span>は<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんの<ruby><rb>隣</rb><rp>(</rp><rt>となり</rt><rp>)</rp></ruby>です。\t\t<hr>',
-    answers: { せき: true, いす: false, つくえ: false, いえ: false },
+    answers: { せき: true, いす: false, いえ: false, つくえ: false },
     id: "問題ID：BKY0171",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -964,23 +1681,62 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>子</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>どもはボールを<span class="kanji"><ruby><rb>投</rb><rp>(</rp><rt>な</rt><rp>)</rp></ruby>げる</span>のが<ruby><rb>上手</rb><rp>(</rp><rt>じょうず</rt><rp>)</rp></ruby>です。\t\t<hr>',
-    answers: { あげる: false, にげる: false, なげる: true, らげる: false },
+    answers: { にげる: false, らげる: false, あげる: false, なげる: true },
     id: "問題ID：BKY0173",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\t<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>までに<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>罰金</rb><rp>(</rp><rt>ばっきん</rt><rp>)</rp></ruby></span>を<ruby><rb>払</rb><rp>(</rp><rt>はら</rt><rp>)</rp></ruby>わなければなりません。\t\t<hr>',
+    answers: {
+      ちょきん: false,
+      しゃっきん: false,
+      ぜいきん: false,
+      ばっきん: true,
+    },
+    id: "問題ID：BKY0174",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>火事</rb><rp>(</rp><rt>かじ</rt><rp>)</rp></ruby>や<ruby><rb>地震</rb><rp>(</rp><rt>じしん</rt><rp>)</rp></ruby>の<ruby><rb>時</rb><rp>(</rp><rt>とき</rt><rp>)</rp></ruby>は、そこの<span class="kanji"><ruby><rb>非常口</rb><rp>(</rp><rt>ひじょうぐち</rt><rp>)</rp></ruby></span>から<ruby><rb>逃</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby>げてください。\t\t<hr>',
+    answers: {
+      ひぞうぐち: false,
+      ひじょぐち: false,
+      ひじょうぐち: true,
+      ひぞぐち: false,
+    },
+    id: "問題ID：BKY0175",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tA：このパンフレットは<span class="kanji"><ruby><rb>無料</rb><rp>(</rp><rt>むりょう</rt><rp>)</rp></ruby></span>ですか。<br>B：はい、そうですよ。\t\t<hr>',
-    answers: { むちん: false, むだ: false, むり: false, むりょう: true },
+    answers: { むちん: false, むだ: false, むりょう: true, むり: false },
     id: "問題ID：BKY0176",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\tA：<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>は<ruby><rb>何時</rb><rp>(</rp><rt>なんじ</rt><rp>)</rp></ruby>ごろ<ruby><rb>会社</rb><rp>(</rp><rt>がいしゃ</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>戻</rb><rp>(</rp><rt>もど</rt><rp>)</rp></ruby>ります</span>か。<br>B：<ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby>3<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>ごろだと<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>います。\t\t<hr>',
+    answers: {
+      のこります: false,
+      はいります: false,
+      かえります: false,
+      もどります: true,
+    },
+    id: "問題ID：BKY0177",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tA：<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんはどの<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ですか。<br>B：あの<span class="kanji"><ruby><rb>紺</rb><rp>(</rp><rt>こん</rt><rp>)</rp></ruby></span>のスーツを<ruby><rb>着</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>ている<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ですよ。\t\t<hr>',
-    answers: { くろ: false, こん: true, みどり: false, あお: false },
+    answers: { みどり: false, くろ: false, こん: true, あお: false },
     id: "問題ID：BKY0178",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -989,9 +1745,9 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>授業</rb><rp>(</rp><rt>じゅぎょう</rt><rp>)</rp></ruby>のあとで<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>質問</rb><rp>(</rp><rt>しつもん</rt><rp>)</rp></ruby></span>します。\t\t<hr>',
     answers: {
+      もんだい: false,
       せつめい: false,
       そうだん: false,
-      もんだい: false,
       しつもん: true,
     },
     id: "問題ID：BKY0179",
@@ -1001,15 +1757,23 @@ const QUESTIONS = [
   {
     question:
       '<!-- 2 -->\n\t\tその<span class="kanji"><ruby><rb>図</rb><rp>(</rp><rt>ず</rt><rp>)</rp></ruby></span>のとおりに<ruby><rb>紙</rb><rp>(</rp><rt>かみ</rt><rp>)</rp></ruby>を<ruby><rb>折</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>ってください。\t\t<hr>',
-    answers: { が: false, ず: true, え: false, と: false },
+    answers: { ず: true, え: false, と: false, が: false },
     id: "問題ID：BKY0180",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
     question:
+      '<!-- 2 -->\n\t\tこの<ruby><rb>野菜</rb><rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>はちょっと<span class="kanji"><ruby><rb>苦</rb><rp>(</rp><rt>にが</rt><rp>)</rp></ruby>い</span>です。\t\t<hr>',
+    answers: { からい: false, にがい: true, あまい: false, こい: false },
+    id: "問題ID：BKY0181",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+  {
+    question:
       '<!-- 2 -->\n\t\tこの<span class="kanji"><ruby><rb>線</rb><rp>(</rp><rt>せん</rt><rp>)</rp></ruby></span>はちょっと<ruby><rb>細</rb><rp>(</rp><rt>ほそ</rt><rp>)</rp></ruby>いので、もう<ruby><rb>少</rb><rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>し<ruby><rb>太</rb><rp>(</rp><rt>ふと</rt><rp>)</rp></ruby>くしてください。\t\t<hr>',
-    answers: { いと: false, ひょう: false, せん: true, みち: false },
+    answers: { ひょう: false, いと: false, せん: true, みち: false },
     id: "問題ID：BKY0182",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
@@ -1018,1176 +1782,22 @@ const QUESTIONS = [
     question:
       '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>趣味</rb><rp>(</rp><rt>しゅみ</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>海外</rb><rp>(</rp><rt>かいがい</rt><rp>)</rp></ruby></span><ruby><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>くことです。\t\t<hr>',
     answers: {
-      こくがい: false,
-      かいがい: true,
       がいこく: false,
       せかい: false,
+      かいがい: true,
+      こくがい: false,
     },
     id: "問題ID：BKY0183",
     confirmed: true,
     explanation: "TODO: ADD EXPLANATION AND SET",
   },
   {
-    question: `<!-- 2 -->
-		A：<span class="kanji"><ruby><rb>何年</rb><rp>(</rp><rt>なんねん</rt><rp>)</rp></ruby></span>ぐらい<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>を<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しましたか。<br>B：3<ruby><rb>年</rb><rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>ぐらい<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しました。		<hr>`,
-    answers: { なにねん: false, なねん: false, なんね: false, なんねん: true },
-    id: "問題ID：BKY0024",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		あの<span class="kanji"><ruby><rb>青</rb><rp>(</rp><rt>あお</rt><rp>)</rp></ruby>い</span>ネクタイをしている<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>は<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんです。		<hr>`,
-    answers: { しろい: false, くろい: false, あかい: false, あおい: true },
-    id: "問題ID：BKY0034",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：カリナさんはどの<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ですか。<br>B：あの<ruby><rb>髪</rb><rp>(</rp><rt>かみ</rt><rp>)</rp></ruby>が<span class="kanji"><ruby><rb>短</rb><rp>(</rp><rt>みじか</rt><rp>)</rp></ruby>い</span><ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ですよ。		<hr>`,
-    answers: { みじかい: true, くろい: false, ながい: false, ほそい: false },
-    id: "問題ID：BKY0088",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>の<ruby><rb>夜</rb><rp>(</rp><rt>よる</rt><rp>)</rp></ruby>、お<ruby><rb>酒</rb><rp>(</rp><rt>さけ</rt><rp>)</rp></ruby>を<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みすぎて<span class="kanji"><ruby><rb>気分</rb><rp>(</rp><rt>きぶん</rt><rp>)</rp></ruby></span>が<ruby><rb>悪</rb><rp>(</rp><rt>わる</rt><rp>)</rp></ruby>いです。		<hr>`,
-    answers: { きぶ: false, きもち: false, きんもち: false, きぶん: true },
-    id: "問題ID：BKY0122",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>子</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>どもはボールを<span class="kanji"><ruby><rb>投</rb><rp>(</rp><rt>な</rt><rp>)</rp></ruby>げる</span>のが<ruby><rb>上手</rb><rp>(</rp><rt>じょうず</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: { なげる: true, にげる: false, らげる: false, あげる: false },
-    id: "問題ID：BKY0173",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎朝</rb><rp>(</rp><rt>まいあさ</rt><rp>)</rp></ruby>、<span class="kanji"><ruby><rb>卵</rb><rp>(</rp><rt>たまご</rt><rp>)</rp></ruby></span>を<ruby><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べます。		<hr>`,
-    answers: { たまこ: false, たばご: false, たばこ: false, たまご: true },
-    id: "問題ID：BKY0028",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ごみはこの<span class="kanji"><ruby><rb>袋</rb><rp>(</rp><rt>ふくろ</rt><rp>)</rp></ruby></span>に<ruby><rb>入</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>れて<ruby><rb>捨</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>ててください。		<hr>`,
-    answers: { ふくろ: true, ふくろん: false, ふうくろ: false, ぶくろ: false },
-    id: "問題ID：BKY0143",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<span class="kanji"><ruby><rb>今週</rb><rp>(</rp><rt>こんしゅう</rt><rp>)</rp></ruby></span>は<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby>が<ruby><rb>忙</rb><rp>(</rp><rt>いそが</rt><rp>)</rp></ruby>しいですから、<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>むことができません。		<hr>`,
-    answers: {
-      こんげつ: false,
-      きょう: false,
-      こんしゅう: true,
-      ことし: false,
-    },
-    id: "問題ID：BKY0020",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		よく<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>えませんから、<ruby><rb>前</rb><rp>(</rp><rt>まえ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>方</rb><rp>(</rp><rt>ほう</rt><rp>)</rp></ruby></span>に<ruby><rb>座</rb><rp>(</rp><rt>すわ</rt><rp>)</rp></ruby>りましょう。		<hr>`,
-    answers: { ほう: true, ほ: false, こお: false, かた: false },
-    id: "問題ID：BKY0156",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>、<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>で<ruby><rb>転</rb><rp>(</rp><rt>ころ</rt><rp>)</rp></ruby>んで<span class="kanji"><ruby><rb>足</rb><rp>(</rp><rt>あし</rt><rp>)</rp></ruby></span>にけがをしました。		<hr>`,
-    answers: { かお: false, て: false, あたま: false, あし: true },
-    id: "問題ID：BKY0082",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんはとても<span class="kanji"><ruby><rb>親切</rb><rp>(</rp><rt>しんせつ</rt><rp>)</rp></ruby></span>な<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: { しんせつ: true, げんき: false, ゆうめい: false, べんり: false },
-    id: "問題ID：BKY0037",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>壁</rb><rp>(</rp><rt>かべ</rt><rp>)</rp></ruby>に<ruby><rb>世界</rb><rp>(</rp><rt>せかい</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>地図</rb><rp>(</rp><rt>ちず</rt><rp>)</rp></ruby></span>が<ruby><rb>貼</rb><rp>(</rp><rt>は</rt><rp>)</rp></ruby>ってあります。		<hr>`,
-    answers: { ちす: false, ちつ: false, ちず: true, ぢず: false },
-    id: "問題ID：BKY0072",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby></span>1<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>40<ruby><rb>分</rb><rp>(</rp><rt>ふん</rt><rp>)</rp></ruby>に<ruby><rb>始</rb><rp>(</rp><rt>はじ</rt><rp>)</rp></ruby>まります。		<hr>`,
-    answers: { ごこ: false, ごせん: false, ごご: true, ごぜん: false },
-    id: "問題ID：BKY0012",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>雪</rb><rp>(</rp><rt>ゆき</rt><rp>)</rp></ruby></span>が<ruby><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>ったら、バスで<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { みず: false, ゆき: true, あめ: false, ふゆ: false },
-    id: "問題ID：BKY0065",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>火事</rb><rp>(</rp><rt>かじ</rt><rp>)</rp></ruby>や<ruby><rb>地震</rb><rp>(</rp><rt>じしん</rt><rp>)</rp></ruby>の<ruby><rb>時</rb><rp>(</rp><rt>とき</rt><rp>)</rp></ruby>は、そこの<span class="kanji"><ruby><rb>非常口</rb><rp>(</rp><rt>ひじょうぐち</rt><rp>)</rp></ruby></span>から<ruby><rb>逃</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby>げてください。		<hr>`,
-    answers: {
-      ひじょぐち: false,
-      ひじょうぐち: true,
-      ひぞぐち: false,
-      ひぞうぐち: false,
-    },
-    id: "問題ID：BKY0175",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：その<span class="kanji"><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby></span>はだれのですか。<br>B：<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんのです。		<hr>`,
-    answers: { しょ: false, べん: false, ほん: true, き: false },
-    id: "問題ID：BKY0007",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		その<span class="kanji"><ruby><rb>着物</rb><rp>(</rp><rt>きもの</rt><rp>)</rp></ruby></span>はとてもきれいですね。		<hr>`,
-    answers: {
-      しょくぶつ: false,
-      どうぶつ: false,
-      きもの: true,
-      くだもの: false,
-    },
-    id: "問題ID：BKY0103",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>今</rb><rp>(</rp><rt>いま</rt><rp>)</rp></ruby>までに3<ruby><rb>回</rb><rp>(</rp><rt>かい</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>外国</rb><rp>(</rp><rt>がいこく</rt><rp>)</rp></ruby></span>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>ったことがあります。		<hr>`,
-    answers: {
-      がいこく: true,
-      そとこく: false,
-      かいがい: false,
-      そとくに: false,
-    },
-    id: "問題ID：BKY0056",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>準備</rb><rp>(</rp><rt>じゅんび</rt><rp>)</rp></ruby></span>はもうできました。<br>はい、もうできました。		<hr>`,
-    answers: {
-      じゅうんび: false,
-      じゅんび: true,
-      ずんび: false,
-      じゅび: false,
-    },
-    id: "問題ID：BKY0115",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<span class="kanji"><ruby><rb>暗</rb><rp>(</rp><rt>くら</rt><rp>)</rp></ruby>く</span>なりましたね。そろそろ<ruby><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>りましょう。		<hr>`,
-    answers: { さむく: false, あつく: false, くらく: true, あかるく: false },
-    id: "問題ID：BKY0084",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>のお<ruby><rb>祝</rb><rp>(</rp><rt>いわ</rt><rp>)</rp></ruby>いに<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんに<span class="kanji">お<ruby><rb>皿</rb><rp>(</rp><rt>さら</rt><rp>)</rp></ruby></span>をいただきました。		<hr>`,
-    answers: { おはし: false, おわん: false, おさら: true, おさけ: false },
-    id: "問題ID：BKY0141",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は1<ruby><rb>週間</rb><rp>(</rp><rt>しゅうかん</rt><rp>)</rp></ruby>に1<ruby><rb>回</rb><rp>(</rp><rt>かい</rt><rp>)</rp></ruby>、<span class="kanji"><ruby><rb>手紙</rb><rp>(</rp><rt>てがみ</rt><rp>)</rp></ruby></span>を<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>いています。		<hr>`,
-    answers: {
-      さくぶん: false,
-      しゅくだい: false,
-      てがみ: true,
-      にっき: false,
-    },
-    id: "問題ID：BKY0027",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>歌</rb><rp>(</rp><rt>うた</rt><rp>)</rp></ruby>は<ruby><rb>若</rb><rp>(</rp><rt>わか</rt><rp>)</rp></ruby>い<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>人気</rb><rp>(</rp><rt>にんき</rt><rp>)</rp></ruby></span>があります。		<hr>`,
-    answers: { れんき: false, ひとけ: false, にんき: true, じんき: false },
-    id: "問題ID：BKY0135",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちがいなくて<span class="kanji"><ruby><rb>寂</rb><rp>(</rp><rt>さび</rt><rp>)</rp></ruby>しい</span>ので、<ruby><rb>毎晩</rb><rp>(</rp><rt>まいばん</rt><rp>)</rp></ruby>お<ruby><rb>酒</rb><rp>(</rp><rt>さけ</rt><rp>)</rp></ruby>を<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>んでいます。		<hr>`,
-    answers: {
-      くるしい: false,
-      かなしい: false,
-      まずしい: false,
-      さびしい: true,
-    },
-    id: "問題ID：BKY0112",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ナイフとフォームは<ruby><rb>同</rb><rp>(</rp><rt>おな</rt><rp>)</rp></ruby>じ<span class="kanji"><ruby><rb>場所</rb><rp>(</rp><rt>ばしょ</rt><rp>)</rp></ruby></span>に<ruby><rb>置</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>いておきます。		<hr>`,
-    answers: { ばそ: false, ばっしょ: false, ばしょ: true, ばっそ: false },
-    id: "問題ID：BKY0124",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>を<span class="kanji"><ruby><rb>掃除</rb><rp>(</rp><rt>そうじ</rt><rp>)</rp></ruby></span>するのが<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。		<hr>`,
-    answers: { しょじ: false, そじ: false, そうじ: true, しょうじ: false },
-    id: "問題ID：BKY0101",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>来月</rb><rp>(</rp><rt>らいげつ</rt><rp>)</rp></ruby>から<ruby><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby><ruby><rb>本社</rb><rp>(</rp><rt>ほんしゃ</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>転勤</rb><rp>(</rp><rt>てんきん</rt><rp>)</rp></ruby></span>することになりました。		<hr>`,
-    answers: {
-      つうきん: false,
-      てんしょく: false,
-      てんきん: true,
-      しゅっちょう: false,
-    },
-    id: "問題ID：BKY0119",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：このパンフレットは<span class="kanji"><ruby><rb>無料</rb><rp>(</rp><rt>むりょう</rt><rp>)</rp></ruby></span>ですか。<br>B：はい、そうですよ。		<hr>`,
-    answers: { むだ: false, むりょう: true, むちん: false, むり: false },
-    id: "問題ID：BKY0176",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>から<ruby><rb>歯</rb><rp>(</rp><rt>は</rt><rp>)</rp></ruby>が<ruby><rb>痛</rb><rp>(</rp><rt>いた</rt><rp>)</rp></ruby>いので、<span class="kanji"><ruby><rb>歯医者</rb><rp>(</rp><rt>はいしゃ</rt><rp>)</rp></ruby></span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: {
-      はいしゃ: true,
-      はいさ: false,
-      はいしや: false,
-      はいじゃ: false,
-    },
-    id: "問題ID：BKY0080",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>から<span class="kanji"><ruby><rb>十日</rb><rp>(</rp><rt>とおか</rt><rp>)</rp></ruby></span>ほど<ruby><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>ませていただけませんか。		<hr>`,
-    answers: { とか: false, とおか: true, とうか: false, どうか: false },
-    id: "問題ID：BKY0023",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>馬</rb><rp>(</rp><rt>うま</rt><rp>)</rp></ruby></span>に<ruby><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>ったことがありません。		<hr>`,
-    answers: { ば: false, うまん: false, ま: false, うま: true },
-    id: "問題ID：BKY0095",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>来週</rb><rp>(</rp><rt>らいしゅう</rt><rp>)</rp></ruby>の<ruby><rb>水曜日</rb><rp>(</rp><rt>すいようび</rt><rp>)</rp></ruby>までに<span class="kanji"><ruby><rb>作文</rb><rp>(</rp><rt>さくぶん</rt><rp>)</rp></ruby></span>を<ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>かなければなりません。		<hr>`,
-    answers: {
-      さくぶん: true,
-      てがみ: false,
-      なまえ: false,
-      しょうせつ: false,
-    },
-    id: "問題ID：BKY0154",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎朝</rb><rp>(</rp><rt>まいあさ</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>牛乳</rb><rp>(</rp><rt>ぎゅうにゅう</rt><rp>)</rp></ruby></span>を<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>んでいます。		<hr>`,
-    answers: {
-      みるく: false,
-      おちゃ: false,
-      ぎゅうにゅう: true,
-      こうちゃ: false,
-    },
-    id: "問題ID：BKY0026",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby></span>1<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>40<ruby><rb>分</rb><rp>(</rp><rt>ふん</rt><rp>)</rp></ruby>に<ruby><rb>始</rb><rp>(</rp><rt>はじ</rt><rp>)</rp></ruby>まります。		<hr>`,
-    answers: { ごご: true, ごぜん: false, ごこ: false, ごせん: false },
-    id: "問題ID：BKY0012",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>授業</rb><rp>(</rp><rt>じゅぎょう</rt><rp>)</rp></ruby></span>は9<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>から12<ruby><rb>時半</rb><rp>(</rp><rt>じはん</rt><rp>)</rp></ruby>までです。		<hr>`,
-    answers: {
-      ずぎょう: false,
-      じゅぎょう: true,
-      じゅぎょん: false,
-      ずぎょん: false,
-    },
-    id: "問題ID：BKY0149",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>玄関</rb><rp>(</rp><rt>げんかん</rt><rp>)</rp></ruby></span>が<ruby><rb>広</rb><rp>(</rp><rt>ひろ</rt><rp>)</rp></ruby>い<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby>が<ruby><rb>好</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>きです。		<hr>`,
-    answers: {
-      だいどころ: false,
-      げんかん: true,
-      しんしつ: false,
-      いま: false,
-    },
-    id: "問題ID：BKY0147",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>郵便局</rb><rp>(</rp><rt>ゆうびんきょく</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>隣</rb><rp>(</rp><rt>となり</rt><rp>)</rp></ruby></span>に<ruby><rb>銀行</rb><rp>(</rp><rt>ぎんこう</rt><rp>)</rp></ruby>があります。		<hr>`,
-    answers: { よこ: false, うしろ: false, まえ: false, となり: true },
-    id: "問題ID：BKY0050",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>将来</rb><rp>(</rp><rt>しょうらい</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>夢</rb><rp>(</rp><rt>ゆめ</rt><rp>)</rp></ruby></span>は<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>になることです。		<hr>`,
-    answers: { ゆうめ: false, ゆめ: true, ゆんめ: false, ゆうめい: false },
-    id: "問題ID：BKY0109",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>の<ruby><rb>会議</rb><rp>(</rp><rt>かいぎ</rt><rp>)</rp></ruby>は<ruby><rb>部長</rb><rp>(</rp><rt>ぶちょう</rt><rp>)</rp></ruby>の<ruby><rb>代</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>わりに<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>が<span class="kanji"><ruby><rb>出席</rb><rp>(</rp><rt>しゅっせき</rt><rp>)</rp></ruby></span>することになりました。		<hr>`,
-    answers: {
-      しゅっせき: true,
-      しゅうせき: false,
-      すっせき: false,
-      すせき: false,
-    },
-    id: "問題ID：BKY0167",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>季節</rb><rp>(</rp><rt>きせつ</rt><rp>)</rp></ruby></span>が4つあります。		<hr>`,
-    answers: { しごと: false, かいしゃ: false, きせつ: true, せいかつ: false },
-    id: "問題ID：BKY0062",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>で<span class="kanji"><ruby><rb>経済</rb><rp>(</rp><rt>けいざい</rt><rp>)</rp></ruby></span>の<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>をしようと<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>っています。		<hr>`,
-    answers: {
-      けえざい: false,
-      けいらい: false,
-      けざい: false,
-      けいざい: true,
-    },
-    id: "問題ID：BKY0076",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>火事</rb><rp>(</rp><rt>かじ</rt><rp>)</rp></ruby>や<ruby><rb>地震</rb><rp>(</rp><rt>じしん</rt><rp>)</rp></ruby>の<ruby><rb>時</rb><rp>(</rp><rt>とき</rt><rp>)</rp></ruby>は、そこの<span class="kanji"><ruby><rb>非常口</rb><rp>(</rp><rt>ひじょうぐち</rt><rp>)</rp></ruby></span>から<ruby><rb>逃</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby>げてください。		<hr>`,
-    answers: {
-      ひじょうぐち: true,
-      ひぞぐち: false,
-      ひじょぐち: false,
-      ひぞうぐち: false,
-    },
-    id: "問題ID：BKY0175",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>から<ruby><rb>歯</rb><rp>(</rp><rt>は</rt><rp>)</rp></ruby>が<ruby><rb>痛</rb><rp>(</rp><rt>いた</rt><rp>)</rp></ruby>いので、<span class="kanji"><ruby><rb>歯医者</rb><rp>(</rp><rt>はいしゃ</rt><rp>)</rp></ruby></span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: {
-      はいじゃ: false,
-      はいしや: false,
-      はいさ: false,
-      はいしゃ: true,
-    },
-    id: "問題ID：BKY0080",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>雪</rb><rp>(</rp><rt>ゆき</rt><rp>)</rp></ruby></span>が<ruby><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>ったら、バスで<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { みず: false, あめ: false, ふゆ: false, ゆき: true },
-    id: "問題ID：BKY0065",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby>から<ruby><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>まで<span class="kanji"><ruby><rb>地下鉄</rb><rp>(</rp><rt>ちかてつ</rt><rp>)</rp></ruby></span>で20<ruby><rb>分</rb><rp>(</rp><rt>ふん</rt><rp>)</rp></ruby>ぐらいです。		<hr>`,
-    answers: {
-      ちかてつ: true,
-      しんかんせん: false,
-      じてんしゃ: false,
-      ひこうき: false,
-    },
-    id: "問題ID：BKY0022",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>駐車場</rb><rp>(</rp><rt>ちゅうしゃじょう</rt><rp>)</rp></ruby></span>に<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>を<ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>めるのが<ruby><rb>苦手</rb><rp>(</rp><rt>にがて</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: {
-      ちゅんしゃじょう: false,
-      ちゅうさじょう: false,
-      ちゅうしゃじょう: true,
-      ちゅうしゃりょう: false,
-    },
-    id: "問題ID：BKY0114",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>時間</rb><rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>十分</rb><rp>(</rp><rt>じゅうぶん</rt><rp>)</rp></ruby></span>にありますから、ゆっくり<ruby><rb>考</rb><rp>(</rp><rt>かんが</rt><rp>)</rp></ruby>えてください。		<hr>`,
-    answers: {
-      じゅうふん: false,
-      じっぷん: false,
-      じゅっぷん: false,
-      じゅうぶん: true,
-    },
-    id: "問題ID：BKY0161",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>が<ruby><rb>生</rb><rp>(</rp><rt>う</rt><rp>)</rp></ruby>まれた<ruby><rb>町</rb><rp>(</rp><rt>まち</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>星</rb><rp>(</rp><rt>ほし</rt><rp>)</rp></ruby></span>がとてもきれいです。		<hr>`,
-    answers: { みず: false, つき: false, ほし: true, そら: false },
-    id: "問題ID：BKY0163",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>は<ruby><rb>貿易</rb><rp>(</rp><rt>ぼうえき</rt><rp>)</rp></ruby><ruby><rb>会社</rb><rp>(</rp><rt>がいしゃ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>社長</rb><rp>(</rp><rt>しゃちょう</rt><rp>)</rp></ruby></span>です。		<hr>`,
-    answers: {
-      しゃちょう: true,
-      じゃじょう: false,
-      さちょう: false,
-      さじょう: false,
-    },
-    id: "問題ID：BKY0097",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>雪</rb><rp>(</rp><rt>ゆき</rt><rp>)</rp></ruby></span>が<ruby><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>ったら、バスで<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { みず: false, あめ: false, ゆき: true, ふゆ: false },
-    id: "問題ID：BKY0065",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<span class="kanji"><ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby></span>の<ruby><rb>趣味</rb><rp>(</rp><rt>しゅみ</rt><rp>)</rp></ruby>は<ruby><rb>写真</rb><rp>(</rp><rt>しゃしん</rt><rp>)</rp></ruby>を<ruby><rb>撮</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>ることです。		<hr>`,
-    answers: { ちち: true, おとうと: false, はは: false, あに: false },
-    id: "問題ID：BKY0033",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>弟</rb><rp>(</rp><rt>おとうと</rt><rp>)</rp></ruby></span>はまだ<ruby><rb>小学生</rb><rp>(</rp><rt>しょうがくせい</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: {
-      おとっと: false,
-      おとと: false,
-      おととう: false,
-      おとうと: true,
-    },
-    id: "問題ID：BKY0055",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎晩</rb><rp>(</rp><rt>まいばん</rt><rp>)</rp></ruby>、<ruby><rb>家族</rb><rp>(</rp><rt>かぞく</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby></span>をかけています。		<hr>`,
-    answers: { てんわ: false, てんは: false, でんふぁ: false, でんわ: true },
-    id: "問題ID：BKY0009",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>が<ruby><rb>生</rb><rp>(</rp><rt>う</rt><rp>)</rp></ruby>まれた<ruby><rb>町</rb><rp>(</rp><rt>まち</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>星</rb><rp>(</rp><rt>ほし</rt><rp>)</rp></ruby></span>がとてもきれいです。		<hr>`,
-    answers: { つき: false, みず: false, ほし: true, そら: false },
-    id: "問題ID：BKY0163",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>の<ruby><rb>夜</rb><rp>(</rp><rt>よる</rt><rp>)</rp></ruby>、お<ruby><rb>酒</rb><rp>(</rp><rt>さけ</rt><rp>)</rp></ruby>を<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みすぎて<span class="kanji"><ruby><rb>気分</rb><rp>(</rp><rt>きぶん</rt><rp>)</rp></ruby></span>が<ruby><rb>悪</rb><rp>(</rp><rt>わる</rt><rp>)</rp></ruby>いです。		<hr>`,
-    answers: { きぶ: false, きんもち: false, きぶん: true, きもち: false },
-    id: "問題ID：BKY0122",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ごみ<ruby><rb>箱</rb><rp>(</rp><rt>ばこ</rt><rp>)</rp></ruby>は<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>隅</rb><rp>(</rp><rt>すみ</rt><rp>)</rp></ruby></span>に<ruby><rb>置</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>いてあります。		<hr>`,
-    answers: { すみ: true, おく: false, そば: false, かど: false },
-    id: "問題ID：BKY0150",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎日</rb><rp>(</rp><rt>まいにち</rt><rp>)</rp></ruby><ruby><rb>午前</rb><rp>(</rp><rt>ごぜん</rt><rp>)</rp></ruby>9<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>から<ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby>5<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>まで<span class="kanji"><ruby><rb>働</rb><rp>(</rp><rt>はたら</rt><rp>)</rp></ruby>きます</span>。		<hr>`,
-    answers: {
-      はたらきます: true,
-      うごきます: false,
-      いきます: false,
-      おきます: false,
-    },
-    id: "問題ID：BKY0014",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>を<span class="kanji"><ruby><rb>修理</rb><rp>(</rp><rt>しゅうり</rt><rp>)</rp></ruby></span>することができますか。<br>B：はい、できます。		<hr>`,
-    answers: {
-      しゅんり: false,
-      しゅうり: true,
-      しゅうじ: false,
-      すうり: false,
-    },
-    id: "問題ID：BKY0104",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>から3<ruby><rb>日間</rb><rp>(</rp><rt>かかん</rt><rp>)</rp></ruby><ruby><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>出張</rb><rp>(</rp><rt>しゅっちょう</rt><rp>)</rp></ruby></span>します。		<hr>`,
-    answers: {
-      すちょう: false,
-      すっちょう: false,
-      しゅっちょう: true,
-      しゅちょう: false,
-    },
-    id: "問題ID：BKY0091",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>趣味</rb><rp>(</rp><rt>しゅみ</rt><rp>)</rp></ruby></span>は<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ることです。		<hr>`,
-    answers: { しゅうみ: false, すみ: false, すうみ: false, しゅみ: true },
-    id: "問題ID：BKY0096",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<span class="kanji"><ruby><rb>間</rb><rp>(</rp><rt>あいだ</rt><rp>)</rp></ruby></span>、<ruby><rb>駅</rb><rp>(</rp><rt>えき</rt><rp>)</rp></ruby>で<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>に<ruby><rb>会</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>ってびっくりしました。		<hr>`,
-    answers: { あいだ: true, ひ: false, まえ: false, かん: false },
-    id: "問題ID：BKY0046",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>来週</rb><rp>(</rp><rt>らいしゅう</rt><rp>)</rp></ruby>の<ruby><rb>土曜日</rb><rp>(</rp><rt>どようび</rt><rp>)</rp></ruby>、<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちを<span class="kanji"><ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby></span>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { えっか: false, えいか: false, えいが: true, えが: false },
-    id: "問題ID：BKY0010",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>月曜日</rb><rp>(</rp><rt>げつようび</rt><rp>)</rp></ruby>から<ruby><rb>金曜日</rb><rp>(</rp><rt>きんようび</rt><rp>)</rp></ruby>まで<span class="kanji"><ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby></span>で<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>します。		<hr>`,
-    answers: { がこう: false, がっこう: true, がっこ: false, かっこう: false },
-    id: "問題ID：BKY0019",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>荷物</rb><rp>(</rp><rt>にもつ</rt><rp>)</rp></ruby>、<ruby><rb>航空</rb><rp>(</rp><rt>こうくう</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>便</rb><rp>(</rp><rt>びん</rt><rp>)</rp></ruby></span>でアメリカまでいくらですか。		<hr>`,
-    answers: { ひん: false, びん: true, き: false, べん: false },
-    id: "問題ID：BKY0057",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>保険証</rb><rp>(</rp><rt>ほけんしょう</rt><rp>)</rp></ruby>をなくしたら、<span class="kanji"><ruby><rb>市役所</rb><rp>(</rp><rt>しやくしょ</rt><rp>)</rp></ruby></span>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>かなければなりません。		<hr>`,
-    answers: {
-      しやくそ: false,
-      しやくしょ: true,
-      しゃくそ: false,
-      しゃくしょ: false,
-    },
-    id: "問題ID：BKY0077",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>準備</rb><rp>(</rp><rt>じゅんび</rt><rp>)</rp></ruby></span>はもうできました。<br>はい、もうできました。		<hr>`,
-    answers: {
-      じゅび: false,
-      じゅんび: true,
-      ずんび: false,
-      じゅうんび: false,
-    },
-    id: "問題ID：BKY0115",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>趣味</rb><rp>(</rp><rt>しゅみ</rt><rp>)</rp></ruby></span>は<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>ることです。		<hr>`,
-    answers: { すみ: false, しゅうみ: false, しゅみ: true, すうみ: false },
-    id: "問題ID：BKY0096",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		へびは<span class="kanji"><ruby><rb>体</rb><rp>(</rp><rt>からだ</rt><rp>)</rp></ruby></span>が<ruby><rb>長</rb><rp>(</rp><rt>なが</rt><rp>)</rp></ruby>いです。		<hr>`,
-    answers: { はな: false, からだ: true, あし: false, みみ: false },
-    id: "問題ID：BKY0085",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今度</rb><rp>(</rp><rt>こんど</rt><rp>)</rp></ruby>の<ruby><rb>日曜日</rb><rp>(</rp><rt>にちようび</rt><rp>)</rp></ruby>は<ruby><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>と<span class="kanji"><ruby><rb>釣</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>り</span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: { ふり: false, くり: false, つり: true, うり: false },
-    id: "問題ID：BKY0068",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>は<ruby><rb>雨</rb><rp>(</rp><rt>あめ</rt><rp>)</rp></ruby>でバスが<span class="kanji"><ruby><rb>遅</rb><rp>(</rp><rt>おく</rt><rp>)</rp></ruby>れました</span>。		<hr>`,
-    answers: {
-      おそれました: false,
-      ちれました: false,
-      くれました: false,
-      おくれました: true,
-    },
-    id: "問題ID：BKY0120",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎朝</rb><rp>(</rp><rt>まいあさ</rt><rp>)</rp></ruby><span class="kanji"><ruby><rb>牛乳</rb><rp>(</rp><rt>ぎゅうにゅう</rt><rp>)</rp></ruby></span>を<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>んでいます。		<hr>`,
-    answers: {
-      おちゃ: false,
-      ぎゅうにゅう: true,
-      こうちゃ: false,
-      みるく: false,
-    },
-    id: "問題ID：BKY0026",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>飛行機</rb><rp>(</rp><rt>ひこうき</rt><rp>)</rp></ruby>は<ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby>7<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>に<ruby><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>着</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>きます</span>。		<hr>`,
-    answers: {
-      おきます: false,
-      あきます: false,
-      つきます: true,
-      うきます: false,
-    },
-    id: "問題ID：BKY0118",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>日本</rb><rp>(</rp><rt>にほん</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>季節</rb><rp>(</rp><rt>きせつ</rt><rp>)</rp></ruby></span>が4つあります。		<hr>`,
-    answers: { かいしゃ: false, せいかつ: false, しごと: false, きせつ: true },
-    id: "問題ID：BKY0062",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>毎晩</rb><rp>(</rp><rt>まいばん</rt><rp>)</rp></ruby>11<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>ます</span>。		<hr>`,
-    answers: { ねます: true, きます: false, みます: false, でます: false },
-    id: "問題ID：BKY0015",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さんはどの<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ですか。<br>B：あの<span class="kanji"><ruby><rb>紺</rb><rp>(</rp><rt>こん</rt><rp>)</rp></ruby></span>のスーツを<ruby><rb>着</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>ている<ruby><rb>人</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>ですよ。		<hr>`,
-    answers: { こん: true, みどり: false, あお: false, くろ: false },
-    id: "問題ID：BKY0178",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>はもう<ruby><rb>少</rb><rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>し<span class="kanji"><ruby><rb>砂糖</rb><rp>(</rp><rt>さとう</rt><rp>)</rp></ruby></span>を<ruby><rb>入</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>れるとおいしいですよ。		<hr>`,
-    answers: { しょうゆ: false, さとう: true, みそ: false, しお: false },
-    id: "問題ID：BKY0070",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<span class="kanji"><ruby><rb>書類</rb><rp>(</rp><rt>しょるい</rt><rp>)</rp></ruby></span>は<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>までに<ruby><rb>部長</rb><rp>(</rp><rt>ぶちょう</rt><rp>)</rp></ruby>に<ruby><rb>出</rb><rp>(</rp><rt>だ</rt><rp>)</rp></ruby>してください。		<hr>`,
-    answers: { そぬい: false, しょるい: true, しょぬい: false, そるい: false },
-    id: "問題ID：BKY0142",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>来月</rb><rp>(</rp><rt>らいげつ</rt><rp>)</rp></ruby>から<ruby><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby><ruby><rb>本社</rb><rp>(</rp><rt>ほんしゃ</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>転勤</rb><rp>(</rp><rt>てんきん</rt><rp>)</rp></ruby></span>することになりました。		<hr>`,
-    answers: {
-      てんしょく: false,
-      しゅっちょう: false,
-      つうきん: false,
-      てんきん: true,
-    },
-    id: "問題ID：BKY0119",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>の<ruby><rb>会議</rb><rp>(</rp><rt>かいぎ</rt><rp>)</rp></ruby>では、<ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>規則</rb><rp>(</rp><rt>きそく</rt><rp>)</rp></ruby></span>について<ruby><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>し<ruby><rb>合</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>います。		<hr>`,
-    answers: {
-      こうぎ: false,
-      きそく: true,
-      ぎょうじ: false,
-      じゅぎょう: false,
-    },
-    id: "問題ID：BKY0168",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		ごみ<ruby><rb>箱</rb><rp>(</rp><rt>ばこ</rt><rp>)</rp></ruby>は<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>隅</rb><rp>(</rp><rt>すみ</rt><rp>)</rp></ruby></span>に<ruby><rb>置</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>いてあります。		<hr>`,
-    answers: { かど: false, そば: false, おく: false, すみ: true },
-    id: "問題ID：BKY0150",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>家</rb><rp>(</rp><rt>いえ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>近</rb><rp>(</rp><rt>ちか</rt><rp>)</rp></ruby>く</span>に<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>たら、<ruby><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby>をください。		<hr>`,
-    answers: { ちかく: true, はやく: false, とおく: false, おそく: false },
-    id: "問題ID：BKY0052",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		その<span class="kanji"><ruby><rb>着物</rb><rp>(</rp><rt>きもの</rt><rp>)</rp></ruby></span>はとてもきれいですね。		<hr>`,
-    answers: {
-      どうぶつ: false,
-      くだもの: false,
-      きもの: true,
-      しょくぶつ: false,
-    },
-    id: "問題ID：BKY0103",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>火事</rb><rp>(</rp><rt>かじ</rt><rp>)</rp></ruby>や<ruby><rb>地震</rb><rp>(</rp><rt>じしん</rt><rp>)</rp></ruby>の<ruby><rb>時</rb><rp>(</rp><rt>とき</rt><rp>)</rp></ruby>は、そこの<span class="kanji"><ruby><rb>非常口</rb><rp>(</rp><rt>ひじょうぐち</rt><rp>)</rp></ruby></span>から<ruby><rb>逃</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby>げてください。		<hr>`,
-    answers: {
-      ひじょぐち: false,
-      ひじょうぐち: true,
-      ひぞぐち: false,
-      ひぞうぐち: false,
-    },
-    id: "問題ID：BKY0175",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		もっと<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>が<span class="kanji"><ruby><rb>上手</rb><rp>(</rp><rt>じょうず</rt><rp>)</rp></ruby></span>になりたいです。		<hr>`,
-    answers: {
-      じょうず: true,
-      じょうずう: false,
-      じょずう: false,
-      じょず: false,
-    },
-    id: "問題ID：BKY0043",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>時間</rb><rp>(</rp><rt>じかん</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>十分</rb><rp>(</rp><rt>じゅうぶん</rt><rp>)</rp></ruby></span>にありますから、ゆっくり<ruby><rb>考</rb><rp>(</rp><rt>かんが</rt><rp>)</rp></ruby>えてください。		<hr>`,
-    answers: {
-      じゅうぶん: true,
-      じゅうふん: false,
-      じっぷん: false,
-      じゅっぷん: false,
-    },
-    id: "問題ID：BKY0161",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>財布</rb><rp>(</rp><rt>さいふ</rt><rp>)</rp></ruby>を<ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>としたら、すぐに<span class="kanji"><ruby><rb>交番</rb><rp>(</rp><rt>こうばん</rt><rp>)</rp></ruby></span>へ<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>ってください。		<hr>`,
-    answers: {
-      ごんばん: false,
-      こんばん: false,
-      ごうばん: false,
-      こうばん: true,
-    },
-    id: "問題ID：BKY0140",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>箱</rb><rp>(</rp><rt>はこ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby></span>に<ruby><rb>猫</rb><rp>(</rp><rt>ねこ</rt><rp>)</rp></ruby>がいます。		<hr>`,
-    answers: { うえ: false, した: false, まえ: false, なか: true },
-    id: "問題ID：BKY0051",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>将来</rb><rp>(</rp><rt>しょうらい</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>夢</rb><rp>(</rp><rt>ゆめ</rt><rp>)</rp></ruby></span>は<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>になることです。		<hr>`,
-    answers: { ゆうめい: false, ゆんめ: false, ゆめ: true, ゆうめ: false },
-    id: "問題ID：BKY0109",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<span class="kanji"><ruby><rb>試験</rb><rp>(</rp><rt>しけん</rt><rp>)</rp></ruby></span>は<ruby><rb>来週</rb><rp>(</rp><rt>らいしゅう</rt><rp>)</rp></ruby>の<ruby><rb>水曜日</rb><rp>(</rp><rt>すいようび</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: {
-      しごと: false,
-      しゅくだい: false,
-      しけん: true,
-      りょこう: false,
-    },
-    id: "問題ID：BKY0013",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>馬</rb><rp>(</rp><rt>うま</rt><rp>)</rp></ruby></span>に<ruby><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>ったことがありません。		<hr>`,
-    answers: { うま: true, うまん: false, ば: false, ま: false },
-    id: "問題ID：BKY0095",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>仕事</rb><rp>(</rp><rt>しごと</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>経験</rb><rp>(</rp><rt>けいけん</rt><rp>)</rp></ruby></span>がないと<ruby><rb>難</rb><rp>(</rp><rt>むずか</rt><rp>)</rp></ruby>しいです。		<hr>`,
-    answers: { けけん: false, たいけん: false, たけん: false, けいけん: true },
-    id: "問題ID：BKY0132",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>たちが<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>している<span class="kanji"><ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby></span>は3<ruby><rb>階</rb><rp>(</rp><rt>がい</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: {
-      きょしつ: false,
-      きよしつ: false,
-      きょっしつ: false,
-      きょうしつ: true,
-    },
-    id: "問題ID：BKY0008",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>明日</rb><rp>(</rp><rt>あした</rt><rp>)</rp></ruby>から3<ruby><rb>日間</rb><rp>(</rp><rt>かかん</rt><rp>)</rp></ruby><ruby><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby>に<span class="kanji"><ruby><rb>出張</rb><rp>(</rp><rt>しゅっちょう</rt><rp>)</rp></ruby></span>します。		<hr>`,
-    answers: {
-      すっちょう: false,
-      しゅっちょう: true,
-      すちょう: false,
-      しゅちょう: false,
-    },
-    id: "問題ID：BKY0091",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<span class="kanji"><ruby><rb>熱</rb><rp>(</rp><rt>ねつ</rt><rp>)</rp></ruby></span>があるときはお<ruby><rb>風呂</rb><rp>(</rp><rt>ふろ</rt><rp>)</rp></ruby>に<ruby><rb>入</rb><rp>(</rp><rt>はい</rt><rp>)</rp></ruby>らないほうがいいです。		<hr>`,
-    answers: { ねつ: true, れつ: false, あつ: false, れづ: false },
-    id: "問題ID：BKY0093",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<span class="kanji"><ruby><rb>郵便局</rb><rp>(</rp><rt>ゆうびんきょく</rt><rp>)</rp></ruby></span>へ<ruby><rb>手紙</rb><rp>(</rp><rt>てがみ</rt><rp>)</rp></ruby>を<ruby><rb>出</rb><rp>(</rp><rt>だ</rt><rp>)</rp></ruby>しに<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: {
-      ゆうびんきょうく: false,
-      ゆびんきょく: false,
-      ゆうびんきょくう: false,
-      ゆうびんきょく: true,
-    },
-    id: "問題ID：BKY0017",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>昨日</rb><rp>(</rp><rt>きのう</rt><rp>)</rp></ruby>の<ruby><rb>夜</rb><rp>(</rp><rt>よる</rt><rp>)</rp></ruby>、お<ruby><rb>酒</rb><rp>(</rp><rt>さけ</rt><rp>)</rp></ruby>を<ruby><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>みすぎて<span class="kanji"><ruby><rb>気分</rb><rp>(</rp><rt>きぶん</rt><rp>)</rp></ruby></span>が<ruby><rb>悪</rb><rp>(</rp><rt>わる</rt><rp>)</rp></ruby>いです。		<hr>`,
-    answers: { きぶ: false, きもち: false, きぶん: true, きんもち: false },
-    id: "問題ID：BKY0122",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>馬</rb><rp>(</rp><rt>うま</rt><rp>)</rp></ruby></span>に<ruby><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>ったことがありません。		<hr>`,
-    answers: { うまん: false, うま: true, ま: false, ば: false },
-    id: "問題ID：BKY0095",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby>か<span class="kanji"><ruby><rb>問題</rb><rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby></span>があったら、いつでも<ruby><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>きに<ruby><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>てください。		<hr>`,
-    answers: {
-      しつもん: false,
-      もんだい: true,
-      しゅくだい: false,
-      かだい: false,
-    },
-    id: "問題ID：BKY0074",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<ruby><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>で<span class="kanji"><ruby><rb>経済</rb><rp>(</rp><rt>けいざい</rt><rp>)</rp></ruby></span>の<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>をしようと<ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>っています。		<hr>`,
-    answers: {
-      けざい: false,
-      けえざい: false,
-      けいざい: true,
-      けいらい: false,
-    },
-    id: "問題ID：BKY0076",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>のサッカーの<span class="kanji"><ruby><rb>試合</rb><rp>(</rp><rt>しあい</rt><rp>)</rp></ruby></span>は<ruby><rb>午後</rb><rp>(</rp><rt>ごご</rt><rp>)</rp></ruby>7<ruby><rb>時</rb><rp>(</rp><rt>じ</rt><rp>)</rp></ruby>からです。		<hr>`,
-    answers: {
-      たいかい: false,
-      れんしゅう: false,
-      けいけん: false,
-      しあい: true,
-    },
-    id: "問題ID：BKY0106",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：このパンフレットは<span class="kanji"><ruby><rb>無料</rb><rp>(</rp><rt>むりょう</rt><rp>)</rp></ruby></span>ですか。<br>B：はい、そうですよ。		<hr>`,
-    answers: { むりょう: true, むちん: false, むり: false, むだ: false },
-    id: "問題ID：BKY0176",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		そのビルの<span class="kanji"><ruby><rb>横</rb><rp>(</rp><rt>よこ</rt><rp>)</rp></ruby></span>に<ruby><rb>自動販売機</rb><rp>(</rp><rt>じどうはんばいき</rt><rp>)</rp></ruby>があります。		<hr>`,
-    answers: { となり: false, まえ: false, よこ: true, なか: false },
-    id: "問題ID：BKY0125",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>隣</rb><rp>(</rp><rt>となり</rt><rp>)</rp></ruby>の<ruby><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>から<ruby><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>の<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きな<span class="kanji"><ruby><rb>声</rb><rp>(</rp><rt>こえ</rt><rp>)</rp></ruby></span>が<ruby><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>こえます。		<hr>`,
-    answers: { おと: false, おん: false, せい: false, こえ: true },
-    id: "問題ID：BKY0127",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<span class="kanji"><ruby><rb>世界</rb><rp>(</rp><rt>せかい</rt><rp>)</rp></ruby></span>には<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>たちの<ruby><rb>知</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>らないことがたくさんあります。		<hr>`,
-    answers: { ぜかい: false, せかい: true, せいかい: false, せがい: false },
-    id: "問題ID：BKY0064",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>の<ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>はその<span class="kanji"><ruby><rb>小</rb><rp>(</rp><rt>ちい</rt><rp>)</rp></ruby>さい</span><ruby><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>です。		<hr>`,
-    answers: { ちさいい: false, ちさい: false, ちいさい: true, ちいさ: false },
-    id: "問題ID：BKY0038",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>風邪</rb><rp>(</rp><rt>かぜ</rt><rp>)</rp></ruby>を<ruby><rb>引</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby>いたら、<span class="kanji"><ruby><rb>病院</rb><rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby></span>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>きます。		<hr>`,
-    answers: {
-      びょおいん: false,
-      びょいん: false,
-      びょっいん: false,
-      びょういん: true,
-    },
-    id: "問題ID：BKY0003",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>の<span class="kanji"><ruby><rb>角</rb><rp>(</rp><rt>かど</rt><rp>)</rp></ruby></span>を<ruby><rb>右</rb><rp>(</rp><rt>みぎ</rt><rp>)</rp></ruby>へ<ruby><rb>曲</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby>がると、<ruby><rb>左</rb><rp>(</rp><rt>ひだり</rt><rp>)</rp></ruby>に<ruby><rb>銀行</rb><rp>(</rp><rt>ぎんこう</rt><rp>)</rp></ruby>があります。		<hr>`,
-    answers: { つの: false, かく: false, すみ: false, かど: true },
-    id: "問題ID：BKY0111",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>部屋</rb><rp>(</rp><rt>へや</rt><rp>)</rp></ruby>には<ruby><rb>大</rb><rp>(</rp><rt>おお</rt><rp>)</rp></ruby>きな<span class="kanji"><ruby><rb>鏡</rb><rp>(</rp><rt>かがみ</rt><rp>)</rp></ruby></span>が<ruby><rb>掛</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>けてあります。		<hr>`,
-    answers: { かぎ: false, かがみ: true, え: false, がく: false },
-    id: "問題ID：BKY0146",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>今晩</rb><rp>(</rp><rt>こんばん</rt><rp>)</rp></ruby>は<ruby><rb>友</rb><rp>(</rp><rt>とも</rt><rp>)</rp></ruby>だちと<ruby><rb>映画</rb><rp>(</rp><rt>えいが</rt><rp>)</rp></ruby>を<ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>に<ruby><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>く<span class="kanji"><ruby><rb>約束</rb><rp>(</rp><rt>やくそく</rt><rp>)</rp></ruby></span>があります。		<hr>`,
-    answers: { やくそく: true, よやく: false, ようじ: false, よてい: false },
-    id: "問題ID：BKY0045",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>野菜</rb><rp>(</rp><rt>やさい</rt><rp>)</rp></ruby>はちょっと<span class="kanji"><ruby><rb>苦</rb><rp>(</rp><rt>にが</rt><rp>)</rp></ruby>い</span>です。		<hr>`,
-    answers: { にがい: true, からい: false, あまい: false, こい: false },
-    id: "問題ID：BKY0181",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：<ruby><rb>今日</rb><rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>はいい<span class="kanji"><ruby><rb>天気</rb><rp>(</rp><rt>てんき</rt><rp>)</rp></ruby></span>ですね。<br>B：ええ、そうですね。		<hr>`,
-    answers: { げんき: false, ようき: false, くうき: false, てんき: true },
-    id: "問題ID：BKY0053",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>馬</rb><rp>(</rp><rt>うま</rt><rp>)</rp></ruby></span>に<ruby><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>ったことがありません。		<hr>`,
-    answers: { ま: false, うまん: false, ば: false, うま: true },
-    id: "問題ID：BKY0095",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>山田</rb><rp>(</rp><rt>やまだ</rt><rp>)</rp></ruby>さんはよくパソコンを<span class="kanji"><ruby><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>います</span>。		<hr>`,
-    answers: {
-      つかいます: true,
-      すいます: false,
-      かいます: false,
-      あらいます: false,
-    },
-    id: "問題ID：BKY0073",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		A：このパンフレットは<span class="kanji"><ruby><rb>無料</rb><rp>(</rp><rt>むりょう</rt><rp>)</rp></ruby></span>ですか。<br>B：はい、そうですよ。		<hr>`,
-    answers: { むり: false, むりょう: true, むちん: false, むだ: false },
-    id: "問題ID：BKY0176",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		この<ruby><rb>料理</rb><rp>(</rp><rt>りょうり</rt><rp>)</rp></ruby>はもう<ruby><rb>少</rb><rp>(</rp><rt>すこ</rt><rp>)</rp></ruby>し<span class="kanji"><ruby><rb>砂糖</rb><rp>(</rp><rt>さとう</rt><rp>)</rp></ruby></span>を<ruby><rb>入</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>れるとおいしいですよ。		<hr>`,
-    answers: { みそ: false, しお: false, さとう: true, しょうゆ: false },
-    id: "問題ID：BKY0070",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-  {
-    question: `<!-- 2 -->
-		<ruby><rb>次</rb><rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>の<ruby><rb>会議</rb><rp>(</rp><rt>かいぎ</rt><rp>)</rp></ruby>は<ruby><rb>部長</rb><rp>(</rp><rt>ぶちょう</rt><rp>)</rp></ruby>の<ruby><rb>代</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>わりに<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>が<span class="kanji"><ruby><rb>出席</rb><rp>(</rp><rt>しゅっせき</rt><rp>)</rp></ruby></span>することになりました。		<hr>`,
-    answers: {
-      しゅっせき: true,
-      しゅうせき: false,
-      すせき: false,
-      すっせき: false,
-    },
-    id: "問題ID：BKY0167",
-    confirmed: true,
-    explanation: `TODO: ADD EXPLANATION AND SET`,
-  },
-];
+    question:
+      '<!-- 2 -->\n\t\t<ruby><rb>私</rb><rp>(</rp><rt>わたし</rt><rp>)</rp></ruby>は<span class="kanji"><ruby><rb>学生</rb><rp>(</rp><rt>がくせい</rt><rp>)</rp></ruby></span>です。<ruby><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby><ruby><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>で<ruby><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>しています。\t\t<hr>',
+    answers: { がせい: false, がくせ: false, がくせい: true, がっせい: false },
+    id: "問題ID：﻿BKY0001",
+    confirmed: true,
+    explanation: "TODO: ADD EXPLANATION AND SET",
+  },
+{question: `<!-- 2 -->
+		<ruby><rb>毎週</rb><rp>(</rp><rt>まいしゅう</rt><rp>)</rp></ruby>、<span class="kanji"><ruby><rb>金曜日</rb><rp>(</rp><rt>きんようび</rt><rp>)</rp></ruby></span>は<ruby><rb>会議</rb><rp>(</rp><rt>かいぎ</rt><rp>)</rp></ruby>があります。		<hr>`,answers: {"もくようび": false,"すいようび": false,"かようび": false,"きんようび": true,},id:'問題ID：BKY0011',confirmed:true, explanation : `TODO: ADD EXPLANATION AND SET`},
