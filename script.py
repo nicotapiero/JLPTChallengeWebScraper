@@ -7,12 +7,13 @@ import time
 
 import json
 
+import re
 
 driver = webdriver.Firefox()
 driver.get("https://challenge-jlpt.com/")
 
 new_questions = 0
-num_remaining = None
+total_in_set = 100
 
 for i in range(0, 300):
 
@@ -25,11 +26,9 @@ for i in range(0, 300):
 
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     # driver.execute_script('document.getElementById("08_n5grammar.csv").checked = true ')
-    driver.execute_script('document.getElementById("10_b_kanji_yomi.csv").checked = true ')
-
-   
-    # driver.execute_script('document.getElementById("09_n5vocabulary.csv").checked = true ')
-
+    driver.execute_script('document.getElementById("09_n5vocabulary.csv").checked = true ')
+    # driver.execute_script('document.getElementById("10_b_kanji_yomi.csv").checked = true ')
+    # driver.execute_script('document.getElementById("13_basicgrammar_1.csv").checked = true ')
 
 
     driver.execute_script('document.getElementById("toggle").checked = true ')
@@ -115,21 +114,18 @@ for i in range(0, 300):
     f.close()
 
    
-
+    total_questions = len([m.start() for m in re.finditer('問題ID：', full_text)])
     
-    print(f"scanned/saved: {i+1}, new questions: {new_questions}")
+    print(f"scanned/saved: {i+1}, new questions: {new_questions}, total: {total_questions +1}")
 
-    if num_remaining is not None:
-        if new_questions == num_remaining:
+    if total_in_set is not None:
+        if total_questions +1 == total_in_set:
             print('found them all!')
             break
-
-    # N5V0041 - rb in answers
 
     # change site insteas of closing
     driver.execute_script("""window.location.replace("https://challenge-jlpt.com/")""")
     time.sleep(4)
-
 
     
 driver.close()
